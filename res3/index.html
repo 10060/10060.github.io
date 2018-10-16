@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>한국방송통신전파진흥원</title>
+    <!--    css-->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="grid.css">
+    <!--  미디어쿼리-->
+    <link rel="stylesheet" href="mediaQ.css">
+    <!--    폰트-->
+    <link href="https://fonts.googleapis.com/css?family=K2D|Lato|Noto+Sans+KR|Noto+Serif+KR|Open+Sans|Oswald|Roboto|Roboto+Condensed|Roboto+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Jua|Sunflower:300" rel="stylesheet">
+
+    <!--    아이콘-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!--    뷰포트 -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!--   아이콘  -->
+
+    <link rel="shortcut icon" href="images/homeIcon.ico" type="image/x-icon">
+    <link rel="icon" size="16x16 32x32 48x48 64x64 72x72 96x96 114x114 128x128 " href="./images/homeIcon.png" type="image/x-icon">
+    <!--    아이폰 아이콘 -->
+    <link rel="apple-touch-icon-precomposed" href="./images/homeIcon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileColor" content="./images/homeIcon.png">
+    <!--     <meta name="msapplication-TileColor" content=""> 여기 콘텐츠에 이미지 넣으면됨-->
+
+
+    <!--    메타태그-->
+    <meta http-equiv="X-UA_Compatible" content="IE=Edge">
+    <meta name="keywords" content="홈앤쇼핑, home&shopping">
+    <meta name="Description" content="고객이 가장먼저 찾는, 최고의 홈쇼핑 브랜드! 홈앤쇼핑 풍성한 가을 혜택, 모바일 앱에서 구매하면 10%할인+10% 적립!">
+
+    <!--    제이쿼리 연결-->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+
+    <script src="jquery-1.11.0.min.js"></script>
+    <script>
+       
+    </script>
+    <script>
+        $(document).ready(function() {
+            var wdImg = parseInt($("#visual").width());
+            var imgCount = $(".imgWrap li").length;
+            var ind1;
+
+            var intv = setInterval(function() {
+                ani1();
+            }, 3000);
+
+            function ani1() {
+                $(".imgWrap").not(":animated").animate({
+                    "margin-left": -wdImg + "px"
+                }, 800, function() {
+                    $(".imgWrap li").eq(0).appendTo($(".imgWrap"));
+                    $(".imgWrap").css("margin-left", "0px");
+                });
+            };
+
+
+
+            $(".collaps").on({
+                click: function() {
+                    var colWd = parseInt($(".CollMenu").width());
+                    $(".CollMenu, .collaps").toggleClass("on")
+
+                }
+
+            });
+
+
+            $(".CollMenu li").on({
+                click: function() {
+                    $(this).find(".sub").slideDown(400);
+                    $(this).siblings().find(".sub").slideUp(100);
+                }
+            });
+
+
+
+
+            $(window).scroll(function() {
+                var hd1 = $(window).scrollTop();
+                var hdheigh = parseInt($(".hd1").height());
+                if (hd1 > hdheigh) {
+                    $(".hd1, .collaps").addClass("on");
+                      $(".menuName").addClass("onMe");
+                    $(".tnb .logo").addClass("on1");
+
+                } else {
+                    $(".hd1, .collaps").removeClass("on");
+                      $(".menuName").removeClass("onMe");
+                    $(".tnb .logo").removeClass("on1");
+                }
+            });
+
+
+            $(".menuName").on({
+                click: function() {
+                    $(".hd1").toggleClass("onMe");
+                    $(".menuName").toggleClass("onMe");
+                    $(".subWrap").toggleClass("on");
+                    $(".tnb .logo").toggleClass("color1");
+                }
+            });
+
+
+        });
+
+    </script>
+
+
+
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="grid">
+            <header id="hd" class="hd1">
+                <nav class="tnb mob">
+                    <a href="" class="logo"></a>
+                    <label for="" class="collaps">
+                        <i class="fas fa-bars"></i>
+                    </label>
+                    <div class="menuWrap">
+                        <div class="deskmenuWrap">
+
+
+
+                            <ul class="desk Menu">
+                                <li>
+                                    <h3 class="menuName">정보공개</h3>
+
+                                </li>
+                                <li>
+                                    <h3 class="menuName">주요사업</h3>
+
+
+                                </li>
+                                <li>
+                                    <h3 class="menuName">고객센터</h3>
+
+
+
+                                </li>
+
+                                <li>
+                                    <h3 class="menuName">알림마당</h3>
+
+                                </li>
+
+                                <li>
+                                    <h3 class="menuName">자료실</h3>
+
+
+                                </li>
+
+                                <li>
+                                    <h3 class="menuName">열린경영</h3>
+
+                                </li>
+                                <li>
+                                    <h3 class="menuName">KCA소개</h3>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                        <div class="subWrap">
+
+                            <ul class="sub">
+                                <li class="bold"><a href="">정보공개제도안내</a></li>
+                                <li class="bold"><a href="">행정정보사전공표</a></li>
+                                <li class="bold"><a href="">행정정보사전공표모니터링</a></li>
+                                <li class="bold"><a href="">정보목록</a></li>
+                                <li class="bold"><a href="">사업실명제</a></li>
+                            </ul>
+
+                            <ul class="sub">
+                                <li class="bold">
+                                    <a href="">방송통신융합진흥</a>
+
+                                    <ul class="boldsub">
+                                        <li><a href="">방송프로그램제작지원</a></li>
+                                        <li><a href="">해외한국어방송지원</a></li>
+                                        <li><a href="">빛마루방송지원센터 운영</a></li>
+                                        <li><a href="">녹색인증평가</a></li>
+                                        <li><a href="">방송통신융합서비스</a></li>
+                                        <li><a href="">스마트미디어 활성화 기반구축</a></li>
+                                        <li><a href="">양방향프로그램제작지원</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="bold">
+                                    <a href="">전파지원관리</a>
+                                    <ul class="boldsub">
+                                        <li><a href="">무선국검사</a></li>
+                                        <li><a href="">전자파강도 측정</a></li>
+                                        <li><a href="">국가기술자격시험</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="bold">
+                                    <a href="">정책연구</a>
+
+                                    <ul class="boldsub">
+                                        <li><a href="">전파방송정책연구및지원</a></li>
+                                        <li><a href="">전파자원연구개발</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="bold">
+                                    <a href="">ICT 기금관리 ㆍ 운용</a>
+                                    <ul class="boldsub">
+                                        <li><a href="">기금현황</a></li>
+                                        <li><a href="">기금운용</a></li>
+                                        <li><a href="">기금사업관리</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+
+                            <ul class="sub">
+
+                                <li class="bold">
+                                    <a href="">국민참여</a>
+                                    <ul class="boldsub">
+
+                                        <li><a href="">혁신제안방</a></li>
+                                        <li><a href="">고객제안</a></li>
+                                        <li><a href="">민원상담</a></li>
+                                        <li><a href="">클린신고센터</a></li>
+                                        <li><a href="">예산낭비신고센터</a></li>
+                                        <li><a href="">자유게시판</a></li>
+                                        <li><a href="">원장과의 대화</a></li>
+                                        <li><a href="">온라인 설문</a></li>
+                                        <li><a href="">KCA 대나무숲</a></li>
+                                        <li><a href="">청탁금지법 위반신고</a></li>
+
+                                    </ul>
+                                </li>
+
+
+
+                                <li class="bold">
+                                    <a href="">무선국 검사</a>
+                                    <ul class="boldsub">
+
+                                        <li><a href="">정기검사 대상국조회</a></li>
+                                        <li><a href="">무선국 준공신고</a></li>
+                                        <li><a href="">무선국 검사지변경</a></li>
+                                        <li><a href="">무선국정기검사연기신청</a></li>
+                                        <li><a href="">검사수수료 과오납 환급안내</a></li>
+                                        <li><a href="">업무안내</a></li>
+                                        <li><a href="">공지사항</a></li>
+                                        <li><a href="">묻고답하기</a></li>
+                                        <li><a href="">무선국검사 신문고</a></li>
+                                    </ul>
+                                </li>
+
+
+
+                                <li class="bold">
+                                    <a href="">전파강도측정</a>
+                                    <ul class="boldsub">
+
+                                        <li><a href="">전자파홈페이지바로가기</a></li>
+                                        <li><a href="">무선국전자파강도측정요청</a></li>
+                                    </ul>
+                                </li>
+
+
+
+                                <li class="bold">
+                                    <a href="">FAQ</a>
+                                </li>
+
+
+                            </ul>
+
+                            <ul class="sub">
+                                <li class="bold">
+                                    <a href="">공지사항</a>
+                                </li>
+                                <li class="bold">
+                                    <a href="">채용정보</a>
+                                </li>
+                                <li class="bold">
+                                    <a href="">입찰정보</a>
+                                    <ul class="boldsub">
+
+                                        <li><a href="">입찰안내</a></li>
+                                        <li><a href="">입찰계약절차</a></li>
+                                        <li><a href="">입찰공고</a></li>
+                                        <li><a href="">입찰관련자료</a></li>
+                                        <li><a href="">관계법령</a></li>
+                                    </ul>
+                                </li>
+
+
+                                <li class="bold">
+                                    <a href="">KCA소식</a>
+                                    <ul class="boldsub">
+
+                                        <li><a href="">KCA뉴스</a></li>
+                                        <li><a href="">보도자료</a></li>
+                                        <li><a href="">원장동정</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <ul class="sub">
+                                <li class="bold">
+                                    <a href="">동향자료</a>
+                                    <ul class="boldsub">
+
+                                        <li><a href="">미디어 이슈 &amp; 트랜드</a></li>
+                                        <li><a href="">방송통신전파저널</a></li>
+                                        <li><a href="">Trend &amp; Insight</a></li>
+                                        <li><a href="">방송통신 이슈 &amp; 전망</a></li>
+                                    </ul>
+                                </li>
+
+
+
+                                
+                                <li class="bold">
+                                    <a href="">연구보고서</a>
+                                    <ul class="boldsub">
+
+                                        <li><a href="">KCA연구보고서</a></li>
+                                        <li><a href="">방송통신정책연구보고서(종료)</a></li>
+
+                                    </ul>
+                                </li>
+                                
+
+                                <li class="bold">
+                                    <a href="">방송통신전파관계법령</a>
+                                </li>
+                                <li class="bold">
+                                    <a href="">KCA 사보</a>
+                                </li>
+                                <li class="bold">
+                                    <a href="">측정장비기술규격</a>
+                                </li>
+                                <li class="bold">
+                                    <a href="">서식자료실</a>
+                                </li>
+
+                            </ul>
+
+                            <ul class="sub">
+                                <li class="bold">
+                                    <a href="">경영공시</a>
+                                </li>
+                                <li class="bold">
+                                    <a href="">정보공개</a>
+                                    <ul class="boldsub">
+
+
+                                        <li><a href="">정보공개제도안내</a></li>
+                                        <li><a href="">행정정보사전공표</a></li>
+                                        <li><a href="">행정정보사전공표모니터링</a></li>
+                                        <li><a href="">정보목록</a></li>
+                                        <li><a href="">정보공개청구</a></li>
+                                        <li><a href="">사업실명제</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="bold">
+                                    <a href="">사회공헌</a>
+                                    <ul class="boldsub">
+
+                                        <li><a href="">사회공헌</a></li>
+                                        <li><a href="">본사지방이전(완료)</a></li>
+                                        <li><a href="">윤리헌장</a></li>
+                                        <li><a href="">고객서비스헌장</a></li>
+                                        <li><a href="">임직원행동강령</a></li>
+                                    </ul>
+                                </li>
+                                <li class="bold">
+                                    <a href="">사규</a>
+                                </li>
+                                <li class="bold">
+                                    <a href="">사규 제 ㆍ 개정예고</a>
+                                </li>
+                            </ul>
+
+
+
+
+                            <ul class="sub">
+                                <li class="bold">
+                                    <a href="">원장인사말</a>
+                                </li>
+                                <li class="bold">
+                                    <a href="">개요</a>
+                                    <ul class="boldsub">
+
+                                        <li><a href="">설립목적</a></li>
+                                        <li><a href="">비전</a></li>
+                                        <li><a href="">연혁</a></li>
+                                        <li><a href="">CI소개</a></li>
+                                    </ul>
+                                </li>
+                                <li class="bold">
+                                    <a href="">조직구성</a>
+                                    <ul class="boldsub">
+
+                                        <li><a href="">조직도</a></li>
+                                        <li><a href="">담당직원검색</a></li>
+                                    </ul>
+                                </li>
+                                <li class="bold">
+                                    <a href="">오시는 길</a>
+                                </li>
+                            </ul>
+
+
+
+
+
+                        </div>
+
+                        <!--데스크탑용 메뉴-->
+
+
+                        <ul class="CollMenu">
+                            <div class="head">
+                                <a href="" class="logo Black"></a>
+                                <label for="" class="collaps">
+                                    <i class="fas fa-bars"></i>
+                                </label>
+                            </div>
+                            <li>
+                                <h3 class="menuName">정보공개</h3>
+                                <ul class="sub">
+                                    <li class="bold"><a href="">정보공개제도안내</a></li>
+                                    <li class="bold"><a href="">행정정보사전공표</a></li>
+                                    <li class="bold"><a href="">행정정보사전공표모니터링</a></li>
+                                    <li class="bold"><a href="">정보목록</a></li>
+                                    <li class="bold"><a href="">사업실명제</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3 class="menuName">주요사업</h3>
+                                <ul class="sub">
+                                    <li class="bold">
+                                        <a href="">방송통신융합진흥</a>
+                                    </li>
+                                    <li><a href="">방송프로그램제작지원</a></li>
+                                    <li><a href="">해외한국어방송지원</a></li>
+                                    <li><a href="">빛마루방송지원센터 운영</a></li>
+                                    <li><a href="">녹색인증평가</a></li>
+                                    <li><a href="">방송통신융합서비스</a></li>
+                                    <li><a href="">스마트미디어 활성화 기반구축</a></li>
+                                    <li><a href="">양방향프로그램제작지원</a></li>
+                                    <li class="bold">
+                                        <a href="">전파지원관리</a>
+                                    </li>
+                                    <li><a href="">무선국검사</a></li>
+                                    <li><a href="">전자파강도 측정</a></li>
+                                    <li><a href="">국가기술자격시험</a></li>
+                                    <li class="bold">
+                                        <a href="">정책연구</a>
+                                    </li>
+
+
+                                    <li><a href="">전파방송정책연구및지원</a></li>
+                                    <li><a href="">전파자원연구개발</a></li>
+                                    <li class="bold">
+                                        <a href="">ICT 기금관리 ㆍ 운용</a>
+                                    </li>
+                                    <li><a href="">기금현황</a></li>
+                                    <li><a href="">기금운용</a></li>
+                                    <li><a href="">기금사업관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3 class="menuName">고객센터</h3>
+                                <ul class="sub">
+
+                                    <li class="bold">
+                                        <a href="">국민참여</a>
+                                    </li>
+
+                                    <li><a href="">혁신제안방</a></li>
+                                    <li><a href="">고객제안</a></li>
+                                    <li><a href="">민원상담</a></li>
+                                    <li><a href="">클린신고센터</a></li>
+                                    <li><a href="">예산낭비신고센터</a></li>
+                                    <li><a href="">자유게시판</a></li>
+                                    <li><a href="">원장과의 대화</a></li>
+                                    <li><a href="">온라인 설문</a></li>
+                                    <li><a href="">KCA 대나무숲</a></li>
+                                    <li><a href="">청탁금지법 위반신고</a></li>
+
+
+
+                                    
+
+                                    <li class="bold">
+                                        <a href="">무선국 검사</a>
+                                    </li>
+                                    <li><a href="">정기검사 대상국조회</a></li>
+                                    <li><a href="">무선국 준공신고</a></li>
+                                    <li><a href="">무선국 검사지변경</a></li>
+                                    <li><a href="">무선국정기검사연기신청</a></li>
+                                    <li><a href="">검사수수료 과오납 환급안내</a></li>
+                                    <li><a href="">업무안내</a></li>
+                                    <li><a href="">공지사항</a></li>
+                                    <li><a href="">묻고답하기</a></li>
+                                    <li><a href="">무선국검사 신문고</a></li>
+
+                                    
+
+                                    <li class="bold">
+                                        <a href="">전파강도측정</a>
+                                    </li>
+
+                                    <li><a href="">전자파홈페이지바로가기</a></li>
+                                    <li><a href="">무선국전자파강도측정요청</a></li>
+
+
+
+                                    <li class="bold">
+                                        <a href="">FAQ</a>
+                                    </li>
+
+
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h3 class="menuName">알림마당</h3>
+                                <ul class="sub">
+                                    <li class="bold">
+                                        <a href="">공지사항</a>
+                                    </li>
+                                    <li class="bold">
+                                        <a href="">채용정보</a>
+                                    </li>
+                                    <li class="bold">
+                                        <a href="">입찰정보</a>
+                                    </li>
+                                    <li><a href="">입찰안내</a></li>
+                                    <li><a href="">입찰계약절차</a></li>
+                                    <li><a href="">입찰공고</a></li>
+                                    <li><a href="">입찰관련자료</a></li>
+                                    <li><a href="">관계법령</a></li>
+                                    <li class="bold">
+                                        <a href="">KCA소식</a>
+                                    </li>
+                                    <li><a href="">KCA뉴스</a></li>
+                                    <li><a href="">보도자료</a></li>
+                                    <li><a href="">원장동정</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h3 class="menuName">자료실</h3>
+                                <ul class="sub">
+                                    <li class="bold">
+                                        <a href="">동향자료</a>
+                                    </li>
+                                    <li><a href="">미디어 이슈 &amp; 트랜드</a></li>
+                                    <li><a href="">방송통신전파저널</a></li>
+                                    <li><a href="">Trend &amp; Insight</a></li>
+                                    <li><a href="">방송통신 이슈 &amp; 전망</a></li>
+                                    
+                                    <li class="bold">
+                                        <a href="">연구보고서</a>
+                                    </li>
+                                    <li><a href="">KCA연구보고서</a></li>
+                                    <li><a href="">방송통신정책연구보고서(종료)</a></li>
+                                    
+
+                                    <li class="bold">
+                                        <a href="">방송통신전파관계법령</a>
+                                    </li>
+                                    <li class="bold">
+                                        <a href="">KCA 사보</a>
+                                    </li>
+                                    <li class="bold">
+                                        <a href="">측정장비기술규격</a>
+                                    </li>
+                                    <li class="bold">
+                                        <a href="">서식자료실</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h3 class="menuName">열린경영</h3>
+                                <ul class="sub">
+                                    <li class="bold">
+                                        <a href="">경영공시</a>
+                                    </li>
+                                    <li class="bold">
+                                        <a href="">정보공개</a>
+                                    </li>
+
+                                    <li><a href="">정보공개제도안내</a></li>
+                                    <li><a href="">행정정보사전공표</a></li>
+                                    <li><a href="">행정정보사전공표모니터링</a></li>
+                                    <li><a href="">정보목록</a></li>
+                                    <li><a href="">정보공개청구</a></li>
+                                    <li><a href="">사업실명제</a></li>
+
+                                    <li class="bold">
+                                        <a href="">사회공헌</a>
+                                    </li>
+                                    <li><a href="">사회공헌</a></li>
+                                    <li><a href="">본사지방이전(완료)</a></li>
+                                    <li><a href="">윤리헌장</a></li>
+                                    <li><a href="">고객서비스헌장</a></li>
+                                    <li><a href="">임직원행동강령</a></li>
+                                    <li class="bold">
+                                        <a href="">사규</a>
+                                    </li>
+                                    <li class="bold">
+                                        <a href="">사규 제 ㆍ 개정예고</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3 class="menuName">KCA소개</h3>
+                                <ul class="sub">
+                                    <li class="bold">
+                                        <a href="">원장인사말</a>
+                                    </li>
+                                    <li class="bold">
+                                        <a href="">개요</a>
+                                    </li>
+                                    <li><a href="">설립목적</a></li>
+                                    <li><a href="">비전</a></li>
+                                    <li><a href="">연혁</a></li>
+                                    <li><a href="">CI소개</a></li>
+                                    <li class="bold">
+                                        <a href="">조직구성</a>
+                                    </li>
+                                    <li><a href="">조직도</a></li>
+                                    <li><a href="">담당직원검색</a></li>
+                                    <li class="bold">
+                                        <a href="">오시는 길</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <figure id="visual" class="page">
+                <div class="imgSection">
+                    <ul class="imgWrap">
+                        <li class="imgVs1" page-val="1">
+                            <div class="view">
+                                <span class="imgLogoBig"></span>
+                            </div>
+                            <div class="viewText1">
+                                <p class="text1">
+                                    전파로 소통항고 방송통신으로<br> 행복한 대한민국을 만들겠습니다.
+                                </p>
+                            </div>
+                            <div class="viewText">
+                                <p class="vstext">
+                                    방송통신전파의 혁신성장을 선도하는 진흥기관
+                                </p>
+                            </div>
+                        </li>
+
+
+                        <li class="imgVs2" page-val="2">
+                            <div class="view">
+                                <span class="imgLogoBig"></span>
+                            </div>
+                            <div class="viewText1">
+                                <p class="text1">
+                                    전파로 소통항고 방송통신으로<br> 행복한 대한민국을 만들겠습니다.
+                                </p>
+                            </div>
+                            <div class="viewText">
+                                <p class="vstext">
+                                    방송통신전파의 혁신성장을 선도하는 진흥기관
+                                </p>
+                            </div>
+                        </li>
+
+                        <li class="imgVs3" page-val="3">
+                            <div class="view">
+                                <span class="imgLogoBig"></span>
+                            </div>
+                            <div class="viewText1">
+                                <p class="text1">
+                                    전파로 소통항고 방송통신으로<br> 행복한 대한민국을 만들겠습니다.
+                                </p>
+                            </div>
+                            <div class="viewText">
+                                <p class="vstext">
+                                    방송통신전파의 혁신성장을 선도하는 진흥기관
+                                </p>
+                            </div>
+                        </li>
+
+                        <li class="imgVs4" page-val="4">
+                            <div class="view">
+                                <span class="imgLogoBig"></span>
+                            </div>
+                            <div class="viewText1">
+                                <p class="text1">
+                                    전파로 소통항고 방송통신으로<br> 행복한 대한민국을 만들겠습니다.
+                                </p>
+                            </div>
+                            <div class="viewText">
+                                <p class="vstext">
+                                    방송통신전파의 혁신성장을 선도하는 진흥기관
+                                </p>
+                            </div>
+                        </li>
+
+                        <li class="imgVs5" page-val="5">
+                            <div class="view">
+                                <span class="imgLogoBig"></span>
+                            </div>
+                            <div class="viewText1">
+                                <p class="text1">
+                                    전파로 소통항고 방송통신으로<br> 행복한 대한민국을 만들겠습니다.
+                                </p>
+                            </div>
+                            <div class="viewText">
+                                <p class="vstext">
+                                    방송통신전파의 혁신성장을 선도하는 진흥기관
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="pgNation">
+                        <label data-val="1" class="lbtn on"></label>
+                        <label data-val="2" class="lbtn"></label>
+                        <label data-val="3" class="lbtn"></label>
+                        <label data-val="4" class="lbtn"></label>
+                        <label data-val="5" class="lbtn"></label>
+                    </div>
+                </div>
+                <a href="" class="nextPage"></a>
+            </figure>
+
+            <section id="vision" class="page">
+
+                <h2 class="pageTitle">
+                    <!--   이미지로 넣기 -->
+                </h2>
+                <span class="visionText">
+                    국민의 전파이용기회 확대,<br>
+                    <strong>방송ㆍ통신ㆍ전파</strong>진흥에 기여
+                </span>
+                <ul class="visionIco">
+                    <li class="icon1"></li>
+                    <li class="icon2"></li>
+                    <li class="icon3"></li>
+                </ul>
+                <div class="aim1">
+                    <h3 class="divTit">
+                        - 3대전략목표 -
+                    </h3>
+                    <ul>
+                        <li>
+                            <span class="num">1</span>
+                            <p>
+                                방송통신진흥촉진
+                            </p>
+                        </li>
+                        <li>
+                            <span class="num">2</span>
+                            <p>
+                                전자관리기반강화
+                            </p>
+                        </li>
+                        <li>
+                            <span class="num">3</span>
+                            <p>
+                                지속가능경영구현
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section id="news" class="page">
+                <h2 class="pageTitle">
+                    <!--   이미지로 넣기 -->
+                </h2>
+                <span class="newsText">
+                    국민에 품에 다가가는 정부기관 KCA
+                </span>
+                <ul>
+                    <li  class="con1">
+                        <a href="">
+                            <span class="newsImg"></span>
+                            <div class="teBox">
+
+                                <h3 class="conTit">KCA,정부혁신평가우수기관 국무총리 표창수상</h3>
+                                <p class="date1">2018.07.27</p>
+                            </div>
+                        </a>
+
+                    </li>
+                    <li  class="con2">
+                        <a href="">
+                            <span class="newsImg"></span>
+                             <div class="teBox">
+
+                                <h3 class="conTit">KCA,정부혁신평가우수기관 국무총리 표창수상</h3>
+                                <p class="date1">2018.07.27</p>
+                            </div>
+                        </a>
+
+                    </li>
+                    <li  class="con3">
+                        <a href="">
+                            <span class="newsImg"></span>
+                             <div class="teBox">
+
+                                <h3 class="conTit">KCA,정부혁신평가우수기관 국무총리 표창수상</h3>
+                                <p class="date1">2018.07.27</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="con4">
+                        <a href="">
+                            <span class="newsImg"></span>
+                             <div class="teBox">
+
+                                <h3 class="conTit">KCA,정부혁신평가우수기관 국무총리 표창수상</h3>
+                                <p class="date1">2018.07.27</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="imglabeling">
+                    <ul>
+                        <li class="lbtn on"><label dv="1"></label></li>
+                        <li class="lbtn"><label dv="2"></label></li>
+                        <li class="lbtn"><label dv="3"></label></li>
+                        <li class="lbtn"><label dv="4"></label></li>
+                    </ul>
+                </div>
+            </section>
+            <section id="career" class="page">
+                <h2 class="pageTitle">
+                    <!--   이미지로 넣기 -->
+                </h2>
+                <span class="newsText">
+                    국민의 전파이용 기회의 확대와 방송 | 통신 | 전파 진흥에 기여
+                </span>
+
+                <div class="boxWrap">
+                    <div class="box col7" id="bigTbox">
+                        <h3 class="boxTit">
+                            방송통신융합진흥
+                        </h3>
+                        <p class="boxCom">
+                            방송콘텐츠에 대한 시청자 만족도 제고 및 방송사업자 경쟁력 강화
+                        </p>
+                        <div class="detailPg">
+                            <ul>
+                                <li><a href="">방송프로그램제작지원</a></li>
+                                <li><a href="">해외한국어방송지원</a></li>
+                                <li><a href="">빛마루방송지원센터운영</a></li>
+                                <li><a href="">녹색인증평가</a></li>
+                                <li><a href="">방송통신융합서비스 활성화 지원</a></li>
+                                <li><a href="">스마트미디어 활성화기반 구축</a></li>
+                                <li><a href="">양방향 프로그램 제작지원</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="left col5" id="left1box">
+                        <h3 class="boxLeftTit">
+                            정책연구
+                        </h3>
+                        <a href="" class="pagego">바로가기 ▶</a>
+                    </div>
+
+                    <div class="left col5" id="left2box">
+                        <h3 class="boxLeftTit">
+                            정책연구
+                        </h3>
+                        <a href="" class="pagego">바로가기 ▶</a>
+                    </div>
+
+                    <div class="left col5" id="left3box">
+                        <h3 class="boxLeftTit">
+                            정책연구
+                        </h3>
+                        <a href="" class="pagego">바로가기 ▶</a>
+                    </div>
+
+
+
+
+
+
+                    <div class="bottom">
+                        <h3 class="boxTit">
+                            고객센터
+                        </h3>
+                        <p class="boxCom">
+                            한국방송통신전파진흥원은 고객의 소중한 의견을 반영하여 고객과 함께하는 공공기관이 되겠습니다.
+                        </p>
+                        <div class="detailPg">
+                            <ul>
+                                <li><a href="">국민참여</a></li>
+                                <li><a href="">무선국검사</a></li>
+                                <li><a href="">전자파강도측정</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+        </div>
+        <footer id="ft">
+            <nav class="tfnv">
+                <ul>
+                    <li><a href="">이용약관</a></li>
+                    <li><a href="">개인정보처리방침</a></li>
+                    <li><a href="">이메일무단수집거부</a></li>
+                    <li><a href="">저작권정책</a></li>
+                    <li><a href="">오시는 길</a></li>
+                    <li><a href="">홈페이지개선의견</a></li>
+                </ul>
+            </nav>
+            <hr class="fthr">
+            <div class="familysite">
+                <h3 class="famTit">
+                    familySite
+                    <p class="drop">
+                        ▼
+                    </p>
+                </h3>
+                <ul class="famSub">
+                    <li><a href="">대한민국전자정부</a></li>
+                    <li><a href="">과학기술정보통신부전자민원센터</a></li>
+                    <li><a href="">방송통신위원회 통합민원센터</a></li>
+                    <li><a href="">국민권익위원회</a></li>
+                    <li><a href="">국민신문고</a></li>
+                </ul>
+
+            </div>
+            <hr class="fthr">
+            <p class="ftTxt">
+                <!--            이미지 만들어 넣기 배경으로-->
+            </p>
+
+        </footer>
+    </div>
+</body>
+
+</html>

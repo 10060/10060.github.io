@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>폰트단위수업</title>
+    <link href="https://fonts.googleapis.com/css?family=K2D|Lato|Noto+Sans+KR|Noto+Serif+KR|Open+Sans|Oswald|Roboto|Roboto+Condensed|Roboto+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poor+Story" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans|Poor+Story" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Jua|Sunflower:300" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-size: 100%;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Noto Serif KR', 'Oswald', sans-serif;
+
+        }
+
+        p,
+        span {
+            display: block;
+        }
+
+        p {
+            font-size: 3em;
+        }
+
+        .em {
+            font-size: 5em;
+        }
+
+        /* em 부모의 3em * 5em = 15em으로 적용*/
+        /* vw * 브라우저너비 = 실제글자크기  */
+         /* vw * 브라우저너비 = 실제글자크기  */
+         /* vh * 브라우저높이 = 실제글자크기  */
+         /* vmin * 웹 브라우저의 너비와 높이중 작은 값 = 실제글자크기  */
+         /* vmax * 웹브라우저의 너비와 높이중 큰값 = 실제글자크기  */
+        
+ 
+        .em2 {
+            font-size: 0.5em;
+        }
+
+        .rem {
+            font-size: 8em;
+        }
+
+        .vw {
+            font-size: 4vw;
+        }
+
+        .vh {
+            font-size: 20vh;
+        }
+
+        .vmin {
+            font-size: 10vmin;
+        }
+
+        .vmax {
+            font-size: 20vmax;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <p>
+        기준 P tag
+        <span class="em">em</span>
+        <span class="em2">em2</span>
+        <span class="rem">rem</span>
+        <span class="vw">vw</span>
+        <span class="vh">vh</span>
+        <span class="vmin">vmin</span>
+        <span class="vmax">vmax</span>
+    </p>
+</body>
+
+</html>
