@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>익스피디아</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no , initial-scale=1">
+    <!--    메타태그-->
+    <meta http-equiv="content-type" content="text/html">
+    <meta name="title" content="">
+    <meta name="description" content="익스피디아에서 여행을 떠나보자">
+    <meta name="keywords" content="익스피디아,EXPIDEA, 여행 , 숙박">
+    <meta name="author" content="EXPIDEA">
+    <!-- css-->
+    <link rel="stylesheet" href="style.css">
+    <!--폰트-->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR|Noto+Serif+KR|Playfair+Display|Roboto|Roboto+Condensed|Roboto+Slab" rel="stylesheet">
+    <!--아이콘-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!--
+               font-family: 'Roboto', sans-serif;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-family: 'Roboto Slab', serif;
+            font-family: 'Playfair Display', serif;
+            font-family: 'Noto Serif KR', sans-serif;
+-->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".gnb > ul > li > a").hover(function() {
+                $(this).removeAttr(href);
+                $(this).siblings(".sub").slideDown(300);
+            });
+            
+            
+            $(".con2 ul li").hover(function(){
+                $(this).find(".tWrap").css("bottom", "0").css("height", "240px");
+                $(this).find(".conSum").css("height", "auto");
+                
+                $(this).find(".hup").css("bottom", "30px");
+                $(this).siblings().find(".tWrap").css("bottom", "-60px").css("height", "160px");
+                $(this).siblings().find(".conSum").css("height", "22px");
+                 $(this).siblings().find(".hup").css("bottom", "12px");
+            });
+            
+            
+            $(".con2 ul li").mouseleave(function(){
+                $(this).find(".tWrap").css("bottom", "-60px").css("height", "160px");
+                $(this).find(".conSum").css("height", "22px");
+                 $(this).find(".hup").css("margin-top", "12px");
+            });
+            
+            
+            $(".mOpen").click(function(){
+                $(".mob.menu1").toggle(100);
+                $(".mob.menu1 li:first-child").find(".sub1").css("display","block");
+                $(".movWrap").toggleClass("on");
+                
+            });
+            $(".menuName").click(function(){
+                $(this).siblings(".sub1").slideDown(100);
+                $(this).parent(".mob.menu1 li").siblings().find(".sub1").slideUp(100);
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+
+    <div class="wrap">
+        <header class="hd">
+            <ul class="tnb">
+                <li><a href="">내계정</a></li>
+                <li><a href="">로그인/로그아웃</a></li>
+                <li><a href="">고객지원</a></li>
+                <li><a href="">영어</a></li>
+            </ul>
+            <div class="bgc">
+
+                <nav class="gnb">
+                    <a href="" class="logo"></a>
+
+                    <ul>
+                        <li>
+                            <a href="hotel.html" class="menuName">호텔</a>
+                            <div class="subWrap"></div>
+                        </li>
+                        <li>
+                            <a href="" class="menuName">항공</a>
+                            <div class="subWrap"></div>
+                        </li>
+                        <li>
+                            <a href="" class="menuName">항공+호텔</a>
+                            <div class="subWrap"></div>
+                        </li>
+                        <li>
+                            <a href="" class="menuName">24시간세일</a>
+                            <div class="subWrap"></div>
+                        </li>
+                        <li>
+                            <a href="" class="menuName">마감특가</a>
+                            <div class="subWrap"></div>
+                        </li>
+                        <li>
+                            <a href="" class="menuName">렌터카</a>
+                            <div class="subWrap"></div>
+                        </li>
+                        <li>
+                            <a href="" class="menuName">추천프로모션</a>
+                            <div class="subWrap"></div>
+                        </li>
+                        <li>
+                            <a href="" class="menuName">모바일</a>
+                            <div class="subWrap"></div>
+                        </li>
+                        <li>
+                            <a href="" class="menuName">트래블블로그</a>
+                            <div class="subWrap"></div>
+                        </li>
+                        <li>
+                            <a href="reword.html" class="menuName">익스피디아리워드</a>
+                            <div class="subWrap"></div>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+            <label class="mOpen"><i class="fas fa-bars"></i></label>
+            <div class="movWrap">
+
+            </div>
+            <ul class="mob menu1">
+                <li>
+                    <h2 class="menuName">여행예약</h2>
+                    <ul class="sub1">
+                        <li><a href="index.html">홈</a></li>
+                        <li><a href="hotel.html">호텔</a></li>
+                        <li><a href="">항공</a></li>
+                        <li><a href="">항공+호텔</a></li>
+                        <li><a href="">24시간 세일</a></li>
+                        <li><a href="">마감 특가</a></li>
+                        <li><a href="">렌터카</a></li>
+                        <li><a href="">추천 프로모션</a></li>
+                        <li><a href="">모바일</a></li>
+                        <li><a href="">트래블 블로그</a></li>
+                        <li><a href="">익스피디아 리워드</a></li>
+                    </ul>
+
+                </li>
+                <li>
+                    <a class="menuName">숙박시설등록하기</a>
+                </li>
+                <li>
+                    <h2 class="menuName">내계정</h2>
+                    <ul class="sub1">
+                        <li><a href="">로그인</a></li>
+                        <li><a href="">회원가입</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="" class="menuName">내리스트</a>
+                </li>
+                <li>
+                    <h2 class="menuName">내 일정</h2>
+                    <ul class="sub1">
+                        <li><a href="">일정</a></li>
+                        <li><a href="">렌터카 일정</a></li>
+                        <li><a href="">온라인 체크인 및 수하물</a></li>
+                        <li><a href="">영수증확인</a></li>
+                    </ul>
+
+                </li>
+                <li>
+                    <h2 class="menuName">고객지원</h2>
+                    <ul class="sub1">
+                        <li><a href="">고객지원</a></li>
+                        <li><a href="">익스피디아 리워드 FAQ</a></li>
+                        <li><a href="">고객의견</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a class="menuName">English</a>
+                </li>
+
+            </ul>
+
+        </header>
+        <figure class="visual">
+            <div class="tcontent">
+
+                <input type="radio" name="ra1" id="tab1_1" checked>
+                <input type="radio" name="ra1" id="tab2_1">
+                <input type="radio" name="ra1" id="tab3_1">
+                <input type="radio" name="ra1" id="tab4_1">
+                <ul class="conTab">
+                    <li><label for="tab1_1">호텔</label></li>
+                    <li><label for="tab2_1">항공</label></li>
+                    <li><label for="tab3_1">항공+호텔</label></li>
+                    <li><label for="tab4_1">렌터카</label></li>
+                </ul>
+                <div class="tabCon" id="tab1">
+                    <h1 class="tabName">
+                        익스피디아에서 호텔을 찾아보세요
+                    </h1>
+                    <form action="" accept-charset="utf-8" name="hotel_check" method="get">
+                        <fieldset class="formCon">
+                            <label class="wtDate">날짜 선택</label>
+
+
+                            <input type="text" placeholder="호텔명,장소,지역명, 기차역, 공항, 랜드마크를 검색해 보세요" class="text1">
+                            <label class="ckin1">체크인</label>
+                            <input type="date" placeholder="체크인" class="checkin">
+                            <label class="ckout1">체크아웃</label>
+                            <input type="date" placeholder="체크아웃" class="checkout">
+                            <label class="kewd">관심키워드를 검색해보세요</label>
+                            <input type="text" placeholder="여행객" class="forign">
+
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="tabCon" id="tab2">
+
+
+                    <h1 class="tabName">
+                        익스피디아에서 항공을 찾아보세요
+                    </h1>
+                    <form action="" accept-charset="utf-8" name="hotel_check" method="get">
+                        <fieldset class="formCon">
+                            <label>항공검색</label>
+
+                            <input type="text" placeholder="출발지" class="text1">
+                            <input type="date" placeholder="가는날" class="checkin">
+                            <input type="date" placeholder="오는날" class="checkin">
+                            <input type="text" placeholder="출발지">
+                            <input type="checkbox"><label>직항만</label>
+                            <input type="checkbox"><label for="dateOpen">여행중 일부 날짜에만 호텔 필요</label>
+                            <div id="dateOpen">
+                                <input type="date" placeholder="체크인">
+                                <input type="date" placeholder="체크아웃">
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+
+                <div class="tabCon" id="tab3">
+
+                    <h1 class="tabName">
+                        익스피디아에서 호텔+호텔을 찾아보세요
+                    </h1>
+                    <form action="" accept-charset="utf-8" name="hotel_check" method="get">
+                        <fieldset class="formCon pls">
+                            <label>항공+호텔</label>
+                            <input type="text" placeholder="출발지" class="text1">
+
+                            <input type="date" placeholder="가는날" class="checkin">
+                            <input type="date" placeholder="오는날" class="checkin">
+                            <input type="text" placeholder="여행객" class="text2">
+                        </fieldset>
+                        <input type="checkbox"><label>직항민</label>
+                        <input type="checkbox"><label for="dateOpen">여행중 일부 날짜에만 호텔 필요</label>
+                        <div id="dateOpen1">
+                            <input type="date" placeholder="체크인" class="checkin">
+                            <input type="date" placeholder="체크아웃" class="checkin">
+                        </div>
+                    </form>
+                </div>
+                <div class="tabCon" id="tab4">
+
+                    <h1 class="tabName">
+                        익스피디아에서 렌터카를 찾아보세요
+                    </h1>
+                    <form action="" accept-charset="utf-8" name="hotel_check" method="get">
+                        <fieldset class="formCon">
+                            <label>날짜 선택</label>
+                            <input type="date">
+
+                            <input type="text" placeholder="호텔명,장소,지역명을 검색해보세요">
+                            <input type="date" placeholder="가는날" class="checkin">
+                            <input type="date" placeholder="오는날" class="checkin">
+
+                        </fieldset>
+                    </form>
+                    <div class="adWrap">
+                        <p class="adsub">
+                            Sponser advertise
+                        </p>
+                        <img src="images/carshare.gif" alt="" class="adver">
+                    </div>
+                </div>
+            </div>
+
+
+        </figure>
+        <section class="content" id="bstSpotWrap">
+            <div class="bestSpot">
+
+
+                <h2 class="contTit">
+                    여행지 BEST SPOT 추천
+                </h2>
+                <input type="radio" name="ra3" id="tc2_1" checked>
+                <input type="radio" name="ra3" id="tc2_2">
+                <input type="radio" name="ra3" id="tc2_3">
+                <input type="radio" name="ra3" id="tc2_4">
+                <input type="radio" name="ra3" id="tc2_5">
+                <input type="radio" name="ra3" id="tc2_6">
+                <ul class="tabCon2">
+                    <li><label for="tc2_1">동남아</label></li>
+                    <li><label for="tc2_2">중국/홍콩</label></li>
+                    <li><label for="tc2_3">일본</label></li>
+                    <li><label for="tc2_4">유럽</label></li>
+                    <li><label for="tc2_5">미주/중남미</label></li>
+                    <li><label for="tc2_6">국내</label></li>
+                </ul>
+
+
+                <div class="con2" id="tb2_1">
+                    <ul>
+                        <li>
+                            <img src="./images/trip1.jpg" alt="">
+                            <div class="tWrap">
+                                <h3 class="con2Tit">하노이/하롱베이 5일<br>영원한 베스트셀러</h3>
+                                <p class="conSum">세계 유네스코 자연유산</p>
+                                <a href="" class="hup">상품보러가기</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/trip2.jpg" alt="">
+                            <div class="tWrap">
+                                <h3 class="con2Tit">세부 4일, 5일<br>동남아 최고의 휴양지</h3>
+                                <p class="conSum">액티비티와 휴양을 동시에!</p>
+                                <a href="" class="hup">상품보러가기</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/trip3.jpg" alt="">
+                            <div class="tWrap">
+                                <h3 class="con2Tit">온 가족이 행복한 여행<br>코타키나발루 5일</h3>
+                                <p class="conSum">황홀한 석양, 잊지못할 반딧불</p>
+                                <a href="" class="hup">상품보러가기</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/trip4.jpg" alt="">
+                            <div class="tWrap">
+                                <h3 class="con2Tit">동남아시아 1PICK<br>후회없는 방콕/파타야 5일</h3>
+                                <p class="conSum">태국 베스트셀러 상품</p>
+                                <a href="" class="hup">상품보러가기</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="con2" id="tb2_2">
+                    <ul>
+                        <li>
+                            <img src="images/trip2_1.jpg" alt="">
+                            <div class="tWrap">
+                                <h3 class="con2Tit">장가계/원가계 5,6,7일<br>천혜의 자연경관</h3>
+                                <p class="conSum">아바타 배경의 모티브 장가계</p>
+                                <a href="" class="hup">상품보러가기</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/trip2_2.png" alt="">
+                            <div class="tWrap">
+                                <h3 class="con2Tit">홍콩/마카오 3,4일<br>로맨틱 시티</h3>
+                                <p class="conSum">낮에는 황홀한 요리를 즐기고</p>
+                                <a href="" class="hup">상품보러가기</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/trip2_4.jpg" alt="">
+                            <div class="tWrap">
+                                <h3 class="con2Tit">계림/양삭 5, 6일<br>한 폭의 그림같은 풍경</h3>
+                                <p class="conSum">끝없이 이어지는 풍경</p>
+                                <a href="" class="hup">상품보러가기</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/trip3.jpg" alt="">
+                            <div class="tWrap">
+                                <h3 class="con2Tit">청도(칭다오)3일<br>제주보다 칭다오</h3>
+                                <p class="conSum">맛있는 먹거리, 다양한 볼거리</p>
+                                <a href="" class="hup">상품보러가기</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="con2" id="tb2_3">
+                    <ul>
+                        <li>
+                            <img src="images/trip3_1.jpg" alt="">
+                            <div class="tWrap">
+                                <h3 class="con2Tit">도쿄/하코네(시즈오카)4일<br>
+                                    도쿄+ 근교까지!</h3>
+                                <p class="conSum">
+                                    일본의 심장 도쿄에서<br>
+                                    즐기는 매력적인 일본!<br>
+                                    가도가도 가고싶은 도쿄</p>
+                                <a href="" class="hup">상품보러가기</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/trip3_2.jpg" alt="">
+                            <div class="tWrap">
+                                <h3 class="con2Tit">오사카 4일<br>
+                                    전일관광으로 알차게</h3>
+                                <p class="conSum">
+                                    간사이 핵심지역 완전정복<br>
+                                    청수사를 거닐며 힐링하고<br>
+                                    꽉찬 일정으로 관광도 알차게</p>
+                                <a href="" class="hup">상품보러가기</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/trip3_3.jpg" alt="">
+                            <div class="tWrap">
+                                <h3 class="con2Tit">오키나와 4일<br>
+                                    에메랄드 빛 유혹</h3>
+                                <p class="conSum">
+                                    츄라우미 수족관과 만좌모,<br>
+                                    류큐왕국의 본성 수리성!<br>
+                                    구타카섬+ 류큐문화체험
+                                    상품보기</p>
+                                <a href="" class="hup">상품보러가기</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/trip3_4.jpg" alt="">
+                            <div class="tWrap">
+                                <h3 class="con2Tit">규슈 3일<br>
+                                    핵심 관광지&amp;온천호텔</h3>
+                                <p class="conSum">
+                                    나빼고 다 가봤대요~<br>
+                                    동화나라 유후인에서<br>
+                                    힐링 가득 온천호텔까지♥</p>
+                                <a href="" class="hup">상품보러가기</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="con2" id="tb2_4">
+                    <ul>
+                        <li>
+                            <img src="images/trip4_1.jpg" alt="">
+                            <div class="tWrap">
+                                <h3 class="con2Tit">남태평양 베스트셀러!<br>
+                                    괌PIC</h3>
+                                <p class="conSum">아동동반 가족여행 추천 리조트!<br>
+                                    올해 4월 추가된<br>
+                                    신규 컨텐츠까지 즐겨보세요</p>
+                                <a href="" class="hup">상품보러가기</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/trip4_2.jpg" alt="">
+                            <div class="tWrap">
+                                <h3 class="con2Tit">럭셔리 호캉스,<br>
+                                    켄싱턴 호텔 사이판</h3>
+                                <p class="conSum">새로운 사이판을 만나는 곳<br>
+                                    럭셔리 호캉스<br>
+                                    켄싱턴 호텔 사이판에서 즐기자</p>
+                                <a href="" class="hup">상품보러가기</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/trip4_3.jpg" alt="">
+                            <div class="tWrap">
+                                <h3 class="con2Tit">완벽한 여행지<br>
+                                    시드니는 사랑입니다♥</h3>
+                                <p class="conSum">남녀노소<br>
+                                    누구와 함께라도<br>
+                                    만족이 가득한 특별한 여행</p>
+                                <a href="" class="hup">상품보러가기</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/trip4_4.jpg" alt="">
+                            <div class="tWrap">
+                                <h3 class="con2Tit">언제나 아름다운<br>
+                                    팔라우 퍼시픽리조트5,6일</h3>
+                                <p class="conSum">#유네스코+밤낚시<br>
+                                    #한국여행협회 선정<br>
+                                    #헐리웃 스타들의 휴양지</p>
+                                <a href="" class="hup">상품보러가기</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="con2" id="tb2_5">
+                    <ul>
+                        <li>
+                            <img src="images/trip5_1.jpg" alt="">
+                            <div class="tWrap">
+                                <h3 class="con2Tit">미서부 완전 8/9일<br>
+                                    4대캐년 3대도시</h3>
+                                <p class="conSum">미국 패키지 여행의 꽃!<br>
+                                    3대캐년&amp;3대도시 투어로<br>
+                                    미서부 완전정복!</p>
+                                <a href="" class="hup">상품보러가기</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/trip5_2.png" alt="">
+                            <div class="tWrap">
+                                <h3 class="con2Tit">가성비 갑!<br>
+                                    하얏트 플레이스 6/7일</h3>
+                                <p class="conSum">하와이를 대표하는 스테디셀러<br>
+                                    공항송영, 오아후섬일주 포함<br>
+                                    자유일정으로 하와이여행 완성</p>
+                                <a href="" class="hup">상품보러가기</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/trip5_3.jpg" alt="">
+                            <div class="tWrap">
+                                <h3 class="con2Tit">화려한 도시와 대자연의 조화<br>
+                                    미동부 캐나다 9일/10일</h3>
+                                <p class="conSum">비수기 특가 모음<br>
+                                    미국 캐나다 패키지 여행의<br>
+                                    정석 코스</p>
+                                <a href="" class="hup">상품보러가기</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/trip5_4.jpg" alt="">
+                            <div class="tWrap">
+                                <h3 class="con2Tit">캐나다 여행 베스트 셀러<br>
+                                    캐나다 항공일주 8일</h3>
+                                <p class="conSum">가장 많은 사랑을 받아온 상품<br>
+                                    밴쿠버/로키/나이아가라까지<br>
+                                    완벽관광</p>
+                                <a href="" class="hup">상품보러가기</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="con2" id="tb2_6">
+                    <ul>
+                        <li>
+                            <img src="images/trip6.jpg" alt="">
+                            <div class="tWrap">
+                                <h3 class="con2Tit">뭉쳐야뜬다 방영 상품!<br>
+                                    남해안 일주 4일</h3>
+                                <p class="conSum">전 일정 특 1급 호텔 숙박!<br>
+                                    여수/남해/부산/한려수도청<br>
+                                    남도 여행의 멋과 맛 체험!</p>
+                                <a href="" class="hup">상품보러가기</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/trip6_2.jpg" alt="">
+                            <div class="tWrap">
+                                <h3 class="con2Tit">[실속] 오전출발<br>
+                                    제주 패키지 3일</h3>
+                                <p class="conSum">특식 포함 식사제공<br>
+                                    섬속의 島 우도<br>
+                                    카멜리아힐 / 에코랜드</p>
+                                <a href="" class="hup">상품보러가기</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/trip6_3.jpg" alt="">
+                            <div class="tWrap">
+                                <h3 class="con2Tit">대한민국 테마여행<br>
+                                    10선 선정 특가상품!</h3>
+                                <p class="conSum">한국관광공사와 함께하는<br>
+                                    남도맛기행 2박 3일<br>
+                                    목포,나주,광주,담양</p>
+                                <a href="" class="hup">상품보러가기</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/trip6_4.jpg" alt="">
+                            <div class="tWrap">
+                                <h3 class="con2Tit">대한민국 테마여행<br>
+                                    10선 선정 특가상품!</h3>
+                                <p class="conSum">
+                                    한국관광공사와 함께하는<br>
+                                    평화역사이야기 3일<br>
+                                    인천,파주,수원,화성</p>
+                                <a href="" class="hup">상품보러가기</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="content" id="promotion">
+            <div class="ben1Wrap">
+                <div class="benner1">
+                    <a href="" class="more">상품더보러가기</a>
+                </div>
+            </div>
+
+
+        </section>
+        <section class="content" id="adv1">
+
+            <ul class="bgCont">
+                <li class="bgC1">
+                    <div class="advConWrap">
+                        <h2 class="pageTit">
+                            대만의 아름다운 <br>야경을 보기<br>
+                            가장 쉬운방법
+                        </h2>
+                        <p>
+                            <span class="exYell">익스피디아 프로모션</span>에<br> 함께 참여하고, 인스타그램에 업로드 공유후 기대글을 작성하면 추첨의 기회가 주어집니다.
+                        </p>
+                    </div>
+                    <div class="conImg">
+
+                        <div class="conImgTWrap">
+                            <h3 class="conTit3">대만 추천 여행지!</h3>
+                            <span class="circle1"></span>
+                            <p class="placeName1">용산사</p>
+                            <span class="spotcon1">
+                                사원,사적 불교 여행지
+                            </span>
+                            <p class="imgCom1">
+                                용산사는 중화민국 타이베이시에 있는 사원으로, 타이베이에서 가장 오래된 사원입니다.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="conImg nt2">
+
+                        <div class="conImgTWrap">
+                            <h3 class="conTit3">대만 맛집여기에 다있어요</h3>
+                            <span class="circle1"></span>
+                            <p class="placeName1">라오허지에 관광 야시장</p>
+                            <span class="spotcon1">
+                                여행에 밤산책은 필수죠!
+                            </span>
+                            <p class="imgCom1">
+
+                            </p>
+                        </div>
+                    </div>
+
+                </li>
+                <li class="bgC2">
+
+                </li>
+            </ul>
+
+
+        </section>
+        <footer class="ft">
+            <nav class="tfnb">
+                <div class="ep1">
+
+                    <label class="ftName">Expedia</label>
+                    <ul>
+                        <li><a href="">회사소개</a></li>
+                        <li><a href="">광고</a></li>
+                        <li><a href="">개인정보취급방침</a></li>
+                        <li><a href="">이용약관</a></li>
+                        <li><a href="">호텔</a></li>
+                        <li><a href="">항공편</a></li>
+                        <li><a href="">에어텔</a></li>
+                        <li><a href="">사이트맵</a></li>
+                    </ul>
+                </div>
+                <div class="ep1">
+
+                    <label class="ftName">제휴 서비스</label>
+                    <ul>
+                        <li><a href="">Expedia Partner Central</a></li>
+                        <li><a href="">숙박 시설 추가</a></li>
+                        <li><a href="">여행사</a></li>
+                        <li><a href="">여행사 전용 사이트</a></li>
+                    </ul>
+
+                </div>
+            </nav>
+            <div class="ftText">
+                <p>ⓒ2018 Expedia, Inc. / Expedia Asia Holdings Mauritius / AAE Travel Pte Ltd. All rights reserved.</p>
+                <p>(주) 벡스트래블코리아 | 서울시 종로구 종로5길 7, Tower8 층</p>
+                <p>고객문의 : 여기 클릭 | 전화 : +02-3480-0118 | 이메일 : travel@support.expedia.co.kr</p>
+                <p>대표이사 : 조나단싱클레어닐 | 사업자등록번호 ; 724-86-00245 | 사업자정보확인</p>
+                <p>
+                    관광사업자 등록번호 : 제2016 -000008호 |통신판매업신고번호 : 2015-서울종로 -1091호
+                </p>
+
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>
