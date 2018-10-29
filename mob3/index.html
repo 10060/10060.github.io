@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>우리은행 모바일 버전만들기</title>
+    <!--   파비콘 -->
+    <link rel="stylesheet" href="">
+    <!--   뷰포트 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <!--    크로스브라우징-->
+    <!--s-->
+    <!-- 서체-->
+
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Noto+Serif+JP|Noto+Serif+KR|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+
+
+    <!--    
+    font-family: 'Noto Serif KR', sans-serif;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Noto Serif JP', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    -->
+
+
+
+    <!--    css 연결-->
+    <link rel="stylesheet" href="index.css">
+    <!--    아이콘 연결-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="index.js"></script>
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <div class="pageWrap">
+
+        <header id="hd">
+            <nav class="tnb">
+                <input type="checkbox" id="Qu1">
+                <label for="Qu1" class="quicklable">
+                    <img src="./images/menu2.png" alt="퀵메뉴아이콘">
+                </label>
+                <h1 class="logo">
+                    <a href="*">
+                        <img src="./images/logo200.png" alt="우리은행컬러로고">
+                    </a>
+                </h1>
+
+                <input type="submit" id="search">
+                <label for="search" class="ser1">
+                    <i class="fas fa-search"></i>
+                </label>
+
+                <label for="colOpen" id="col"><i class="fas fa-bars"></i></label>
+                <!--     Collapsible Menu -->
+                <input type="checkbox" id="colOpen">
+
+                <div class="QuickOpen">
+
+
+                    <div class="imgView">
+                        <ul>
+
+
+
+
+                            <li class="viewli">
+                                <img src="./images/wr.png" alt="">
+                                <button class="left"><i class="fas fa-chevron-circle-left"></i></button>
+                                <button class="right"><i class="fas fa-chevron-circle-right"></i></button>
+                                <a href="" class="btnGo">바로가기</a>
+                            </li>
+                            <li class="viewli">
+                                <img src="./images/mar.png" alt="">
+                                <button class="left"><i class="fas fa-chevron-circle-left"></i></button>
+                                <button class="right"><i class="fas fa-chevron-circle-right"></i></button>
+                                <a href="" class="btnGo">바로가기</a>
+                            </li>
+                            <li class="viewli">
+                                <img src="./images/webb2.png" alt="">
+                                <button class="left"><i class="fas fa-chevron-circle-left"></i></button>
+                                <button class="right"><i class="fas fa-chevron-circle-right"></i></button>
+                                <a href="" class="btnGo">바로가기</a>
+                            </li>
+                            <li class="viewli">
+                                <img src="./images/card.png" alt="">
+                                <button class="left"><i class="fas fa-chevron-circle-left"></i></button>
+                                <button class="right"><i class="fas fa-chevron-circle-right"></i></button>
+                                <a href="" class="btnGo">바로가기</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+
+                </div>
+
+                <div class="menuOpenWrap">
+
+
+                    <div class="leftWrap">
+                        <label for="ck1">APP센터</label>
+                        <label for="ck2">추천상품</label>
+                        <label for="ck3">우리뉴스</label>
+                        <label for="ck4">INFO</label>
+                        <label for="ck5">EVENT</label>
+                        <label for="ck6">우리이야기</label>
+                    </div>
+
+
+
+
+
+
+                    <div class="subWrap">
+
+
+                        <div class="subwli">
+                            <h3 class="subTit">우리은행 앱센터</h3>
+                            <ul class="sub appcenter">
+                                <li><a href="">위비톡</a></li>
+                                <li><a href="">원터치개인뱅킹</a></li>
+                                <li><a href="">원터치알림</a></li>
+                                <li><a href="">원터치기업뱅킹</a></li>
+                                <li><a href="">위비뱅크 by 우리은행</a></li>
+                                <li><a href="">우리로보알파</a></li>
+                                <li><a href="">우리글로벌뱅킹</a></li>
+                            </ul>
+                        </div>
+
+
+                        <div class="subwli">
+                            <h3 class="subTit">
+                                우리은행추천상품1
+                            </h3>
+                            <ul class="sub smart">
+                                <li><a href="">예금</a></li>
+                                <li><a href="">펀드</a></li>
+                                <li><a href="">대출</a></li>
+                                <li><a href="">현재환율</a></li>
+                            </ul>
+                        </div>
+
+
+                        <div class="subwli">
+
+                            <h3 class="subTit">
+                                우리은행추천상품2
+                            </h3>
+                            <ul class="sub news">
+                                <li><a href="">우리뉴스</a></li>
+                                <li><a href="">보도자료</a></li>
+                                <li><a href="">FAQ</a></li>
+                            </ul>
+                        </div>
+
+
+
+                        <div class="subwli">
+                            <h3 class="subTit">
+                                우리은행추천상품3
+                            </h3>
+                            <ul class="sub info">
+                                <li><a href="">추천상품</a></li>
+                                <li><a href="">스마트예약신규</a></li>
+                                <li><a href="">금리조회</a></li>
+                                <li><a href="">환율조회</a></li>
+                            </ul>
+                        </div>
+
+
+
+                        <div class="subwli">
+                            <h3 class="subTit">
+                                우리은행추천상품4
+                            </h3>
+                            <ul class="sub event">
+                                <li><a href="">이벤트</a></li>
+                                <li><a href="">smartCupon</a></li>
+                            </ul>
+                        </div>
+
+
+
+
+                        <div class="subwli">
+                            <h3 class="subTit">
+                                우리은행추천상품5
+                            </h3>
+                            <ul class="sub company">
+                                <li><a href="">우리의나눔</a></li>
+                                <li><a href="">우리의고객</a></li>
+                                <li><a href="">우리의가치</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <figure id="con1" class="visual">
+
+
+            <div class="imgWrap">
+                <img src="./images/slide1.png" alt="400x300즐추">
+                <img src="./images/img_char_intro_new2.png" alt="">
+
+               
+
+            </div>
+            <div class="lbWrap">
+                <div class="lbview">
+                    <!--               가운데 몰때-->
+                    <ul class="lbslWrap">
+
+
+                        <li>
+                            <label data-val="0">아이터치</label>
+                        </li>
+                        <li>
+                            <label data-val="1">풍성한한가위</label>
+                        </li>
+                        <li>
+                            <label data-val="2">위비꿀마켓</label>
+                        </li>
+                        <li>
+                            <label data-val="3">취업(창업)기금</label>
+                        </li>
+                        <li>
+                            <label data-val="4">금융대표상품</label>
+                        </li>
+                        <li>
+                            <label data-val="0">퀵대출심사</label>
+                        </li>
+                    </ul>
+
+
+
+                    <button class="lb_btn left1">&lt;</button>
+                    <button class="lb_btn right1">&gt;</button>
+                </div>
+            </div>
+
+
+
+
+
+
+        </figure>
+
+
+        <section id="con2">
+            <div class="buttonWrap">
+
+                <a href="" class="quickPage">
+                    <h3>사이버 창구앱</h3>
+                    <i class="far fa-arrow-alt-circle-right"></i>
+                </a>
+                <a href="" class="quickPage">
+                    <h3>보험상품</h3>
+                    <i class="far fa-arrow-alt-circle-right"></i>
+                </a>
+
+                <a href="" class="quickPage">
+                    <h3>치아보험금 청구</h3>
+                    <i class="far fa-arrow-alt-circle-right"></i>
+                </a>
+                <a href="" class="quickPage">
+                    <h3>우리환전센터</h3>
+                    <i class="far fa-arrow-alt-circle-right"></i>
+                </a>
+                <a href="" class="quickPage">
+                    <h3>카드신청</h3>
+                    <i class="far fa-arrow-alt-circle-right"></i>
+                </a>
+
+                <a href="" class="quickPage">
+                    <h3>퀵 대출심사</h3>
+                    <i class="far fa-arrow-alt-circle-right"></i>
+                </a>
+            </div>
+            <div id="pgaeQuicknoti">
+                <span class="notiName">알림</span>
+                <div class="notiview">
+
+
+                    <ul>
+                        <li><a href="">간편뱅킹 | 간편뱅킹이용으로 더 편리해진 우리를 만나보세요</a></li>
+                        <li><a href="">상품몰 | 상품몰의 추석맞이 세일상품, 특가상품 오늘 오후 9시 까지</a></li>
+                        <li><a href="">점검안내 | 안정적인 서버유지를 위해 점검이 있습니다 . </a></li>
+                        <li><a href="">유용한정보 | 이달의 브로슈어를 보러오세요</a></li>
+                        <li><a href="">고객정보 | 고객님의 소중한 정보를 위해 노력하겠습니다</a></li>
+                        <li><a href="">위비뱅크 | 위비!금융서비스의 새로운 방식</a></li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </section>
+        <footer id="ft">
+
+
+
+            <div class="snswrap">
+                <a href="" class="snsIcon">
+                    <img src="./images/facebook.png" alt="페이스북로고" width="30px" height="30px">
+                </a>
+                <a href="" class="snsIcon">
+                    <img src="./images/youtube.png" alt=""></a>
+                <a href="" class="snsIcon">
+                    <img src="./images/twitter.png" alt=""></a>
+                <a href="" class="snsIcon">
+                    <img src="./images/google_plus.png" alt=""></a>
+                <a href="" class="snsIcon">
+                    <img src="./images/instagram.png" alt=""></a>
+                <a href="" class="snsIcon">
+                    <img src="./images/kakak.png" alt=""></a>
+                <a href="" class="snsIcon">
+                    <img src="./images/google_plus.png" alt=""></a>
+            </div>
+            <div class="ft_txtarea">
+
+
+
+                <span>
+                    개인정보처리방침
+                </span>
+                <span>
+                    고객센터
+                </span>
+                <span>
+                    이용약관
+                </span>
+
+                <p>copyright 2018 Woori Bank</p>
+
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
