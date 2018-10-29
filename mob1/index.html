@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>불가리</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalabel=no">
+    <!--    폰트-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2|Fjalla+One|Lato|Nanum+Gothic|Nanum+Myeongjo|Oswald|Pacifico|Slabo+27px" rel="stylesheet">
+    <!--
+ 폰트 css
+font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Lato', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Slabo 27px', serif;
+font-family: 'Nanum Myeongjo', serif;
+font-family: 'Fjalla One', sans-serif;
+font-family: 'Exo 2', sans-serif;
+font-family: 'Pacifico', cursive;-->
+
+    <!--        메타 태그        -->
+    <meta name="application-name" content="bulgari">
+    <meta name="author" content="D10060">
+    <meta name="keywords" content="bulgari">
+    <meta name="description" content="불가리 모바일 연습용 디자인 실습">
+    <!--파비콘 -->
+
+    <link rel="shortcut icon" href="./favi/bul32x32.png">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .pageMap {
+            width: 414px;
+            height: auto;
+
+
+        }
+
+        .wrap {
+            width: 414px;
+            
+            margin: 0 auto;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        #hd {
+            width: 414px;
+            height: 60px;
+            position:  fixed;
+            z-index:  999;
+            background: #ffffff;
+            border-bottom: 1px solid #dddddd;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            display: block;
+            width: 238px;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+
+        }
+
+        .logo img {
+            display: block;
+            width: 100%;
+        }
+
+        .collaps {
+ 
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 24px;
+        top: 12px;
+        }
+
+        .fas fa-align-left {
+            font-size: 18px;
+        }
+
+        .pgTit {
+            text-indent: -99999px;
+            display: none;
+        }
+        section#pageMap {
+            margin-top: 55px;
+        }
+        .menuWrap {
+            width: 414px;
+            height: 1071px;
+            padding: 12px 10px;
+       
+            box-sizing: border-box;
+        }
+
+        .menuWrap li {
+            float: left;
+            width: 46%;
+            margin-top: 10px;
+            position: relative;
+            overflow: hidden;
+
+        }
+        
+
+        .menuWrap li:nth-child(odd) {
+            margin: 10px 10px;
+        }
+
+        .menuWrap li img {
+            display: block;
+            width: 100%;
+        }
+
+        .menuName {
+            font-family: 'Nanum Gothic', sans-serif;
+            font-size: 16px;
+            color: #000000;
+            line-height: 42px;
+            text-indent: 10px;
+            position:  absolute;
+        }
+          
+              .meTitle {
+            display: block;
+            font-size: 20px;
+            width: 69%;
+            /* position: absolute; */
+            /* height: 100%; */
+            height: 44px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #000;
+        }
+
+           
+        .plus{
+              font-family: 'Nanum Gothic', sans-serif;
+              font-size: 20px;
+              color: #000000;
+              font-weight: 900;
+              line-height: 42px;
+              /* text-indent: 10px; */
+              float:  left;
+              display: block;
+              position: absolute;
+              z-index: 99;
+              right: 15px;
+              height: 5px;
+        }
+        .textBox {
+            position: absolute;
+            width: 100%;
+            height: 181px;
+            background-color: rgba(255, 255, 255, 0.7);
+            bottom: -134px;
+            box-sizing: border-box;
+            padding: 5px 10px;
+        }
+
+        #ft {
+            width: 414px;
+            height: 200px;
+         background-color: #000;
+            box-sizing: border-box;
+            padding: 20px 0;
+            margin: 0 auto;   
+            z-index: 99;
+
+
+        }
+
+        .fnv {
+            width: 414px;
+            height: 100px;
+           
+            position: relative;
+
+        }
+
+        .fnv ul li {
+            height: 30px;
+            width: 80%;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #777;
+            box-sizing: border-box;
+        }
+.fnv ul li a {
+    display:  block;
+    font-size:  15px;
+    color:  #ddd;
+    width:  100%;
+    height: 100%;
+  
+    line-height: 29px;
+    /* margin-bottom: 20px; */
+    /* padding-bottom: 3px; */
+}
+        .snsWrap {
+            position: absolute;
+            right: 20px;
+            top: 108px;
+        }
+
+        .sns1 {
+            display: block;
+            width: 40px;
+            height: 40px;
+            float: left;
+        }
+
+        .sns1:nth-child(2) {
+            margin: 0 10px;
+        }
+
+        .sns1 img {
+            display: block;
+            width: 100%;
+            height: 100%;
+
+        }
+/*        컬렙부분 */
+        .sub {
+            width: 414px;
+            clear: both;
+            margin-left: -30px;
+            background: #ddd;
+            }
+        .sub li {
+            width: 100%;
+            height: 50px;
+            border-bottom: 1px solid #999;
+        }
+
+        .sub li:last-child {
+            border-bottom: 0;
+        }
+
+        .sub li a {
+            display: block;
+            color: darkblue;
+            text-indent: 20px;
+            line-height: 50px;
+        }
+        .collap1{
+            display: none;
+        }
+       
+   .collOpen {
+    width: 414px;
+    height: 714px;
+    overflow: scroll;
+    /* height: auto; */
+    position: fixed;
+    display: none;
+    top: 60px;
+    background: #ffffff;
+
+}
+        #col2:checked ~ .collOpen {
+            display: none;
+        }
+        #col1:checked ~ .collOpen {
+            display: block;
+        }
+        .collOpen li{
+            width: 100px;
+  
+            border-bottom: 1px solid #ddd;
+        }
+        .collOpen > ul {
+           width: 414px;
+            height:671px;
+        }
+        .collOpen > ul > li{
+            width: 100%;
+ 
+            box-sizing: border-box;
+            padding: 5px 0 0 30px;
+                
+        }
+       
+        .copy{
+            width: 300px;
+            height: 50px;
+        }
+        .copy p{
+            display: block;
+            color: #fff;
+            text-indent: 30px;
+            line-height: 50px;    
+            width: 300px;
+            height: 50px;
+            
+        }
+        .head{
+            width: 100%;
+            height: 50px;
+            background: black;
+        }
+        
+        .search1{
+        display: block;
+        width: 300px;
+            top: 6px;
+            left: 12px;
+        height:36px;
+        text-indent: 20px;
+        outline: 0;
+            position: absolute;
+ 
+        }
+        .searchbtn{
+           
+            display: block;
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            width: 36px;
+            height: 36px;
+            
+           
+
+        }
+        .searchbtn i{
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            font-size:20px;
+            text-align: center;
+            line-height: 30px;
+        }
+        .drop{
+            position: absolute;
+            right: 30px;
+            margin-top: -42px;
+        }
+        .drop i{
+            display: block;
+            line-height: 2;
+        }
+        
+        .subdiv{
+       display: none;
+            border-bottom: 1px solid #333;
+        }
+               
+        .subdiv li{
+            height: 50px;
+        }
+        .subdiv li a{
+            display: block;
+        width: 100%;
+            height: 50px;
+            
+        }
+
+    </style>
+    <script>
+        $(document).ready(function(){
+     
+        
+                /*
+            $(".collaps").click(function(){
+                if(sw){
+                $(".collOpen").fadeIn(100);
+                    
+                } else{
+                     $(".collOpen").fadeOut(100);
+                }
+                sw=!sw;
+          
+                //미타이틀에 있는 인덱스 값을 구해서 걔만 내려와하면 됨다 eq()로 내려오게함
+                콜오픈이 열림
+                
+                    
+                */
+                
+                 var sw = true;
+            
+            $("#collOpen>ul>li").click(function() {
+                $(".subdiv").css("display", "block");
+                
+                if(sw){
+                    
+                    $(this).find(".sub .subdiv").stop().slideDown(100);
+                } else{
+                    $(this).find(".sub .subdiv").slideUp(100);
+                }
+                    sw=!sw;
+                    
+                
+            });
+            
+        });
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header id="hd">
+            <a href="" class="logo"><img src="./imagefile/header_logo.png" alt=""></a>
+            <!--            <label for="" class="collaps"><i class="fas fa-align-left"></i></label>-->
+            <label for="col1" class="collaps"><img src="./images/al-01.svg" alt=""></label>
+
+            <input type="radio" name="r2" id="col1" class="collap1">
+            <input type="radio" name="r2" id="col2" class="collap1" checked>
+            <div class="collOpen">
+                <div class="head">
+                    <h2 class="logoimg"><img src="./imagefile/" alt=""></h2>
+                    <input type="text" class="search1" placeholder="불가리 불가리 검색하자">
+                    <a href="" class="searchbtn"><i class="fas fa-search"></i></a>
+
+                </div>
+                <ul>
+                    <li>
+
+
+                        <h2 class="meTitle">스토어</h2>
+                        <span class="drop">
+                            <i class="fas fa-caret-down"></i>
+                        </span>
+
+                        <div class="sub">
+                            <ul class="subdiv">
+                                <h2 class="subTit">불가리 소개</h2>
+                                <li><a href="">FOREVER BVGARI</a></li>
+                                <li><a href="">BRAND EXPERIENCE</a></li>
+                                <li><a href="">TEMPLES</a></li>
+                                <li><a href="">인재채용</a></li>
+                                <li><a href="">사회 공헌 활동</a></li>
+                                <li><a href="">#RAISE YOUR HAND</a></li>
+                            </ul>
+                            <ul class="subdiv">
+                                <h2 class="subTit">고객서비스</h2>
+                                <li><a href="">주얼리</a></li>
+                                <li><a href="">워치</a></li>
+                                <li><a href="">액세서리</a></li>
+                                <li><a href="">문의하기</a></li>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li>
+                        <h2 class="meTitle">스토리</h2>
+                    </li>
+                    <li>
+                        <h2 class="meTitle">하이주얼리</h2>
+                        <span class="drop">
+                            <i class="fas fa-caret-down"></i>
+                        </span>
+                        <div class="sub">
+                            <ul class="subdiv">
+                                <h2 class="subTit">하이주얼리</h2>
+                                <li><a href="">링</a></li>
+                                <li><a href="">네크리스</a></li>
+                                <li><a href="">브레이슬릿</a></li>
+                                <li><a href="">이어링</a></li>
+
+                            </ul>
+                            <ul class="subdiv">
+                                <h2 class="subTit">컬렉션</h2>
+                                <li><a href="">와일드 팝</a></li>
+                                <li><a href="">페스타</a></li>
+                                <li><a href="">세르펜디</a></li>
+                                <li><a href="">디바스 드림</a></li>
+                                <li><a href="">레 마그니피케 크레아치오니</a></li>
+                                <li><a href="">컬러 트레져</a></li>
+                                <li><a href="">지아르디니 이탈리아니</a></li>
+                                <li><a href="">피오레</a></li>
+                                <li><a href="">파렌티지</a></li>
+
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <h2 class="meTitle">주얼리</h2>
+                        <span class="drop">
+                            <i class="fas fa-caret-down"></i>
+                        </span>
+                        <div class="sub">
+                            <ul class="subdiv">
+                                <h2 class="subTit">주얼리</h2>
+                                <li><a href="">링</a></li>
+                                <li><a href="">네크리스</a></li>
+                                <li><a href="">브레이슬릿</a></li>
+                                <li><a href="">이어링</a></li>
+                                <li><a href="">커프링크스</a></li>
+                            </ul>
+                            <ul class="subdiv">
+                                <h2 class="subTit">컬렉션</h2>
+                                <li><a href="">비제로원</a></li>
+                                <li><a href="">디바스 드림</a></li>
+                                <li><a href="">세르펜티</a></li>
+                                <li><a href="">불가리 불가리</a></li>
+                                <li><a href="">무사</a></li>
+                                <li><a href="">모네떼</a></li>
+                                <li><a href="">파렌티지</a></li>
+                                <li><a href="">세이브더 칠드런</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <h2 class="meTitle">브라이덜</h2>
+                        <span class="drop">
+                            <i class="fas fa-caret-down"></i>
+                        </span>
+                        <div class="sub">
+                            <ul class="subdiv">
+                                <h2 class="subTit">브라이덜</h2>
+                                <li><a href="">웨딩밴드</a></li>
+                                <li><a href="">인게이지먼트 링</a></li>
+                                <li><a href="">러브 셀레브레이션</a></li>
+                                <li><a href="">나만의 링 제작하기</a></li>
+
+                            </ul>
+                            <ul class="subdiv">
+                                <h2 class="subTit">컬렉션</h2>
+                                <li><a href="">인콘트로 다모레</a></li>
+                                <li><a href="">인피니토</a></li>
+                                <li><a href="">코로나</a></li>
+                                <li><a href="">베네치아 컬렉션</a></li>
+                                <li><a href="">이터너티 밴드</a></li>
+                                <li><a href="">페디</a></li>
+                                <li><a href="">매리미</a></li>
+                                <li><a href="">그리페</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <h2 class="meTitle">워치</h2>
+                        <span class="drop">
+                            <i class="fas fa-caret-down"></i>
+                        </span>
+                        <div class="sub">
+                            <ul class="subdiv">
+                                <h2 class="subTit">여성용</h2>
+                                <li><a href="">세르펜티</a></li>
+                                <li><a href="">루체아</a></li>
+                                <li><a href="">불가리 불가리</a></li>
+                                <li><a href="">비제로원</a></li>
+                                <li><a href="">디바스 드림</a></li>
+                                <li><a href="">크리에이티브 주얼리 워치</a></li>
+                                <li><a href="">오뜨 오를로제리</a></li>
+                            </ul>
+                            <ul class="subdiv">
+                                <h2 class="subTit">남성용</h2>
+                                <li><a href="">옥토</a></li>
+                                <li><a href="">불가리 불가리</a></li>
+                                <li><a href="">오뜨 오를로제리</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+
+                        <h2 class="meTitle">가죽제품</h2>
+                        <span class="drop">
+                            <i class="fas fa-caret-down"></i>
+                        </span>
+                        <div class="sub">
+                            <ul class="subdiv">
+                                <h2 class="subTit">가죽제품</h2>
+                                <li><a href="">여성용 백</a></li>
+                                <li><a href="">지갑</a></li>
+                                <li><a href="">카드 지갑 및 동전 지갑</a></li>
+                                <li><a href="">키홀더</a></li>
+                                <li><a href="">남성용 백</a></li>
+                            </ul>
+                            <ul class="subdiv">
+                                <h2 class="subTit">컬렉션</h2>
+                                <li><a href="">세르펜티 힙노틱</a></li>
+                                <li><a href="">세르펜티</a></li>
+                                <li><a href="">불가리 불가리</a></li>
+                                <li><a href="">불가리 칵테일</a></li>
+                                <li><a href="">불가리 불가리 맨</a></li>
+                                <li><a href="">불가리 버클</a></li>
+                                <li><a href="">디바스 드림</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <h2 class="meTitle">액세서리</h2>
+                        <span class="drop">
+                            <i class="fas fa-caret-down"></i>
+                        </span>
+                        <div class="sub">
+                            <ul class="subdiv">
+                                <h2 class="subTit">액세서리</h2>
+                                <li><a href="">아이웨어</a></li>
+                                <li><a href="">액세서리 주얼리</a></li>
+                                <li><a href="">참</a></li>
+                                <li><a href="">스카프 및 스톨</a></li>
+                                <li><a href="">기프트</a></li>
+                                <li><a href="">타이</a></li>
+                                <li><a href="">벨트</a></li>
+
+                            </ul>
+                            <ul class="subdiv">
+                                <h2 class="subTit">컬렉션</h2>
+                                <li><a href="">세르펜티 힙노틱</a></li>
+                                <li><a href="">윈터 홀리데이 컬렉션</a></li>
+                                <li><a href="">불가리 불가</a></li>
+                                <li><a href="">디바스 드림</a></li>
+                                <li><a href="">디아고노</a></li>
+                            </ul>
+
+                        </div>
+                    </li>
+                    <li>
+                        <h2 class="meTitle">향수</h2>
+                        <span class="drop">
+                            <i class="fas fa-caret-down"></i>
+                        </span>
+                        <div class="sub">
+                            <ul class="subdiv">
+                                <h2 class="subTit">여성용</h2>
+                                <li><a href="">불가리 골데아</a></li>
+                                <li><a href="">스플랜드다 불가리</a></li>
+                                <li><a href="">옴니아</a></li>
+                                <li><a href="">쁘띠 마망</a></li>
+
+                            </ul>
+                            <ul class="subdiv">
+                                <h2 class="subTit">남성용</h2>
+                                <li><a href="">불가리 맨</a></li>
+                                <li><a href="">아쿠아</a></li>
+                                <li><a href="">클래식</a></li>
+                                <li><a href="">블루 뿌르 옴므</a></li>
+
+                            </ul>
+                            <ul class="subdiv">
+                                <h2 class="subTit">하이 퍼퓨머리</h2>
+                                <li><a href="">불가리 레젬메</a></li>
+                                <li><a href="">오 파퓨메</a></li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <h2 class="meTitle">기프트</h2>
+                        <span class="drop">
+                            <i class="fas fa-caret-down"></i>
+                        </span>
+                        <div class="sub">
+                            <ul class="subdiv">
+                                <h2 class="subTit">남성용 및 여성용</h2>
+                                <li><a href="">남성용기프트</a></li>
+                                <li><a href="">여성용기프트</a></li>
+
+                            </ul>
+                            <ul class="subdiv">
+                                <h2 class="subTit">스페셜 기프트</h2>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="" class="meTitle">호텔리조트</a></li>
+                </ul>
+            </div>
+        </header>
+        <section id="pageMap">
+            <h2 class=pgTit>페이지1</h2>
+            <ul class="menuWrap">
+                <li><a href="store.html" id="pgIcon1"><img src="./imagefile/meIco1.png" alt="">
+                        <div class="textBox">
+                            <h3 class="menuName">스토어</h3>
+                            <span class="plus">+</span>
+
+                        </div>
+                    </a>
+
+                </li>
+                <li><a href="" id="pgIcon2"><img src="./imagefile/meIco2.png" alt="">
+                        <div class="textBox">
+                            <h3 class="menuName">스토리</h3>
+                            <span class="plus">+</span>
+                        </div>
+                    </a></li>
+                <li><a href="" id="pgIcon3"><img src="./imagefile/meIco3.png" alt="">
+                        <div class="textBox">
+                            <h3 class="menuName">하이주얼리</h3>
+                            <span class="plus">+</span>
+                        </div>
+                    </a></li>
+                <li><a href="" id="pgIcon4"><img src="./imagefile/meIco4.png" alt="">
+                        <div class="textBox">
+                            <h3 class="menuName">주얼리</h3>
+                            <span class="plus">+</span>
+                        </div>
+                    </a></li>
+                <li><a href="" id="pgIcon5"><img src="./imagefile/meIco5.png" alt="">
+                        <div class="textBox">
+                            <h3 class="menuName">워치</h3>
+                            <span class="plus">+</span>
+                        </div>
+                    </a></li>
+                <li><a href="" id="pgIcon6"><img src="./imagefile/meIco6.png" alt="">
+                        <div class="textBox">
+                            <h3 class="menuName">브라이덜</h3>
+                            <span class="plus">+</span>
+                        </div>
+                    </a></li>
+                <li><a href="" id="pgIcon7"><img src="./imagefile/meIco7.png" alt="">
+                        <div class="textBox">
+                            <h3 class="menuName">가죽제품</h3>
+                            <span class="plus">+</span>
+                        </div>
+                    </a></li>
+                <li><a href="" id="pgIcon8"><img src="./imagefile/meIco8.png" alt="">
+                        <div class="textBox">
+                            <h3 class="menuName">향수</h3>
+                            <span class="plus">+</span>
+                        </div>
+                    </a></li>
+                <li><a href="" id="pgIcon9"><img src="./imagefile/meIco9.png" alt="">
+                        <div class="textBox">
+                            <h3 class="menuName">휴양지</h3>
+                            <span class="plus">+</span>
+                        </div>
+                    </a></li>
+            </ul>
+        </section>
+
+    </div>
+    <footer id="ft">
+        <nav class="fnv">
+            <ul>
+                <li><a href="">pc version</a></li>
+                <li><a href="">개인정보 처리방침</a></li>
+                <li><a href="">이용약관</a></li>
+            </ul>
+            <div class="snsWrap">
+                <a href="" class="sns1"><img src="./imagefile/facebook.png" alt=""></a>
+                <a href="" class="sns1"><img src="./imagefile/google-plus.png" alt=""></a>
+                <a href="" class="sns1"><img src="./imagefile/instagram.png" alt=""></a>
+            </div>
+        </nav>
+        <div class="copy">
+            <p>copyright by bvgary</p>
+        </div>
+
+    </footer>
+</body>
+
+</html>
