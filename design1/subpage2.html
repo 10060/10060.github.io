@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+    <style>
+        .Wrap1{ width: 100%; height: 100%;}
+
+        .hd{ width: 100%; height: 400px; position: relative; background-image:url(imeges2/sub%20image2.png); }
+
+        .hdWrap{ width: 1260px; height: 150px; position:relative; margin:0 auto; }
+
+        .hdWrap .tnb{ width: 95%; height:50px;  margin:0 auto;  }
+
+        .hdWrap .gnb{ width: 100%; height: 80px; }
+
+         #main{width: 100%; height: 100%;   }
+         #con{width: 100%; height: 100%;   }
+
+      
+        #visual{ width: 100%; height:100%;  background-repeat: no-repeat; margin-top:-152px;  }
+
+        .pagetitle { text-align:center; }
+
+       
+
+        /*탑메뉴상세설정*/
+        a{text-decoration: none;}
+        .tnb,{ width:100%; height:100%; clear: both;   }
+
+        .tnb li { float:left; margin-top:30px; font-family: 'Nanum Gothic', sans-serif; font-size:12px; padding-left:20px; }
+
+        .tnb li a {color:#a3a3a3; padding-left:26px; }
+
+        .left{ float:left;  }
+
+        .right{ float:right; }
+
+
+        .gnb{background-image:url(images/menubar.png); width: 1270px; height: 100px; background-repeat: no-repeat; position:fixed; float: left; z-index:150; top:77px; } 
+
+        .gnb li { position:relative;z-index:10; width: 1200px; height: 80px; margin:0 auto;}
+
+        .gnb li a{ color: #fff; float: left ;}
+
+        .logo{display: block; position: absolute;     left: 100px;  top: 16px;}
+
+        #menu{ float: left ;  width: 900px; left:160px; float: left; padding-top:-60px;      margin-top: 29px;
+    margin-left: 120px; }
+
+        #menu li{  font-family:'Nanum Gothic', sans-serif; font-size:15px; padding-left:6px; padding-right:10px;  float:right; width: 130px; height: 40px; margin: 0 auto; text-align: center;}
+
+        #menu li a{ display: block; position:relative; padding: 0 5px; }
+
+        #menu li a:hover {color:#f8d261; text-align: center; }
+
+        #menu li a.cafelanovo{left:-40px; }
+        
+        .link1{   display: block;  width: 150px; height: 60px;
+
+    color: #f8d261;
+
+    float: right;
+
+    width: 150px;    
+
+    /* margin-left: 290px; */
+
+    position: absolute;
+
+    top: 28px;
+
+    left: 1078px;
+
+    text-align: center; }
+
+      
+
+        .login{background-image:url(images/login-8.png); background-repeat: no-repeat;}
+
+        .join{background-image:url(images/joinus-8.png); background-repeat: no-repeat; margin-left: 10px;}
+
+        .face{background-image:url(images/facebook-8.png); background-repeat: no-repeat; }
+
+        .insta{background-image:url(images/instagram-8.png); background-repeat: no-repeat;}
+
+        .point{background-image: url(images/point-8.png); background-repeat: no-repeat; }
+         
+        .page{width: 1920px; height: 1080px; background:#fff; background-position:center; background-attachment: fixed;  }
+        .pageTitle{color:#0000ff; display: block; margin:0px auto; width: 300px; z-index: 800;}
+        #pageWrap a{display:block; float: left;}
+        .right{ display: block; float:right;}
+        
+       
+        .page .left, .page .right {position:absolute; align-content: }
+        
+        #page1{background-image:url(imeges2/background.png);  height: 3000px; position: relative;}
+        
+        .contents{display:block; width: 1920px; text-align: center;}
+        .lanovo1{display: block; position: absolute; text-align: center; }
+        
+    
+        
+        
+        
+        /* 강사님이하신 부분! 브랜드 수정하고 값 주는 것 
+        .chitem{display:none;}
+        .bread {clear: both; border-top:1px solid; margin-top:2px; height: 42px; width: 100%; position: relative; border-bottom:1px solid#ba8412; }
+        
+        .bread.home, .bread.selcate, .bread .selcur{display: block; font-size:50px; padding: 0px 15px; color: #121212; float:left; line-height:30px; margin-left: 200px; }
+        .bread .selcate, .bread .selcur{padding-left:10px; margin-left:0px;  } 
+        .bread .home:after, .bread .selcate:after{content:"/"; padding-left:20px; }
+        .cate, .curpage{position: relative; float: left;}
+        .cate, .curGroup{position:absolute; top: 0; left:0; z-index: 20; background:#fff; border:1px solid #555; display:none; }
+        .chitem:checked~.cateGroup{display: block;}
+        
+        .chitem:checked~.curGroup{display: block;}*/
+        
+        
+        
+        
+        
+        
+
+</style>
+<body>
+   
+    
+  <div class="Wrap1">
+
+      <header class="hd">
+
+          <div class="hdWrap">
+
+              <nav class="tnb">
+
+                  <ul class="left">
+
+                      <li><a href="" class="login">로그인</a></li>
+
+                      <li><a href="" class="join">회원가입</a></li>
+
+                  </ul>
+
+                  <ul class="right">
+
+                      <li><a href="" class="face">FACE BOOK</a></li>
+
+                      <li><a href="" class="insta">INSTAGRAM</a></li>
+
+                      <li><a href="" class="point">LANOVO POINT</a></li>
+
+                  </ul>
+
+              </nav>
+
+              <nav class="gnb">
+
+                  <a href="" class="logo"><img src="./images/logo.png" alt=""></a>
+
+                  <ul id="menu">
+
+                   
+
+                      <li><a href="">COSTOMER</a></li>
+
+                      <li><a href="">EVENT</a></li>
+
+                      <li><a href="">STORE</a></li>
+
+                      <li><a href="">MENU</a></li>
+
+                      <li><a href="" class="cafelanovo">CAFE LANOVO</a></li>
+
+                    
+
+                  </ul>
+
+                  <a href="" class="link1">
+
+                   <span class="lnktext">가맹사업안내</span>
+
+                  </a>
+             
+              </nav>
+          </div>
+      </header>
+
+      <section id="con">
+          <div class="page" id="page1">
+              <figure id="pageWrap">
+                 <a href="#page3" class="left">홍보센터</a>
+                  <h2 class="pageTitle">라노보소개</h2>
+                 <a href="#page2" class="right">커피 컬쳐</a>  
+                  <div class="bread">
+                      <a href="index.html" class="home">HOME</a>
+                      <div class="cate">
+                                       
+                     <input type="checkbox" id="cateck" class="chitem">
+                      <label for="catebox" class="selecate">라노보소개</label>      
+                        <ul class="curGroup">
+                           <li><a href="subpage6.html">COSTOMER</a></li>
+                           <li><a href="subpage5.html">EVENT</a></li>
+                           <li><a href="subpage4.html">STORE</a></li>
+                           <li><a href="subpage3.html">MENU</a></li>
+                           <li><a href="subpage2.html" class="cafelanovo">CAFE LANOVO</a></li>
+
+                       </ul>
+                     </div>
+                      
+                      
+                      <div class="curpage">
+                       <input type="text" id="curck" class="ckitem">
+                       <label for="curck" class="selsur">라노보소개</label>
+                       <ul class="curgroup">
+                           <li><a href="">라노보소개</a></li>
+                           <li><a href="">커피 컬쳐</a></li>
+                           <li><a href="">홍보센터</a></li>
+                       </ul>
+                          
+                      </div>
+                  </div>
+                  
+                  
+                  
+                  <div id="tabGroup1">
+                      <input type="radio" name="tg" id="tg1" class="tgiteml1"  checked>
+                      <input type="radio" name="tg" id="tg2">
+                      <input type="radio" name="tg" id="tg3">
+                      <ul class="btnGroup">
+                          <li class="item1"><label for="">전통과 전통의 만남</label></li>
+                           <li class="item1"><label for="">라노보 카페 대동점</label></li>
+                            <li class="item1"><label for="">쓰기기기기</label></li>
+                      </ul>
+                  </div>
+                  
+                  <div class="contents">
+                      <ul class="lanvo1">
+                          <img src="./imeges2/lanovo.png" alt="" class="lanovotext">
+                          <h2>라노보를 소개합니다</h2>
+                          <p></p>
+                      </ul>
+                  </div>
+                  
+              </figure>
+
+          </div>
+          
+        
+
+    
+<div class="page" id="page2">
+   
+              <figure id="pageWrap">
+                     <a href="#page3" class="left"></a>
+                      <h2 class="pageTitle">커피 컬쳐</h2>
+                     <a href="#page1" class="right"></a>  
+                  <div class="bread">
+                      <a href="index.html" class="home"></a>
+                      <div class="cate">
+                                       
+                     <input type="checkbox" id="cateck" class="chitem">
+                      <label for="catebox" class="selecate">라노보소개</label>      
+                        <ul class="curGroup">
+                           <li><a href="">COSTOMER</a></li>
+                           <li><a href="">EVENT</a></li>
+                           <li><a href="">STORE</a></li>
+                           <li><a href="">MENU</a></li>
+                           <li><a href="" class="cafelanovo">CAFE LANOVO</a></li>
+
+                       </ul>
+                     </div>
+                      
+                      
+                      <div class="curpage">
+                       <input type="text" id="curck" class="ckitem">
+                       <label for="curck" class="selsur"></label>
+                       <ul class="curgroup">
+                           <li><a href="">라노보소개</a></li>
+                           <li><a href="">커피 컬쳐</a></li>
+                           <li><a href="">홍보센터</a></li>
+                       </ul>
+                          
+                      </div>
+                 </div>
+                 
+                  <div id="tabGroup1">
+                      <input type="radio" name="tg" id="tg1" checked>
+                      <input type="radio" name="tg" id="tg2">
+                      <input type="radio" name="tg" id="tg3">
+                      <ul class="btnGroup">
+                          <li class="item1"><label for="">전통과 전통의 만남</label></li>
+                           <li class="item1"><label for="">라노보 카페 대동점</label></li>
+                            <li class="item1"><label for="">쓰기기기기</label></li>
+                      </ul>
+                  </div>
+
+         </figure>
+   </div>
+     
+
+  <div class="page" id="page3">
+              <figure id="pageWrap">
+                    <a href="#page2" class="left"></a>
+                  <h2 class="pageTitle">홍보센터</h2>
+                  <a href="#page1" class="right"></a>
+                  <div class="bread">
+                      <a href="index.html" class="home"></a>
+                     
+                 <div class="cate">
+                                       
+                     <input type="checkbox" id="cateck" class="chitem">
+                      <label for="catebox" class="selecate">라노보소개</label>      
+                        <ul class="curGroup">
+                           <li><a href="">COSTOMER</a></li>
+                           <li><a href="">EVENT</a></li>
+                           <li><a href="">STORE</a></li>
+                           <li><a href="">MENU</a></li>
+                           <li><a href="" class="cafelanovo">CAFE LANOVO</a></li>
+
+                       </ul>
+                     </div>
+                      
+                      
+                      <div class="curpage">
+                       <input type="text" id="curck" class="ckitem">
+                       <label for="curck" class="selsur"></label>
+                       <ul class="curgroup">
+                           <li><a href="">라노보소개</a></li>
+                           <li><a href="">커피 컬쳐</a></li>
+                           <li><a href="">홍보센터</a></li>
+                       </ul>
+                          
+                      </div>
+                    
+                  
+                  
+                  
+                  <div id="tabGroup1">
+                      <input type="radio" name="tg" id="tg1" checked>
+                      <input type="radio" name="tg" id="tg2">
+                      <input type="radio" name="tg" id="tg3">
+                      <ul class="btnGroup">
+                          <li class="item1"><label for="">전통과 전통의 만남</label></li>
+                           <li class="item1"><label for="">라노보 카페 대동점</label></li>
+                            <li class="item1"><label for="">쓰기기기기</label></li>
+                      </ul>
+                  </div>
+                  
+                     </div>
+             </figure>
+         
+    </div>
+          
+      </section>
+   
+         
+
+
+         
+
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+    
+     
+
+     
+
+  
+
+     
+
+    <footer class="ft">
+
+        <div class="ftWrap">
+
+            <nav class="fnv">
+
+                <ul class="ftlink">
+
+                    <li><a href="">라노보포인트</a></li>
+
+                    <li><a href="">개인정보처리방침</a></li>
+
+                    <li><a href="">영상정보처리기기운영-관리방침</a></li>
+
+                    <li><a href="">이용약관</a></li>
+
+                    <li><a href="">윤리신고센터</a></li>
+
+                    <li><a href="">거래희망사전등록</a></li>
+
+                </ul>
+
+                <ul class="text">
+
+                    <li>대전광역시 동구 대동 대동초등길 123-45</li>
+
+                    <li>고객상담센터042-234-5678</li>
+
+                    <li>FAX.0505-012-3456</li>
+
+                </ul>
+
+                <p class="copyright">COPYRIGHTⓒ2017 THE LANOVO.ALL RIGHTS RESERVED</p>
+
+            </nav>
+
+            <nav class="snb">
+
+               <li><a href=""></a></li>
+
+               <li><a href=""></a></li>
+
+               <li><a href=""></a></li>
+
+                
+
+            </nav>
+
+        </div>
+
+      </footer>
+
+   
+
+     
+
+     
+
+     <a href="" class="totop"><span></span></a>
+
+
+
+ 
+
+      
+
+      
+
+      
+    </div>
+     
+
+</body>
+
+</html>
+
+

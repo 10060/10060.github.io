@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>안녕 여기는 라노보 카페 웹사이트야</title>
+    <script src=""></script>
+
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="st.css">
+
+    <style>
+
+
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // 해당적용박스에 .not().animate()
+            var wid = parseInt($(window).width());
+            console.log(wid);
+
+            function sl() {
+                $("#slider .imgBox").not(":animated").animate({
+                    "margin-left": wid * -1 + "px"
+                }, 900, function() {
+                    $("#slider .imgBox li").eq(0).appendTo($("#slider .imgBox"));
+                    $("#slider .imgBox").css("margin-left", "0px");
+                });
+            };
+
+            var intv = setInterval(function() {
+                sl();
+            }, 3000);
+
+            var hd = parseInt($(window).height());
+
+            $(window).on("mousewheel", function(e) {
+                if (e.originalEvent.wheelDelta < 0) {
+                    $("html, body").not(":animated").animate({
+                        scrollTop: "+=" + hd + "px"
+                    }, 900);
+                } else {
+                    $("html, body").not(":animated").animate({
+                        scrollTop: "-=" + hd + "px"
+                    }, 900);
+                }
+                return false;
+            });
+                
+            
+            $("#gnb a").removeAttr("href").click(function(){
+                  var th = parseInt($(this).attr("data-rel"));
+            $("body, html").not(":animated").animate({scrollTop:th*hr*3+"px"},800);
+     
+            });
+            
+            
+            
+            //top 버튼 맨 위로 가면 안보이게 하기 display:none; opacity:0; 
+            
+            
+            
+
+
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <div class="Wrap1">
+        <header class="hd">
+            <div class="hdWrap">
+                <nav class="tnb">
+                    <ul class="left">
+                        <li><a href="" class="login">로그인</a></li>
+                        <li><a href="" class="join">회원가입</a></li>
+                    </ul>
+                    <ul class="right">
+                        <li><a href="" class="face">FACE BOOK</a></li>
+                        <li><a href="" class="insta">INSTAGRAM</a></li>
+                        <li><a href="" class="point">LANOVO POINT</a></li>
+                    </ul>
+                </nav>
+                <nav class="gnb">
+                    <a href="" class="logo"><img src="./images/logo.png" alt=""></a>
+                    <ul id="menu">
+
+
+                        <li class="widemn"><a href="">MENU</a>
+                            <div class="subWrap">
+                                <ul class="sub">
+                                    <a href="" class="meTitle">COFFEE</a>
+                                    <li><a href="">hot</a></li>
+                                    <li><a href="">iced</a></li>
+                                    <li><a href="">Been</a></li>
+
+                                </ul>
+                                <ul class="sub">
+                                    <a href="" class="meTitle">BEVERAGE</a>
+                                    <li><a href="">coffee granita</a></li>
+                                    <li><a href="">grainita variation</a></li>
+                                    <li><a href="">fresh juice</a></li>
+                                    <li><a href="">sparkling</a></li>
+                                    <li><a href="">chocolate</a></li>
+                                    <li><a href="">Tea</a></li>
+                                </ul>
+                                <ul class="sub">
+                                    <a href="" class="meTitle">Italian Classic</a>
+                                    <li><a href="">coffee</a></li>
+                                    <li><a href="">coffee variation</a></li>
+                                    <li><a href="">food</a></li>
+
+                                </ul>
+
+                            </div>
+
+
+
+                        </li>
+                        <li><a href="" class="cafelanovo">CAFE LANOVO</a>
+                            <div class="subWrap">
+                                <ul class="sub">
+                                    <li><a href="subpage2.html">라노보 동구점 </a></li>
+                                    <li><a href="subpage2.html">커피이야기</a></li>
+                                    <li><a href="subpage2.html">브랜드 스토리</a></li>
+                                </ul>
+                            </div>
+
+                        </li>
+                        <li><a href="">STORE</a>
+
+
+                        </li>
+                        <li><a href="">EVENT</a>
+                        </li>
+
+                        <li>
+                            <a href="" class="cafelanovo">COSTOMER</a>
+                            <div class="subWrap">
+                                <ul class="sub">
+                                    <li><a href="">제휴안내</a></li>
+                                    <li><a href="">자주하는 질문</a></li>
+                                    <li><a href="">1:1문의</a></li>
+                                    <li><a href="">공지사항</a></li>
+                                </ul>
+                            </div>
+
+                        </li>
+
+
+                    </ul>
+                    <a href="" class="link1">
+                   <span class="lnktext">가맹사업안내</span>
+                  </a>
+                </nav>
+            </div>
+        </header>
+
+
+        <section id="con">
+            <div class="page" id="main">
+                <figure id="visual">
+
+
+                    <ul class="imgBox">
+                        <li class="item1">
+                            <div class="titBox">
+                                <h2 class="imgtit">달콤한 티라미수와 <br>아이스아메리카노 한잔</h2>
+                            </div>
+                            <div class="lban"><img src="./images/coffee%20sup.png" alt="coffee" class="limg"></div>
+                            <div class="rban"><img src="./images/tramisu.png" alt="tiramisu" class="rimg1"></div>
+                        </li>
+                        <li class="item2">
+                            <div class="titBox">
+                                <h2 class="imgtit">
+                                    아침에 달달한 라떼랑<br> 베이커리 어떠세요?
+                                </h2>
+                            </div>
+                            <div class="lban"><img src="./images/latte.png" alt="" class="limg"></div>
+                            <div class="rban"><img src="./images/bread.png" alt="" class="rimg"></div>
+
+
+                        </li>
+                        <li class="item3">
+                            <div class="lban"><img src="" alt="" class="limg"></div>
+                            <div class="rban"><img src="" alt="" class="rimg"></div>
+                            <div class="titBox"><img src="" alt="" class="tit"></div>
+
+                        </li>
+
+                        <a href="" class="more">
+                      <span>브랜드스토리</span>
+                      </a>
+                    </ul>
+
+                </figure>
+            </div>
+
+
+            <div class="page" id="page2">
+                <!-- 제이쿼리로할때는 
+                버튼으로 data-val animate active클래스 추가해서 바뀐애니메이션 넣어주기
+              
+                css는 checkbox
+               -->
+                <ul id="btnbox" class="bBox">
+                    <li><label for="p1" class="btn it1"></label></li>
+                    <li><label for="p2" class="btn it2"></label></li>
+                    <li><label for="p2" class="btn it3"></label></li>
+<!--
+                   <li><button class="btnpg2" data-val="0"></button></li> 
+                    <li><button class="btnpg2"  data-val="1"></button></li>
+                    <li><button class="btnpg2"  data-val="2"></button></li>
+-->
+                </ul>
+
+                <div class="rad">
+                    <input type="radio" name="ra" id="p1" checked/>
+                    <input type="radio" name="ra" id="p2">
+                    <input type="radio" name="ra" id="p3">
+                </div>
+
+                <div class="imgBox" id="slider">
+                    <figure>
+                        <ul class="imgBox">
+                            <li class="summer"><img src="./images/pro1.png" alt="">
+
+                                <ul class="proBox2">
+                                    <li class="juice">
+
+                                        <h3 class="proname">레몬라임 모히토</h3>
+                                        <h4 class="proname2">Lemon mojito </h4>
+
+                                    </li>
+                                    <li class="juice">
+
+                                        <h3 class="proname">자몽가득 모히토</h3>
+                                        <h4 class="proname2">grapefruit mojito </h4>
+
+                                    </li>
+                                    <li class="juice">
+
+                                        <h3 class="proname">블루베리 모히토</h3>
+                                        <h4 class="proname2">brueberry mojito </h4>
+
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="latte"><img src="./images/page2img.png" alt=""></li>
+                            <li class="bingsoo"><img src="./images/page%202-3.png" alt=""></li>
+                            <li><img src="" alt=""></li>
+                        </ul>
+                    </figure>
+                </div>
+
+                <div class="pageWrap">
+                    <h4 class="pagetitle2">LANOVO'S PICK</h4>
+                    <ul class="proBox1">
+                        <li>
+                            <img src="./images/bing1.png" class="bing" alt="">
+                            <li class="price">
+                                <h2 class="proname">크림치즈 빙수</h2>
+                                <p>CREAM CHEEZE BING SOO</p>
+                                <hr>
+                                <p>9600</p>
+                            </li>
+                            <li class="price">
+                                <h2 class="proname2">인절미 빙수</h2>
+                                <p>INSULMI BING SOO</p>
+                                <hr>
+                                <p>10000</p>
+
+
+                            </li>
+
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="page" id="page4">
+                <h4 class="pagetitle">MORE cafeLANOVO</h4>
+                <h2 class="ftext">라노보를 더 만나보고 싶다면</h2>
+                <ul class="snsbox">
+                    <li>
+                        <a href="">
+                  <img src="./images/insta1.png" alt="">
+                        <span class="icon">
+                        <img src="./images/BIG.png" alt="instagram">
+                        </span> 
+               </a>
+                    </li>
+                    <li><a href=""><img src="./images/insta2.png" alt=""><span class="icon"><img src="./images/BIG.png" alt="instagram"></span> </a></li>
+                    <li><a href=""><img src="./images/insta3.png" alt=""> <span class="icon"><img src="./images/bigpa.png" alt="instagram"></span></a></li>
+
+
+
+
+                </ul>
+            </div>
+
+            <div class="page" id="page5">
+
+
+                <ul class="li1">
+                    <div class="ctWr">
+                        <h4 class="pagetitle lanovostore">LANOVO'S STORE</h4>
+
+                        <h2 class="midtitle1">라노보를 찾아보세요!</h2>
+                        <input type="text" id="search" placeholder="매장찾기" class="search1">
+                        <button class=btnbtn> <a href="" class="btn morebtn">찾기</a></button>
+                    </div>
+                </ul>
+                <ul class="li2">
+                    <div class="cbox">
+                        <h4 class="pagetitle lanovotogether">LANOVO TOGETHER</h4>
+
+
+                        <h2 class="midtitle2">라노보와 함께할 가맹점주를 모십니다.</h2>
+                        <p>1588-1662</p>
+                    </div>
+                </ul>
+
+
+
+            </div>
+
+            <footer class="ft">
+                <div class="ftWrap">
+                    <nav class="fnv">
+                        <ul class="ftlink">
+                            <li><a href="">라노보포인트</a></li>
+                            <li><a href="">개인정보처리방침</a></li>
+                            <li><a href="">영상정보처리기기운영-관리방침</a></li>
+                            <li><a href="">이용약관</a></li>
+                            <li><a href="">윤리신고센터</a></li>
+                            <li><a href="">거래희망사전등록</a></li>
+                        </ul>
+                        <ul class="text">
+                            <p>대전광역시 동구 대동 대동초등길 123-45</p>
+                            <li>고객상담센터042-234-5678</li>
+                            <li>FAX.0505-012-3456</li>
+                            <p class="copyright">COPYRIGHTⓒ2017 THE LANOVO.ALL RIGHTS RESERVED</p>
+                        </ul>
+                        <a href="#main" class="ftlogo"><img src="./images/logo.png" alt=""></a>
+
+
+
+                    </nav>
+                </div>
+            </footer>
+        </section>
+
+
+        <a href="#main" class="totop"><span>top</span></a>
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>
