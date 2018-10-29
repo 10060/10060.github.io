@@ -1,0 +1,623 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Noto Serif KR', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.wrap {
+    width: 414px;
+    height: auto;
+    overflow-x: hidden;
+}
+
+#hd {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #fff;
+    border-bottom: 1px solid #000;
+    z-index: 999;
+
+}
+
+section {
+    margin-top: 100px;
+}
+
+input[type=checkbox],
+input[type=radio]
+ {
+    display: none;
+}
+
+.logo {
+    display: block;
+    background-image: url(./images/converselogo.png);
+    height: 24px;
+    width: auto;
+    margin-top: 7px;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+
+}
+#ck1:checked ~ .menuSection{
+    display: block;
+}
+
+.bar {
+    right: 20px;
+    top: 10px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000;
+    position: absolute;
+}
+
+.bar i {
+    font-size: 24px;
+    text-align: center;
+    display: block;
+    line-height: 40px;
+}
+
+/*
+왼쪽 펼침 메뉴 열린 부분
+
+*/
+
+.lckOpen {
+
+
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    right: 417px;
+
+}
+.leftClose{
+    float: right;
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid #fff;
+}
+
+
+.menuSection {
+    display: none;
+    width: 414px;
+    height:760px;
+    overflow: scroll;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 60px;
+    z-index: 99999;
+    
+}
+
+.mehead{
+    width:414px;
+    height: 100px;
+    position: relative;
+    background: #000;
+    box-sizing: border-box;
+    padding: 10px 20px;
+}
+
+.mehead a{
+    display: block;
+    float: left;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #fff;
+  
+    text-indent: 10px;
+    height: 20px;
+    line-height: 20px;
+}
+.join{
+    font-size: 16px;
+      margin-left: 150px;
+    font-weight: bold;
+    
+}
+
+
+
+.join i ,.home i{
+    display: block;
+    color:#fff;
+    font-size:20px;
+    float: left;
+    
+}
+
+.sear1{
+    display: block;
+    width: 360px;
+    height: 30px;
+    text-indent: 30px;
+   position: absolute;
+    bottom: 16px;
+    outline: 0;
+}
+
+.mTit{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 40px;
+    font-size:40px;
+    height: 50px;
+    line-height: 50px;
+   clear: both;
+}
+
+
+.subTit:after{
+    display: block;
+    content: "";
+    width: 200px;
+    height: 3px;
+    position: absolute;
+    background: #000;
+    left: 0;
+}
+.menuWrap li{
+    position: relative;font-family: 'Noto Sans KR', sans-serif;
+}
+
+.menuWrap > li > a{
+    color: #fff;
+    
+    font-size: 30px;
+    display: block;
+    background: #000;
+    height:70px;
+}
+.menuWrap > li:nth-child(5){
+    margin-top: 160px;
+}
+.mTit.on:after{
+    display: block;
+    content: "";
+    width: 200px;
+    height: 4px;
+    position: absolute;
+    top:30px;
+    left: 10px;
+    background: #f00;
+}
+.subWrap1{
+    display: none;
+    
+}
+.subMenu{
+    width: 290px;
+    height: auto;
+    float: right;
+}
+.subMenu li{
+    text-indent: 90px;
+}
+
+.subMenu li a{
+    font-weight: bold;
+    color: #333;
+}
+
+.subTit{
+    text-indent: 20px;
+    font-size: 20px;
+    line-height: 2em;
+
+}
+
+
+.subTit:nth-child(1){
+    margin-top: 50px;
+}
+.subTit li{
+line-height: 40px;
+}
+
+
+
+
+
+/*
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background:rgba(255, 255, 255, 0.9);
+    top: 0;
+    left: 0;
+    
+*/
+
+
+.leftopen {
+    position: fixed;
+    display: block;
+    width: 60px;
+    height: 70px;
+    top: 400px;
+    right: 0;
+    border: 1px solid #ddd;
+    z-index: 9999;
+    background-color: #fff;
+
+}
+
+#lck:checked ~ .lckOpen{
+    
+}
+
+.leftopen p {
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 5px;
+}
+
+#intro {
+    margin-top: 60px;
+}
+
+.imgWrap {
+    width: 500%;
+    height: 570px;
+}
+
+.imgWrap li {
+    float: left;
+    width: 20%;
+    height: 100%;
+    box-sizing: border-box;
+    padding-top: 50px;
+    position: relative;
+}
+
+
+.imgWrap li img {
+    position: absolute;
+    bottom: 0;
+    display: block;
+}
+
+
+.textWrap {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 30px;
+}
+
+
+
+
+.tTit:after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 3px;
+    background: #000;
+    margin-top: 20px;
+}
+
+
+.tTit {
+    display: block;
+    height: 100%;
+    font-family: 'Oswald', sans-serif;
+    height: 70px;
+    line-height: 20px;
+}
+
+.proCom {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.amore {
+    display: block;
+    font-size: 20px;
+    font-weight: lighter;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    width: 160px;
+    height: 40px;
+    line-height: 40px;
+    right: 0;
+    position: absolute;
+    transition: 0.5s;
+    text-align: center;
+    z-index: 99;
+    border: 1px solid #ddd;
+}
+
+
+.amore:hover {
+    margin-left: 50px;
+}
+
+
+
+#am1 {
+    background-color: lightpink;
+}
+
+#am2 {
+    background-color: darkcyan;
+}
+
+#am3 {
+    background-color: darkslategray;
+}
+
+#am4 {
+    background-color: darkgoldenrod;
+}
+
+#am5 {
+    background-color: tomato;
+}
+
+
+.btn {
+    width: 100%;
+    height: 60px;
+    top: 500px;
+    position: absolute;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+
+.btn button {
+    display: block;
+    width: 60px;
+    height: 60px;
+    outline: 0;
+    border: 0;
+    background: transparent;
+    font-size: 40px;
+    color: #fff;
+
+}
+
+#left {
+    float: left;
+}
+
+#right {
+    float: right;
+}
+
+
+
+
+.proslider {
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+
+.pageTitA {
+    display: block;
+    height: 100px;
+    font-family: 'Noto Sans KR', 'Oswald', sans-serif;
+    font-size: 32px;
+    text-align: center;
+    height: 80px;
+    line-height: 100px;
+
+}
+
+.pageTitA:after,
+.pageTitA:before {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 25px;
+    background: #000;
+    position: absolute;
+    top: 40px;
+
+}
+
+.pageTitA:after {
+    left: 80px;
+}
+
+.pageTitA:before {
+    right: 80px;
+}
+
+
+.num p {
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    position: absolute;
+}
+
+.num.on p:after {
+    display: block;
+    content: "";
+    width: 20px;
+    height: 3px;
+    position: absolute;
+    top: 20px;
+    left: 6px;
+    background: red;
+}
+
+
+.page {
+    float: left;
+    width: 20%;
+    position: relative;
+    box-sizing: border-box;
+    padding: 10px 20px;
+}
+
+.prosliderWrap {
+    width: 500%;
+    height: 100%;
+
+}
+
+.pageTit {
+    display: block;
+    height: 100px;
+    font-family: 'Noto Sans KR', 'Oswald', sans-serif;
+    font-size: 28px;
+    margin-left: 60px;
+    height: 70px;
+    line-height: 50px;
+
+}
+
+.btnWrap {
+
+    width: 250px;
+    height: 40px;
+    position: relative;
+    margin: 0 auto;
+}
+
+
+.btnWrap label {
+    position: absolute;
+    display: block;
+    line-height: 30px;
+
+
+    width: 30px;
+    height: 30px;
+    font-weight: bold;
+    float: left;
+ 
+
+}
+
+
+
+.btnWrap label[data-val="0"] {
+    left: 0px;
+}
+
+.btnWrap label[data-val="1"] {
+    left: 50px;
+}
+
+.btnWrap label[data-val="2"] {
+    left: 100px;
+}
+
+
+.btnWrap label[data-val="3"] {
+    left: 150px;
+}
+
+.btnWrap label[data-val="4"] {
+    left: 200px;
+}
+
+#num3 h2 {
+    font-size: 26px;
+    line-height: 1em;
+}
+
+.pageTit:after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 3px;
+    background: #000;
+    margin-left: 5px;
+
+}
+
+.pgCom {
+    font-family: 'Noto Sans KR', 'Oswald', sans-serif;
+    font-size: 16px;
+    color: #666;
+    margin-left: 60px;
+}
+
+.moreview {
+    clear: both;
+    display: block;
+    width: 100px;
+    height: 30px;
+    color: royalblue;
+    font-weight: bold;
+    background: #eee;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 30px;
+    border-radius: 3px;
+    font-family: 'Noto Sans KR', 'Oswald', sans-serif;
+    margin-left: 60px;
+}
+
+.moreview.red {
+    color: #f00;
+    background: #000;
+}
+
+.cloth {
+    display: block;
+    width: 360px;
+
+}
+
+.page img {}
+
+#ft {
+    width: 100%;
+    height: 400px;
+    margin-top: 50px;
+    background: #000;
+}

@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CONVERSE</title>
+    <!-- 뷰포트 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- 폰트 연결 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Noto+Serif+JP|Noto+Serif+KR|Roboto" rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR|Noto+Serif+KR|Oswald" rel="stylesheet">
+    <!--    
+    font-family: 'Noto Serif KR', sans-serif;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Noto Serif JP', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Noto Serif KR', sans-serif;
+    -->
+
+    <!-- css 연결 -->
+    <link rel="stylesheet" href="index.css">
+    <!-- 아이콘 연결 -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        /*
+        $(document).ready(function(){
+            var wd = parseInt($("#intro").width());
+            var cnt = $(".imgWrap li").length;
+            var intv = setInterval(function(){
+                ani1();
+            },3000);
+            
+            var nb = 0;
+            function ani1(){
+                
+            $(".imgWrap").not(":animated").animate({"margin-left":-wd+"px"}); 
+            $(".imgWrap li").eq(0).appendTo(".imgWrap");
+            $(".imgWrap").css("margin-left","0px");    
+            }
+            
+            function leftGo(){
+                $(".imgWrap li").eq(0).next().css("margin-left", wd+"px");
+            } 
+            
+            $("#left").click(function(){
+                clearInterval(intv);
+                leftGo();
+                
+                setInterval(function(){
+                    intv();
+                },3000);
+            
+            
+            });
+        }); 
+        
+        */
+    </script>
+
+    <script>
+
+
+        $(document).ready(function(){
+        var idx;
+        var wd=parseInt($("#intro").width());
+        var intv=setInterval(function(){ lAni(); }, 3000);
+        $("#right").click(function(){
+            clearInterval(intv);
+            lAni();
+            intv=setInterval(function(){ lAni(); }, 3000);
+        });
+        $("#left").click(function(){
+            clearInterval(intv);
+            rAni();
+            intv=setInterval(function(){ lAni(); }, 3000);
+        });
+        function lAni(){
+            $(".imgWrap").not(":animated").animate({"margin-left":-wd+"px"}, 600, function(){
+                $(".imgWrap li").eq(0).appendTo($(".imgWrap"));
+                $(".imgWrap").css("margin-left", "0px");
+            });
+        };
+        function rAni(){
+            $(".imgWrap").css("margin-left", -wd+"px");
+            $(".imgWrap li:last-child").prependTo($(".imgWrap"));
+
+            $(".imgWrap").not(":animated").animate({"margin-left":"0px"}, 900);
+        };
+            
+         var wd1=parseInt($(".proslider").width());
+        var sw=true;
+        var intv1=setInterval(function(){ nAni1(); }, 3000);
+        
+        function nAni1(){
+            $(".proslider .prosliderWrap").not(":animated").animate({"margin-left" : -wd+"px"}, 800, function(){
+                $(".proslider .prosliderWrap div").eq(0).appendTo($(".proslider .prosliderWrap"));
+                $(".proslider .prosliderWrap").css("margin-left", "0px");
+                $(".proslider .btnWrap label").removeClass("on");
+                $(".proslider .btnWrap label").eq(0).appendTo($(".proslider .btnWrap"));
+                $(".proslider .btnWrap label").eq(0).addClass("on");
+            });
+        }
+        $(".btnWrap label").click(function(){
+           clearInterval(intv);
+           var idx=$(this).index();
+            for(var i=0;i<idx-2;i++){
+                $(".proslider .prosliderWrap div").eq(0).appendTo($(".proslider .prosliderWrap"));
+                $(".proslider .btnWrap label").eq(0).appendTo($(".proslider .btnWrap"));
+            }
+            nAni1();
+            intv=setInterval(function(){ nAni1(); }, 3000);
+        });
+       
+    
+        $(".menuWrap li").click(function(){
+            $(".mTit").removeClass("on");
+            $(this).find(".mTit").addClass("on");
+            $(this).find(".subWrap1").slideToggle(800);
+            $(this).siblings().find(".subWrap1").slideUp(0);
+            
+        });
+       $(".leftopen").click(function(){
+          $(".lckOpen").animate({"left":"0px"},500);
+           $(".leftopen").animate({"margin-right":"-100px"},300);
+       });
+            
+            
+        $(".leftClose").click(function(){
+
+          $(".lckOpen").animate({"left":"-500px"},500);
+           $(".leftopen").animate({"margin-right":"0px"},300);
+        
+        });    
+            
+         
+            
+            
+            
+            
+            
+            
+            
+            
+        });    
+        
+        
+        
+        
+        
+    
+    </script>
+    <script>
+        /*
+        var lbnum;
+        $(".proslider label").click(function(){
+           lbnum= $(this).attr("data-val");
+            
+            $(".prosliderWrap div").eq(lbnum).prependTo(".prosliderWrap");
+             $(".prosliderWrap div").eq(0).appendTo($(".prosliderWrap"));
+                $("#vs .picBox").css("margin-left", "0px");
+                $(".proslider label").removeClass("on");
+                $(".proslider label").eq(0).appendTo($(".proslider label"));
+                $(".proslider label").eq(0).addClass("on");
+
+            
+        });
+        */
+        
+
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header id="hd">
+            <a href="#" class="logo"></a>
+            <input type="checkbox" id="ck1">
+            <label for="ck1" class="bar"><i class="fas fa-bars"></i>
+            </label>
+            <nav class="menuSection">
+                <div class="mehead">
+                    <a href="" class="join">
+                        <i class="fas fa-user-circle"></i>회원가입/로그인</a>
+                    <a href="" class="home"><i class="fas fa-home"></i>
+                    </a>
+                    <input type="text" placeholder="검색" class="sear1">
+                </div>
+
+                <div class="subWrap">
+                    <ul class="menuWrap">
+                        <li>
+                            <h3 class="mTit ">MEN</h3>
+                            <div class="subWrap1">
+                            <ul class="subMenu">
+
+                                <h4 class="subTit">컬렉션</h4>
+
+                                <li><a href="">척클래식</a></li>
+                                <li><a href="">척70</a></li>
+                                <li><a href="">원스타 컬렉션</a></li>
+                                <li><a href="">잭퍼셀컬렉션</a></li>
+                                <li><a href="">에센셜</a></li>
+                            </ul>
+                            <ul class="subMenu">
+                                <h4 class="subTit">신발</h4>
+                                <li><a href="">전체보기</a></li>
+                                <li><a href="">척테일러올스타
+                                    </a></li>
+                                <li><a href="">컨스</a></li>
+                                <li><a href="">잭퍼셀</a></li>
+                            </ul>
+                            <ul class="subMenu">
+                                <h4 class="subTit">의류</h4>
+                                <li><a href="">전체보기</a></li>
+                                <li><a href="">티셔츠</a></li>
+                                <li><a href="">팬츠</a></li>
+                                <li><a href="">후디&amp;재킷</a></li>
+                                <li><a href="">가방&amp;액세서리</a></li>
+                            </ul>
+                            <ul class="subMenu">
+                                <h4 class="subTit">더보기</h4>
+                                <li><a href="">론칭 캘린더</a></li>
+                                <li><a href="">신상품</a></li>
+                                <li><a href="">베스트셀러</a></li>
+
+                            </ul>
+                            </div>
+                        </li>
+
+
+                        <li>
+                            <h3 class="mTit">WOMEN</h3>
+                            <div class="subWrap1">
+                                <ul class="subMenu">
+                                    <h4 class="subTit">컬렉션</h4>
+                                    <li><a href="">척클래식</a></li>
+                                    <li><a href="">척70</a></li>
+                                    <li><a href="">우먼 컬렉션</a></li>
+                                    <li><a href="">잭퍼셀컬렉션</a></li>
+                                    <li><a href="">에센셜</a></li>
+                                </ul>
+                                <ul class="subMenu">
+                                    <h4 class="subTit">신발</h4>
+                                    <li><a href="">전체보기</a></li>
+                                    <li><a href="">척테일러올스타
+                                        </a></li>
+                                    <li><a href="">컨스</a></li>
+                                    <li><a href="">잭퍼셀</a></li>
+                                </ul>
+                                <ul class="subMenu">
+                                    <h4 class="subTit">의류</h4>
+                                    <li><a href="">전체보기</a></li>
+                                    <li><a href="">티셔츠</a></li>
+                                    <li><a href="">팬츠</a></li>
+                                    <li><a href="">후디&amp;재킷</a></li>
+                                    <li><a href="">가방&amp;액세서리</a></li>
+                                </ul>
+                                <ul class="subMenu">
+                                    <h4 class="subTit">더보기</h4>
+                                    <li><a href="">론칭 캘린더</a></li>
+                                    <li><a href="">신상품</a></li>
+                                    <li><a href="">베스트셀러</a></li>
+
+                                </ul>
+
+                            </div>
+                        </li>
+
+
+                        <li>
+                            <h3 class="mTit">KIDS</h3>
+                            <div class="subWrap1">
+                                <ul class="subMenu">
+                                    <h4 class="subTit">컬렉션</h4>
+                                    <li><a href="">핼로키티컬렉션</a></li>
+                                </ul>
+                                <ul class="subMenu">
+
+                                    <h4 class="subTit">신발</h4>
+                                    <li><a href="">전체보기</a></li>
+                                    <li><a href="">컨스</a></li>
+
+                                </ul>
+                                <ul class="subMenu">
+                                    <h4 class="subTit">더보기</h4>
+                                    <li><a href="">론칭 캘린더</a></li>
+                                    <li><a href="">신상품</a></li>
+                                    <li><a href="">베스트셀러</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+
+                        <li>
+                            <h3 class="mTit">브랜드</h3>
+                            <div class="subWrap1">
+                                <ul class="subMenu">
+                                    <h4 class="subTit">신제품소개</h4>
+                                    <li><a href="">제품 전체보기</a></li>
+                                    <li><a href="">론칭캘린더</a></li>
+                                </ul>
+                                <ul class="subMenu">
+                                    <h4 class="subTit">브랜드 소개</h4>
+
+                                    <li><a href="">컨버스에 대하여</a></li>
+                                    <li><a href="">매장안내</a></li>
+
+                                </ul>
+
+                            </div>
+                        </li>
+                        <li>
+                            <a href="">
+                                <h3 class="mTit">FAQ</h3>
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="">
+                                <h3 class="mTit">고객지원센터</h3>
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="">
+                                <h3 class="mTit">매장찾기</h3>
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+            </nav>
+        </header>
+
+
+        <!--    왼쪽 선택시 열리는 메뉴부분    -->
+        <label for="lck" class="leftopen">
+            <img src="./images/icon160.png" alt="">
+            <p>
+                &larr;
+
+            </p>
+        </label>
+        <input type="checkbox" id="lck">
+
+        <div class="lckOpen">
+            <div class="lckTop">
+
+                <a href="" class="icon pack">
+                    <i class="fas fa-cart-arrow-down"></i>
+                </a>
+                <a href="" class="icon mypage">
+                    <i class="fas fa-user-circle"></i>
+                </a>
+                <label for="lck" class="leftClose">
+                    X
+                </label>
+
+            </div>
+
+
+
+            <h3 class="pageTit">
+                내가본상품
+            </h3>
+            <ul>
+                <li><a href=""><img src="" alt=""></a></li>
+                <li><a href=""><img src="" alt=""></a></li>
+                <li><a href=""><img src="" alt=""></a></li>
+                <li><a href=""><img src="" alt=""></a></li>
+                <li><a href=""><img src="" alt=""></a></li>
+                <li><a href=""><img src="" alt=""></a></li>
+            </ul>
+        </div>
+        <section id="intro">
+
+            <ul class="imgWrap">
+                <li>
+                    <div class="textWrap">
+                        <h2 class="tTit">RETRO RUNNER. REMIXED.</h2>
+                        <p class="proCom">
+
+                            [온라인 단독] 런스타 Y2K 출시
+                            온라인 단독으로 선보이는 런스타 Y2K 컬렉션.
+                            정통 스트릿 패션의 색다른 변화와 Y2K 스톰퍼와 80년 대의 러너의 믹스를 통해 현대적으로 재해석 하여 디자인 되었습니다.
+                            새로운 스타일로 출시된 런스타 Y2K 컬렉션을 컨버스온라인스토어에서 만나보세요.
+
+                        </p>
+                    </div>
+                    <img src="./images/proimgq5.png" alt="광고 비주얼이미지">
+                    <a href="" class="amore" id="am1">LEARN MORE</a>
+                </li>
+
+
+                <li>
+                    <div class="textWrap">
+                        <h2 class="tTit">컨버스 X 칼하트 WIP 컬렉션</h2>
+                        <p class="proCom">
+                            컨버스와 'BEST IN CLASS'라는 모토아래 최상의 완성도와 내구성을 추구하는 칼하트 WIP와 컨버스 X 칼하트 WIP 원스타 컬렉션을 출시합니다. 스케이트 보드 문화의 상징적인 아이템으로 각광받는 원스타 실루엣에 내구성이 높은 코듀라 어퍼와 칼하트 WIP의 견과한 기능성이 결합되어 높은 퀄리티의 디자인으로 완성되었습니다.
+
+                        </p>
+                    </div>
+                    <img src="./images/proimgq4.png" alt="컨버스칼하트">
+                    <a href="" class="amore" id="am2">LEARN MORE</a>
+                </li>
+
+
+
+
+
+                <li>
+                    <div class="textWrap">
+                        <h2 class="tTit">ONE STAR CARNIVAL</h2>
+                        <p class="proCom">
+                            이번 시즌 새롭게 출시된 컨버스 원스타 카니발은
+                            기존 원스타의 아이코닉한 실루엣을 재해석하여 한차원 진화된 내구성과 고전적 미학을 동시에 보여주는 스니커즈로 재탄생 되었습니다.
+                            프리미엄 스웨이드 어퍼와 풍성한 색채와 대비되는 스타 쉐브론 디테일, 오쏠 라이트 인솔을 적용하여 내구성을 향상시켰습니다.
+
+                        </p>
+                    </div>
+                    <img src="./images/proimgq1.png" alt="원스타카니발">
+                    <a href="" class="amore" id="am3">BUY NOW</a>
+                </li>
+                <li>
+                    <div class="textWrap">
+                        <h2 class="tTit">CHUCK 72 VINTAGE CANVAS</h2>
+                        <p class="proCom">
+                            척 70 빈티지 캔버스 컨버스 스테디셀러 척 70 빈티지 제품은 아이코닉한 디자인과 빈티지한 매력을 선보입니다. 척 70의 디테일은 현대적으로 재해석하여 스니커즈의 미드솔은 더욱 두툼하고 견고해졌으며, 전체적인 실루엣은 세련된 곡선이 더해져 더욱 모던한 스트릿 무드를 선사합니다.
+
+                        </p>
+                    </div>
+                    <img src="./images/proimgq3.png" alt="척테일러">
+                    <a href="" class="amore" id="am4">BUY NOW</a>
+                </li>
+
+
+
+                <li>
+                    <div class="textWrap">
+                        <h2 class="tTit">PRODUCT</h2>
+                        <p class="proCom">
+                            세계에서 가장 유명한 콜라보레이션 스니커즈 중 하나인 "컨버스 x 꼼데가르송 플레이 척 70"을 선보입니다. 뉴욕 그래픽 아티스트 필립 파고스키 (flip Pagowski)와 꼼데가르송의 레이 카와쿠보(Rei Kawakubo)가 상상해낸 꼼데가르송의 시그니처 "Heart-and-eyes"로고는 컨버스의 클래식한 척 70에서도 돋보입니다.
+
+                        </p>
+                    </div>
+                    <img src="./images/proimgq2.png" alt="꼼데가르송">
+                    <a href="" class="amore" id="am5">LEARN MORE</a>
+                </li>
+            </ul>
+
+
+            <div class="btn">
+                <button id="left"><i class="fas fa-chevron-left"></i></button>
+                <button id="right"><i class="fas fa-chevron-right"></i></button>
+            </div>
+
+        </section>
+        <section id="product">
+            <h2 class="pageTit">
+                CANVARS MAGAZINE
+            </h2>
+
+            <div class="box">
+                <h3 class="boxtit"></h3>
+                <img src="./images/proimgq5.png" alt="">
+                <p></p>
+            </div>
+            <div class="box">
+                <img src="./images/proimgq5.png" alt="">
+                <img src="" alt="">
+                <p></p>
+            </div>
+            <div class="box">
+                <h3 class="boxtit"></h3>
+                <img src="./images/proimgq5.png" alt="">
+                <p></p>
+            </div>
+
+        </section>
+
+
+        <section class="proslider">
+            <h2 class="pageTitA">PRODUCT PICK</h2>
+            <div class="btnWrap">
+
+
+                <label data-val="0" class="num on">
+                    <p>1</p>
+                </label>
+                <label data-val="1" class="num">
+                    <p>2</p>
+                </label>
+                <label data-val="2" class="num ">
+                    <p>3</p>
+                </label>
+                <label data-val="3" class="num">
+                    <p>4</p>
+                </label>
+                <label data-val="4" class="num">
+                    <p>5</p>
+                </label>
+            </div>
+            <div class="prosliderWrap">
+                <div class="page" id="num1" data-val="0">
+                    <h2 class="pageTit">컨버스X닥터 우 척70</h2>
+                    <span class="pgCom">129,000 원</span>
+                    <a href="" class="moreview red">일시품절</a>
+                    <img src="./images/pagenum1.jpg" alt="" class="cloth">
+                </div>
+                <div class="page" id="num2" data-val="1">
+                    <h2 class="pageTit">잭퍼셀 LP L/S 나일론</h2>
+                    <span class="pgCom">79,000 원</span>
+                    <a href="" class="moreview">바로구매</a>
+                    <img src="images/pagenum2.jpg" alt="" class="cloth">
+                </div>
+                <div class="page" id="num3" data-val="2">
+                    <h2 class="pageTit">컨버스 X 꼼데가르송<br>플레이 척 70</h2>
+                    <span class="pgCom">215,000 원</span>
+                    <a href="" class="moreview">바로구매</a>
+                    <img src="./images/pagenum3.jpg" alt="" class="cloth">
+                </div>
+                <div class="page" id="num4" data-val="3">
+                    <h2 class="pageTit">척 70 빈티지 캔버스</h2>
+                    <span class="pgCom">89,000 원</span>
+                    <a href="" class="moreview">바로구매</a>
+                    <img src="images/pagenum4.jpg" alt="" class="cloth">
+                </div>
+                <div class="page" id="num5" data-val="4">
+                    <h2 class="pageTit">스트레이트 엣지 백팩</h2>
+                    <span class="pgCom">59,000 원</span>
+                    <a href="" class="moreview">바로구매</a>
+                    <img src="./images/pagenum5.jpg" alt="" class="cloth">
+                </div>
+            </div>
+
+        </section>
+
+
+        <footer id="ft">
+            <div class="iconsns">
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+            </div>
+
+
+            <p>(유)컨버스코리아</p>
+            <p>대표이사 주형준</p>
+            <p>개인정보책임 박해진</p>
+            <p>사업자 등록번호 220-88-74818통신판매업 신고번호 제 2016-서울 강남-00478호</p>
+            <p>주소:서울시 강남구 테헤란로 152 강남파이낸스센터33F</p>
+            <p>TEL 080-987-0182</p>
+
+
+            <div class="fta">
+                <a href="">개인정보취급방침</a>
+                <a href="">이용약관</a>
+                <a href="">보증보험 가입확인</a>
+            </div>
+            <p class="copy">2016 Converse Korea LLC. All Rights Reserved</p>
+
+        </footer>
+
+        <a href="#" class="totop"><i class="fas fa-angle-up"></i></a>
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>
