@@ -1,0 +1,413 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+input[type=checkbox],
+input[type=radio] {
+    display: none;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+
+}
+
+
+#header {
+    width: 1280px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+    position: absolute;
+}
+
+.menu {
+    float: right;
+    width: 60%;
+    height: 100px;
+}
+
+.menu ul {
+    width: 50%;
+    height: 100%;
+    float: right;
+}
+
+.menu li {
+    float: left;
+    position: relative;
+    margin-right: 30px;
+}
+
+.menu li:last-child {
+    margin-right: 0;
+}
+
+.menu li a {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    line-height: 100px;
+}
+
+#main {
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+}
+
+.visual {
+    width: 100%;
+    height: 100%;
+}
+
+.con {
+    width: 600%;
+    height: 700px;
+}
+
+.con li {
+    width: 16.66%;
+    height: 700px;
+    box-sizing: border-box;
+    float: left;
+}
+
+.ckv {
+    display: none;
+    width: 114%;
+    position: absolute;
+    top: 49px;
+    left: -4px;
+    height: 6px;
+    background-color: rgba(23, 90, 206, 0.8);
+}
+
+.ckv.on {
+    display: block;
+}
+
+.conWrap {
+
+    width: 1280px;
+
+    height: 100%;
+
+    border: 1px solid #333;
+
+    margin: 0 auto;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.conWrap > div {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.leftsection {
+    box-sizing: border-box;
+    padding-top: 48px;
+    padding-left: 80px;
+}
+
+.sub {
+    font-size: 20px;
+    font-weight: bold;
+    color: firebrick;
+}
+
+.subject {
+    color: #666;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 57px;
+    line-height: 73px;
+}
+
+.contentcom {
+    display: block;
+    width: 80%;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.normal {
+    font-weight: normal;
+}
+
+.more {
+    width: 300px;
+    height: 40px;
+    display: block;
+    color: #fff;
+    line-height: 40px;
+    text-indent: 30px;
+    font-size: 20px;
+
+    background-color: dodgerblue;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.more:hover {
+    animation: mogra 3s 0.4s infinite;
+}
+
+.pg1 {
+    background-image: url(mainimages/webbg1.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.pg2 {
+    background-image: url(mainimages/responsivebg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+
+.pg3 {
+    background-image: url(mainimages/webbg1.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+.pg4 {
+    background-image: url(mainimages/webbg1.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+.pg1 .rightsection {
+    background-image: url(mainimages/igong.png);
+    background-position: right bottom;
+    background-size: 241%;
+}
+
+.pg2 .rightsection {
+    background-image: url(mainimages/ex1.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.pg2 .more {
+    background-color: #f1bd09;
+}
+
+.pg2 {
+    background-image: url(mainimages/expedialibg.png);
+    transition: 3s;
+}
+
+.pg2:hover .rightsection {
+    background-image: url(mainimages/exMob.png);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.pg3 .rightsection {
+    background-image: url(mainimages/kylieMob.png);
+
+    cursor: crosshair;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: 3s;
+}
+
+.pg3:hover .rightsection {
+    background-size: 110%;
+    background-position: bottom right;
+
+}
+
+.pg3:hover {
+    background: -webkit-linear-gradient(left, #f54ea2 0%, #ff7676 50%, #f54ea2 51%, #ff7676 100%);
+    /* Chrome10-25,Safari5.1-6 */
+}
+
+.pg4 .rightsection {
+    background-image: url(mainimages/dongwon.png);
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position: 4%;
+}
+
+.pg5 .rightsection {
+    background-image: url(mainimages/lanoa.png);
+    background-image: url(mainimages/lanoa.png);
+    background-size: 220%;
+    background-position: 34% 96%;
+    background-color: #e4e4e4;
+
+}
+
+.pg6 .rightsection {
+    background-image: url(mainimages/kca1.png);
+    background-size: 150%;
+    background-position: 34% 96%;
+    background-color: #e4e4e4;
+    background-repeat: no-repeat;
+}
+
+.pagenation {
+    position: absolute;
+    left: 50px;
+    top: 300px;
+
+}
+
+.gageWrap {
+    width: 2px;
+    height: 200px;
+    background-color: #000;
+    top: -8px;
+    position: absolute;
+    box-sizing: border-box;
+    padding-top: 10px;
+}
+
+.gage {
+    display: block;
+    width: 3px;
+    height: 26px;
+    margin-top: 0;
+    padding-top: 10px;
+    background-color: goldenrod;
+}
+
+.pagenation ul {
+    width: 150px;
+    height: 200px;
+
+}
+
+.pagenation ul li {
+    width: 100%;
+    line-height: 30px;
+}
+
+
+.pagenation ul li label {
+    display: block;
+    color: #f1f1f6;
+    text-shadow: 1px 1px 1px #000;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    text-indent: 20px;
+}
+
+.pagenation ul li label.num1.on {
+    color: goldenrod;
+}
+
+input[name=im1] {
+    display: none;
+}
+
+/*
+
+.ra1:checked .con {
+    margin-left: 0px;
+}
+
+.ra2:checked .con {
+    margin-left:-1920px;
+}
+
+
+
+.ra3:checked .con {
+    margin-left:-200%;
+}
+
+
+
+.ra4:checked .con {
+    margin-left:-300%;
+}
+
+
+
+.ra5:checked .con {
+    margin-left:-400%;
+}
+
+
+.ra6:checked .con {
+    margin-left: -500%;
+}
+
+*/
+.gall {
+    width: 100%;
+    display: none;
+    height: 900px;
+    background-color: forestgreen;
+
+
+}
+
+@keyframes mogra {
+    0% {
+        background-color: dodgerblue;
+    }
+
+    50% {
+        background: -webkit-linear-gradient(left, #5b247a 0%, #1bcedf 100%);
+        /* Chrome10-25,Safari5.1-6 */
+    }
+
+    100% {
+        background-color: dodgerblue;
+    }
+}
