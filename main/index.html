@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>백유경의 포트폴리오</title>
+
+    <!--    css-->
+
+    <link rel="stylesheet" href="style.css">
+
+    <!--    <link rel="stylesheet" href="scroll.css">-->
+
+
+
+    <!--    폰트-->
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=K2D|Lato|Noto+Sans+KR|Noto+Serif+KR|Open+Sans|Fjalla+One|Oswald|Roboto|Roboto+Condensed|Roboto+Slab" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Jua|Sunflower:300" rel="stylesheet">
+
+
+
+    <!--    아이콘-->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!--    뷰포트 -->
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+
+
+    <!--   아이콘  -->
+
+
+
+    <link rel="shortcut icon" href="./images1/fv_01.png" type="image/x-icon">
+
+    <link rel="icon" size="16x16 32x32 48x48 64x64 72x72 96x96 114x114 128x128 " href="./images1/fv_01.png" type="image/x-icon">
+
+    <!--    아이폰 아이콘 -->
+
+    <link rel="apple-touch-icon-precomposed" href="./images1/fv_01.png">
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+
+    <meta name="msapplication-TileColor" content="">
+
+    <!--     <meta name="msapplication-TileColor" content=""> 여기 콘텐츠에 이미지 넣으면됨-->
+
+
+
+
+
+    <!--    메타태그-->
+
+    <meta http-equiv="X-UA_Compatible" content="IE=Edge">
+
+    <meta name="keywords" content="">
+
+    <meta name="Description" content="">
+
+
+
+    <!--    제이쿼리 연결-->
+
+
+
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+
+        $(document).ready(function() {
+
+            setTimeout(function() {
+
+                $(".loading").fadeOut(400);
+
+            }, 5000);
+
+ 
+
+            $(".loading").on("click", function() {
+
+                $(this).fadeOut(100);
+
+            });
+
+        });
+        
+         
+
+ 
+    </script>
+    <script>
+
+        //탑버튼+페이지 번호 표시+게이지바 이벤트
+        $(document).ready(function(){
+            var ht = parseInt($(window).height()); // 메뉴 스크롤 모션
+            var wd = parseInt($(window).width());
+            var pageCnt = parseInt($(".conWrap li").length)-2;
+            var rt = wd/ht/pageCnt;
+            
+            //버튼 숨기기
+            $("#toFirst").hide();
+            
+            // 스크롤시 버튼 페이드 인
+            $(function(){
+                $(window).scroll(function(){
+                    var sct = $(window).scrollLeft();     // 페이지 넘버1
+                    var pageNum = parseInt(sct/ht)+1;   //페이지 넘버2
+                    $("#pageCnt").text(pageNum);    //페이지 넘버2
+                    // 게이지 모션 시작
+                    $(".gage").width(parseInt(rt*sct));
+                    $("#gageBar").css("left", parseInt(rt*sct)-10+"px");
+                    $("#gageNum").text(pageNum).css("left", parseInt(rt*sct)-12+"px");
+                    // 게이지 모션 끝 ↑
+                    if ($(this).scrollTop() > 500) {
+                        $('#toTop').fadeIn();
+                    } else {
+                        $('#toTop').fadeOut();
+                    }
+                });
+            });
+            // 버튼 클릭시 맨 위로 이동
+            $('#toTop').click(function(){
+                $('body, html').animate({
+                    scrollTop: 0
+                }, 800);
+                return false;
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            var ht = parseInt($(window).height());
+            var wd1 = parseInt($(".conWrap li").width());
+            var pageLast = $(".conWrap li").length;
+            var sc1 = $(window).scrollLeft();
+            var sc2 = $(".Wrap").width();
+
+            
+            $(window).on("mousewheel", function(e){
+                if(e.originalEvent.wheelDelta < 0){ // 내려가는거
+                    $("html, body").not(":animated").animate({scrollLeft:"+="+ht+"px"}, 800);
+                    if (sc1==wd1*pageLast){
+                          $("#toFirst").show();
+                        
+                    }
+                } else { //올라가는거
+                    $("html, body").not(":animated").animate({scrollLeft:"-="+ht+"px"}, 800);
+                }
+                return false;
+            });
+               $("#toFirst").click(function(){
+                   $(".Wrap").scrollLeft(0);
+               })
+             
+                        
+                        
+        });
+
+    </script>
+    <script>
+
+        $(document).ready(function(){
+                    
+                var open1 = true;
+             $(".ck1").on("click", function(){
+                 $(".open").toggleClass("on");
+            
+                  if( open1 == true ){
+                        $(this).text("CLOSE");
+                    }
+                  else{ 
+                    $(this).text("OPEN"); 
+                   }
+           
+                  open1 = !open1;
+                        
+             });
+                 
+                     
+        });                                             
+    </script>
+
+
+    <script>
+        /*
+        $(document).ready(function(){
+            var open2 = $(this).html("CLOSED");
+           $(".ck1").click(function(){
+              $(".open").toggleClass("on");
+               open2;
+              }); 
+           }); 
+        });
+        
+         var open1 = true;
+                  if( open1 == true ){
+                        $(this).text("CLOSE");
+                    }
+                  else{ 
+                    $(this).text("OPEN"); 
+                   }
+                  open1 = !open1;
+                  
+               function changeText(){
+                var x = document.getElementById("change");   
+                if (x.innerHTML === "OPEN") {
+                    x.innerHTML = "CLOSE";
+                } else {
+                    x.innerHTML = "OPEN";
+                }
+                        
+                }
+        */
+    </script>
+
+
+
+    <script>
+        $(document).ready(function(){
+       
+            $(".conWrap li").hover(function(){
+          
+                
+           $(this).css("width", "3%");
+            $(".conWrap li").eq(0).removeClass("on");    
+            $(this).find(".txM, .txD , .num").addClass("on");
+            $(this).find(".pgImg, .pgimg, .more, .text1").addClass("on");
+           $(this).find(".pgimg").css("display", "block");
+           
+           $(this).siblings().css("width","1.1%");
+           $(this).siblings().find(".txM, .txD, .num").removeClass("on");
+           $(this).siblings().find(".pgImg, .pgimg, .more").removeClass("on");
+                
+                
+       });
+           
+          $(".conWrap li").mouseleave(function(){
+            $(".conWrap li").eq(0).css("width", "3%");
+            $(".conWrap li").eq(0).css("widht", "1.1%");
+            $(this).find(".pgimg").css("display", "none");
+               $(this).removeClass("on");
+            $(this).siblings().find(".txM").removeClass("on");
+            $(this).siblings().find(".pgImg, .pgimg, .more, .num").removeClass("on");
+          }); 
+            
+            
+            
+            var hdwdis = parseInt($(".hdText").width());
+            if(hdwdis < 20) {
+                $(".hdText").css("display", "none");
+            } else {
+                $(".hdText").css("display", "block");
+            }
+                
+            
+            
+            $(".pageGo.first").on("click",)
+            
+            
+            
+            
+    });
+    </script>
+
+
+
+
+
+
+
+    <style>
+        /*
+                           
+                 else{
+                   $(".open").removeClass("on", function(){
+                    topen; 
+                   });
+                  open1 = !open1;
+                
+                     }*/
+
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+    <div class="Wrap">
+
+        <div class="loading">
+
+
+
+        </div>
+
+        <div class="pageWrap">
+
+
+
+
+
+            <aside class="as1">
+
+                <div class="asWrap">
+
+
+
+
+
+                    <div class="logo">
+
+                    </div>
+
+                    <label class="ck1" for="op">OPEN</label>
+
+                    <input type="checkbox" id="op">
+
+
+
+                </div>
+                <div class="open">
+
+                    <nav class="menu">
+
+                        <h2 class="meTit">
+
+                            MENU
+
+                        </h2>
+
+                        <ul class="menuWrap">
+
+                            <li><a href="">HOME</a><span class="hcon"></span></li>
+
+                            <li><a href="">WORK</a><span class="hcon"></span></li>
+
+                            <li><a href="">ABOUT ME</a><span class="hcon"></span></li>
+
+                            <li><a href="">CONTACT ME</a><span class="hcon"></span></li>
+
+                        </ul>
+
+                    </nav>
+
+                    <div class="contact">
+                        <h3 class="tot">
+                            CONTECT
+                        </h3>
+                        <p class="email">
+                            email
+                        </p>
+                        <p class="git">
+
+                            1006_0@naver.com
+
+                        </p>
+                        <p>github</p>
+                        <a href="https://github.com/10060/10060.github.io" class="git">https://github.com/10060/10060.github.io</a>
+                        <p>instagram</p>
+                        <a href="" class="git">https://www.instagram.com/
+                            _106_0</a>
+                    </div>
+
+                </div>
+
+            </aside>
+
+            <main class="main">
+
+                <ul class="conWrap">
+
+                    <li class="con view" id="n1">
+                        <div class="n1Wrap">
+
+
+                            <h2 class="num pg00">
+
+                                00
+
+                            </h2>
+
+                            <div class="tbox">
+
+
+
+                                <h3 class="hdText">
+
+                                    안녕하세요. <br><strong>UX/UI디자이너</strong>가 되고 싶어 <br><strong>시각디자인과</strong>를 졸업하고,<br><strong>퍼블리싱을</strong> 배우고 있는<strong>백유경</strong> 입니다.<br>저의 포트폴리오의 작업물들은<br> 모두<strong> HTML5ㆍCSS3ㆍjQuery</strong>를<br> 사용한 디자인 작업물입니다.
+
+                                </h3>
+
+
+
+                            </div>
+
+                            <label for="" class="pageGo first"> CONTACT ME <span class="af"></span></label>
+
+                            <label for="" class="pageGo"> gallery <span class="af"></span></label>
+
+                            <label for="" class="pageGo"> Introduce <span class="af"></span></label>
+
+                        </div>
+                    </li>
+
+                    <li class="con" id="n2">
+
+                        <h2 class="num ">01</h2>
+
+                        <div class="conBox">
+
+                            <p class="pgCom">DESKTOP</p>
+
+                            <h3 class="pgsub">이공갤러리</h3>
+
+                            <p class="text1">이공갤러리의 웹페이지 디자인 웹에 최적화 되어있다. 이미지를 돋보일 수 있도록 어두운 배경을 이용하였다.이공갤러리의 웹페이지 디자인 웹에 최적화 되어있다. 이미지를 돋보일 수 있도록 어두운 배경을 이용하였다.이공갤러리의 웹페이지 디자인 웹에 최적화 되어있다. 이미지를 돋보일 수 있도록 어두운 배경을 이용하였다.이공갤러리의 웹페이지 디자인 웹에 최적화 되어있다. 이미지를 돋보일 수 있도록 어두운 배경을 이용하였다.</p>
+                            <span class="txD"></span>
+                            <div class="pgImg">
+                            </div>
+
+
+
+                            <a href="http://dbrud8.dothome.co.kr/pofo/site928_02/" class="more">
+                                MORE VIEW
+                            </a>
+
+                        </div>
+
+                    </li>
+
+                    <li class="con" id="n3">
+
+                        <h2 class="num">02</h2>
+
+                        <div class="conBox">
+
+                            <p class="pgCom">MOBILE WEB</p>
+
+                            <h3 class="pgsub">컨버스 모바일 웹 리디자인</h3>
+
+                            <p class="text1">신발브랜드 컨버스의 모바일버전 웹 디자인을 리디자인 하였습니다.</p>
+                            <span class="txM">
+
+                            </span>
+                            <img src="images1/convers.png" alt="컨버스목업화면" class="pgimg">
+
+                            <a href="" class="more">MORE VIEW</a>
+
+                        </div>
+
+                    </li>
+
+                    <li class="con" id="n4">
+
+                        <h2 class="num">03</h2>
+
+                        <div class="conBox">
+
+                            <p class="pgCom">RESPONSIVE</p>
+
+                            <h3 class="pgsub">익스피디아 <br>웹사이트 리디자인</h3>
+
+                            <p class="text1">여행사이트 익스피디아의 웹사이트를 반응형으로 리디자인 하였습니다. 기존의 색감은 유지하였고 컨텐츠들의 디자인을 색감과 이미지들로 바꾸었습니다.</p>
+                            <span class="txM"></span>
+                            <img src="./images1/exMob.png" alt="익스피디아목업화면" class="pgimg">
+
+                            <a href="" class="more">MORE VIEW</a>
+
+                        </div>
+
+                    </li>
+
+                    <li class="con" id="n5">
+
+                        <h2 class="num">04</h2>
+
+                        <div class="conBox">
+
+                            <p class="pgCom">MOBLIE</p>
+
+                            <h3 class="pgsub">한국방송통신진흥원</h3>
+
+                            <p class="text1">한국방송통신 진흥원의 웹사이트 리디자인을 진행하였습니다. 페이지에 풀페이지로 배경이미지를 넣어 화면을 내릴 때 마다 다른 컨텐츠라는 것을 알리고 분위기를 바뀌는 것을 느낄 수 있도록 디자인 하였습니다.</p>
+                            <span class="txM"></span>
+                            <img src="./images1/kcaMon.png" alt="" class="pgimg">
+
+                            <a href="" class="more">MORE VIEW</a>
+
+                        </div>
+
+                    </li>
+
+                    <li class="con" id="n6">
+
+                        <h2 class="num">05</h2>
+
+                        <div class="conBox">
+
+                            <p class="pgCom">DESKTOP</p>
+
+                            <h3 class="pgsub">보령제약<br> 기업형 사이트 리디자인</h3>
+
+                            <p class="text1"> 제약 회사의 브랜드 사이트로 보령의 로고에 있는 컬러 두가지의 색감에서 명도와 채도를 낮추어 무게감있는 컬러로 메인페이지의 상단에 비주얼요소를 강조하였고, 사이트의 아웃라인에 틀을 디자인하였다.</p>
+                            <span class="txD"></span>
+                            <div class="pgImg">
+                                <img src="images1/borying.png" alt="" class="pgImg">
+
+                            </div>
+
+                            <a href="" class="more">MORE VIEW</a>
+
+                        </div>
+
+                    </li>
+
+                    <li class="con" id="n7">
+
+                        <h2 class="num">06</h2>
+
+                        <div class="conBox">
+
+                            <p class="pgCom">MOBILE WEB</p>
+
+                            <h3 class="pgsub">우리은행</h3>
+
+                            <p class="text1">우리은행의 금융기관 모바일버전 웹 디자인을 리디자인 하였습니다.</p>
+                            <span class="txM">
+
+                            </span>
+                            <img src="images1/woori.png" alt="" class="pgImg">
+
+                            <a href="" class="more">MORE VIEW</a>
+
+                        </div>
+
+                    </li>
+
+                    <li class="con" id="n8">
+
+                        <h2 class="num">07</h2>
+
+                        <div class="conBox">
+
+                            <p class="pgCom">MOBILE WEB</p>
+
+                            <h3 class="pgsub">불가리</h3>
+
+                            <p class="text1">불가리의 모바일 웹디자인 모바일에서쉽게 사용할 수 있도록 디자인 하려 하였다. 쇼케이스에 진열된 주얼리를 컨셉으로 디자인 하였다. 다양한 제품군을 한번에 찾을수 있도록 위젯형태의레이아웃으로 디자인 하였다.
+                            </p>
+
+                            <span class="txM">
+
+                            </span>
+                            <img src="./images1/bul1.png" alt="" class="pgimg">
+
+                            <a href="" class="more">MORE VIEW</a>
+
+                        </div>
+
+                    </li>
+
+                    <li class="con" id="n9">
+
+                        <h2 class="num">08</h2>
+
+                        <div class="conBox">
+
+                            <p class="pgCom">RESPONSIVE</p>
+
+                            <h3 class="pgsub">신세계인터네셔날</h3>
+
+                            <p class="text1"> 신세계의 시그니처 컬러를 이용해 색감으로 브랜드 이미지를 전달하고, 슬라이드를 넣어 페이지가 단조로워 보이지 않도록 디자인하였습니다.</p>
+                            <span class="txD"></span>
+                            <img src="./images1/sinseg.png" alt="신세계인터메인화면이미지" class="pgImg">
+
+                            <a href="" class="more">MORE VIEW</a>
+
+                        </div>
+
+                    </li>
+
+                    <li class="con" id="n10">
+
+                        <h2 class="num">09</h2>
+
+                        <div class="conBox">
+
+                            <p class="pgCom">RESPONSIVE</p>
+
+                            <h3 class="pgsub">동원F&amp;B</h3>
+
+                            <p class="text1">동원F&amp;B의 기업형 웹디자인을 리디자인 하였습니다. 식품의 청결함을 나타 내기위해 명도 높은 blue계열을 사용하였습니다.</p>
+                            <span class="txD"></span>
+                            <div class="pgImg">
+
+                            </div>
+
+                            <a href="" class="more">MORE VIEW</a>
+
+                        </div>
+
+                    </li>
+
+                    <li class="con" id="n11">
+
+                        <h2 class="num">10</h2>
+
+                        <div class="conBox">
+
+                            <p class="pgCom">RESPONSIVE</p>
+
+                            <h3 class="pgsub">노루홀딩스</h3>
+
+                            <p class="text1">노루홀딩스의 웹디자인을 반응형으로 리디자인 하였습니다. 노루홀딩스의 다양한 색감을 나타낼수 있도록 배경은 화이트로 하였고 컨텐츠들의 색감을 화려하게 표현하였습니다.</p>
+                            <span class="txD"></span>
+                            <div class="pgImg">
+                            </div>
+
+
+
+                            <a href="" class="more">MORE VIEW</a>
+
+                        </div>
+
+                    </li>
+
+                    <li class="con" id="n12">
+
+                        <h2 class="num">11</h2>
+
+                        <div class="conBox">
+
+                            <p class="pgCom">DESKTOP</p>
+
+                            <h3 class="pgsub">라노아</h3>
+
+                            <p class="text1">천연 화장품브랜드 라노아의 웹페이지를 리디자인 하였습니다.</p>
+                            <span class="txD"></span>
+                            <div class="pgImg">
+
+                            </div>
+
+                            <a href="" class="more">MORE VIEW</a>
+
+                        </div>
+
+                    </li>
+
+                    <li class="con" id="n13">
+
+                        <h2 class="num">12</h2>
+
+                        <div class="conBox">
+
+                            <p class="pgCom">DESKTOP</p>
+
+                            <h3 class="pgsub">라노보</h3>
+
+                            <p class="text1">커피브랜드 라노보의 웹사이트를 디자인 하였습니다.</p>
+                            <span class="txD"></span>
+                            <div class="pgImg">
+
+                            </div>
+
+
+                            <a href="" class="more">MORE VIEW</a>
+
+                        </div>
+
+                    </li>
+
+                    <li class="con" id="n14">
+
+                        <h2 class="num">13</h2>
+
+                        <div class="conBox">
+
+                            <p class="pgCom">DESKTOP</p>
+
+                            <h3 class="pgsub">제주동백관광페이지</h3>
+
+                            <p class="text1">제주의 관광상품 동백꽃을 관광상품으로 만든 제주동백 웹사이트입니다. 제주관광의 색깔인 오렌지 계열과 포인트컬러로 동백의 색감을 담았습니다. 탭형태로 컨텐츠를 정리하였습니다.</p>
+
+                            <span class="txD">
+
+                            </span>
+                            <div class="pgImg">
+
+                            </div>
+
+
+                            <a href="" class="more">MORE VIEW</a>
+
+                        </div>
+
+                    </li>
+
+                    <li class="con" id="n15">
+
+                        <h2 class="num">14</h2>
+
+                        <div class="conBox">
+
+                            <p class="pgCom">MOBILE</p>
+
+                            <h3 class="pgsub">카일리코스메틱</h3>
+
+                            <p class="text1">색조화장품이 유명한 카일리 코스메틱의 개성을 살린 모바일웹 사이트를 디자인하였습니다.</p>
+                            <span class="txM">
+
+                            </span>
+                            <img src="./images1/kylieMob.png" alt="" class="pgimg">
+
+                            <a href="" class="more">MORE VIEW</a>
+
+                        </div>
+
+                    </li>
+
+
+                </ul>
+
+            </main>
+
+        </div>
+
+        <div class="scroll1">
+            <span>스 크 롤 </span>
+            <span class="scrollBox">&gt; &gt;</span>
+        </div>
+
+
+     <div id="toFirst">
+         <span>
+             &lt;
+             &lt;
+         </span>
+     </div>
+    </div>
+
+
+
+</body>
+
+
+
+</html>
