@@ -320,15 +320,17 @@ img {
 
 }
 
-.tot{
-color: #fff;
+.tot {
+    color: #fff;
 }
-.git{
+
+.git {
     display: block;
     font-size: 30px;
     color: #fff;
     font-weight: bold;
 }
+
 #op {
 
     display: none;
@@ -352,12 +354,12 @@ color: #fff;
 h2.num.pg00 {
     text-indent: 84px;
 }
-
 h2.num.pg00:after {
-    left: 165px;
+    left: 209px;
+    top: 106px;
+    width: 10px;
+    transform: rotate(90deg);
 }
-
-
 
 
 .main {
@@ -375,14 +377,30 @@ h2.num.pg00:after {
 
 .con.view {
 
-    width: 2.6%;
+    width: 931px;
+
+    /* position: fixed; */
+
+    left: 0;
+
+    position: fixed;
 
     color: #fff;
+
     background: linear-gradient(-45deg, #ff6d6d, #86a7ff, #65c178, #ffcd88);
+
     background-size: 400% 400%;
+
     -webkit-animation: Gradient 15s ease infinite;
+
     -moz-animation: Gradient 15s ease infinite;
+
     animation: Gradient 15s ease infinite;
+}
+
+
+.con.view .hdText {
+    display: block;
 }
 
 @-webkit-keyframes Gradient {
@@ -430,9 +448,9 @@ h2.num.pg00:after {
 .conWrap {
 
     width: 1800%;
-
+    background-color: #ffffff;
     height: 100%;
-
+    margin-left: 784px;
 }
 
 
@@ -447,6 +465,7 @@ h2.num.pg00:after {
     padding: 40px;
     transition: 1s;
     position: relative;
+    background-color: #fff;
     box-sizing: border-box;
     border-right: 1px solid #ddd;
 
@@ -491,8 +510,8 @@ h2.num.pg00:after {
 .hdText {
 
     display: block;
-height: 302px;
-    font-size:1.4em;
+    height: 302px;
+    font-size: 1.4em;
     width: 90%;
     overflow: hidden;
     font-weight: 400;
@@ -549,7 +568,7 @@ height: 302px;
 
     transition: 0.5s;
 
-    top:0px;
+    top: 0px;
 
     height: 10px;
 
@@ -577,7 +596,7 @@ height: 302px;
 
     margin-left: 105px;
 
-    width: 42%;
+    width: 55%;
 
     height: 354px;
 }
@@ -624,9 +643,9 @@ height: 302px;
 
 
 
-.more.on{
+.more.on {
     display: block;
-      width: 291px;
+    width: 291px;
     position: absolute;
     bottom: 100px;
     left: 634px;
@@ -636,14 +655,13 @@ height: 302px;
     background-color: #0d5e80;
     color: #fff;
 }
-.more:hover div{
+
+.more:hover div {
     background-color: cornflowerblue;
     color: #fff;
 }
 
-.more div {
-   
-}
+.more div {}
 
 
 div.m1 {
@@ -693,7 +711,6 @@ div.m3 {
         transform: rotateZ(-45deg) rotateX(270deg) rotateY(45deg);
     }
 }
-
 
 
 
@@ -774,16 +791,18 @@ p.text1 {
     width: 100%;
     height: 50px;
     display: block;
-    
+
 
     overflow: hidden;
- 
+
 }
-.text1{
+
+.text1 {
     width: 100%;
     height: 250px;
     margin-top: 50px;
 }
+
 .pgImg {
     width: 100%;
     height: 300px;
@@ -794,105 +813,111 @@ p.text1 {
     opacity: 0;
 
     background-repeat: no-repeat;
-    background-size:100% auto;
+    background-size: 100% auto;
     background-position: center bottom;
     transition-delay: 1s;
-    
-    
+
+
 }
 
 
-.pgimg{
+.pgimg {
     position: absolute;
     width: 350px;
     top: 2000px;
     opacity: 0;
     height: auto;
-    
+
     transition: 1.5s;
     transition-delay: 0.5s;
-    
+
 }
-.pgimg.on{
+
+.pgimg.on {
     left: 0;
-    width:350px;
-    top:250px;
+    width: 350px;
+    top: 250px;
     opacity: 1;
-    
+
 }
-.pgImg.on{
+
+.pgImg.on {
     left: 20px;
     left: 0;
     top: 560px;
     opacity: 1;
     width: 100%;
     height: auto;
-     animation: bgani 1s 2s;
-    
+    animation: bgani 1s 2s;
+
 }
-.txM{
-    display:block;
-  
+
+.txM {
+    display: block;
+
     position: absolute;
     top: 510px;
     width: 350px;
     height: 200px;
-    left:1300px;
-  
+    left: 1300px;
+
     transition-delay: 0.5s;
     transition-duration: 2s;
     background-repeat: no-repeat;
- 
+
 
     background-image: url(images1/tex1.png);
- 
+
 }
- 
-.txD{
-        display:block;
-  
+
+.txD {
+    display: block;
+
     position: absolute;
-   top: 380px;
+    top: 380px;
     left: -800px;
     width: 350px;
     height: 200px;
-   
-  
+
+
     transition-delay: 0.5s;
     transition-duration: 2s;
     background-repeat: no-repeat;
- 
+
 
     background-image: url(images1/tex2.png);
 }
-    .txD.on{
-   left: 30px;
-    top: 380px;
-}
 
-    
-
-
-
-.txM.on{
-   left: 380px;
-}
-
-
-#n7 .txM.on{
+.txD.on {
     left: 30px;
     top: 380px;
 }
 
-#n7 .txM{
- top: 380px;
+
+
+
+
+.txM.on {
+    left: 380px;
+}
+
+
+#n7 .txM.on {
+    left: 30px;
+    top: 380px;
+}
+
+#n7 .txM {
+    top: 380px;
     left: -800px;
-    
+
 }
-.con{
+
+.con {
     overflow: hidden;
-cursor: pointer;
+    cursor: pointer;
 }
+
 .loading {
     width: 100%;
     height: 100%;
@@ -900,8 +925,8 @@ cursor: pointer;
 
 }
 
-.num.on{
-     background: linear-gradient(-45deg, #ff6d6d, #d7fdff, #ffd9fb, #dcffe2);
+.num.on {
+    background: linear-gradient(-45deg, #ff6d6d, #d7fdff, #ffd9fb, #dcffe2);
     background-size: 400% 400%;
     -webkit-animation: Gradient 15s ease infinite;
     -moz-animation: Gradient 15s ease infinite;
@@ -920,52 +945,59 @@ li#n2.on {
 }
 
 
-#n2 .pgImg{
+#n2 .pgImg {
     background-image: url(images1/igong.png);
 }
-#n3 .pgImg{
+
+#n3 .pgImg {
     background-image: url(images1/borying.png);
 }
-#n4 .pgImg{
+
+#n4 .pgImg {
     background-image: url(images1/borying.png);
 }
-#n11 .pgImg{
-    background-image:url(images1/noroo.png); 
+
+#n11 .pgImg {
+    background-image: url(images1/noroo.png);
     background-repeat: no-repeat;
     animation: bgani 2s 3s;
-        
+
 }
-#n10 .pgImg{
+
+#n10 .pgImg {
     background-image: url(images1/dongwon.png);
     background-position: top;
-     animation: bgani 2s 3s;
-}
-#n12 .pgImg{
-    background-image: url(images1/lanoa.png);
-     animation: bgani 2s 3s ;
-}
-#n6 .pgImg{
-    background-image: url(images1/borying.png);
-     animation: bgani 2s 3s;
+    animation: bgani 2s 3s;
 }
 
-#n13 .pgImg{
+#n12 .pgImg {
+    background-image: url(images1/lanoa.png);
+    animation: bgani 2s 3s;
+}
+
+#n6 .pgImg {
+    background-image: url(images1/borying.png);
+    animation: bgani 2s 3s;
+}
+
+#n13 .pgImg {
     background-image: url(images1/lanovo.png);
-    animation: bgani 2s 3s ;
+    animation: bgani 2s 3s;
     background-position: top;
 }
-#n14 .pgImg{
+
+#n14 .pgImg {
     background-image: url(images1/jeju.png);
-     animation: bgani 2s 3s;
+    animation: bgani 2s 3s;
 }
 
-@keyframes bgani{
-    0%{
-        background-position:bottom center;
+@keyframes bgani {
+    0% {
+        background-position: bottom center;
     }
- 
-    100%{
-             background-position: 0 -150px;
+
+    100% {
+        background-position: 0 -150px;
     }
 }
 
@@ -973,13 +1005,30 @@ li#n2.on {
 
 
 
-#toFirst{
+#toFirst {
     width: 50px;
     height: 80px;
     background-color: #000;
     border-radius: 50px;
     float: right;
-    
+
+}
+
+
+
+.gofirst {
+    width: 100px;
+    height: 100%;
+    background-color: #000000;
+    position: relative;
+}
+
+.pgG {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 100px;
+    left: 0;
 }
 
 
