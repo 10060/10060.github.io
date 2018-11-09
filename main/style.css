@@ -986,6 +986,7 @@ li#n2.on {
 #n11 .pgImg {
     background-image: url(images1/noroo.png);
     background-repeat: no-repeat;
+    background-position: center;
     animation: bgani 0.2s 0.5s;
 
 }
@@ -1016,6 +1017,8 @@ li#n2.on {
 #n14 .pgImg {
     background-image: url(images1/jeju.png);
     animation: bgani 0.2s 0.5s;
+    background-position: center;
+    background-size: 80%;
 }
 
 @keyframes bgani {
