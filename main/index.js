@@ -87,7 +87,12 @@ $(document).ready(function () {
     $(".wd50").css("widht", winHalf + "px");
 
 
-
+       $(".more").hover(function () {
+         $(this).addClass("on");
+         }); 
+       $(".more").mouseleave(function () {
+         $(this).removeClass("on");
+         }); 
 
 
 
