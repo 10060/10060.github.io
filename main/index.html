@@ -76,7 +76,7 @@
 
 
 
-    <script src="https://code.jquery.com/jquery-latest.js"></script>
+  
     <script src="jquery-3.3.1.min.js"></script>
     <script>
 
@@ -99,13 +99,13 @@
         });
         
          
+    </script>
 
  
-    </script>
     <script>
 
         //탑버튼+페이지 번호 표시+게이지바 이벤트
-        $(document).ready(function(){
+     /*  $(document).ready(function(){
             var ht = parseInt($(window).height()); // 메뉴 스크롤 모션
             var wd = parseInt($(window).width());
             var pageCnt = parseInt($(".conWrap li").length)-2;
@@ -139,9 +139,83 @@
                 }, 800);
                 return false;
             });
-        });
+        }); */
     </script>
     <script>
+        $(document).ready(function(){
+            var ht = parseInt($(window).height());
+            var winHalf = parseInt($(window).width()/2);
+            var first1 = $(".conWrap li").eq(0);
+            var first2 = parseInt($(".view").width());
+            var wd1 = parseInt($(".con").width());
+            var wd2 = parseInt($(this).siblings().width());
+            var pageLast = $(".conWrap li").length;
+            var sc1 = $(window).scrollLeft();
+            var sc2 = $(".Wrap").width();
+            
+            console.log(winHalf);
+
+            
+            $(window).on("mousewheel", function(e){
+                if(e.originalEvent.wheelDelta < 0){ // 내려가는거
+                    $("html, body").not(":animated").animate({scrollLeft:"+="+wd2+"px"}, 800, function(){
+//                        $(".conWrap li").eq(1).appendTo(".conWrap");
+                        $(".conWrap li").eq(0).appendTo(".conWrap");
+                        
+                        $(".conWrap").css("margin-left",first2+"px");
+                    });
+                    } else { //올라가는거
+                    $("html, body").not(":animated").animate({scrollLeft:"-="+wd2+"px"}, 800, function(){
+                        $(".conWrap li").eq(pageLast-1).prependTo(".conWrap");
+                        $(".conWrap").css("margin-left",first2+"px");
+                    });
+                }
+                return false;
+            });
+                   
+               $("#toFirst").click(function(){
+                   $(".Wrap").scrollLeft(0);
+               });
+                        
+
+        
+             
+         $(".conWrap li").slice(1).hover(function(){
+            $(this).css("width", "3%");
+            $(this).find(".txM, .txD , .num, .pgImg, .pgimg, .more, .text1").addClass("on");
+            $(this).find(".pgimg").css("display", "block");
+            $(this).siblings().css("width","1.1%");
+            $(this).siblings().find(".txM, .txD, .num, .pgImg, .pgimg, .more").removeClass("on");
+
+       });
+            
+         
+          $(".conWrap li").mouseleave(function(){
+//            $(".conWrap li").eq(1).css("width", "3%");
+//            $(".conWrap li").eq(0).css("widht", "1.1%");
+              $(this).css("width", "1.1%");
+              $(this).find(".txM, .txD, .num, .pgImg, .pgimg, .more").removeClass("on");
+              $(this).find(".pgimg").css("display", "none");
+              $(this).siblings().find(".pgImg, .pgimg, .more, .num, .txM").removeClass("on");
+           
+          
+            
+          
+                
+          }); 
+            
+            
+            $(".wd50").css("widht", winHalf+"px");
+           
+        
+               });
+             
+                        
+                        
+
+    </script>
+    <script>
+        /*
         $(document).ready(function(){
             var ht = parseInt($(window).height());
             var wd1 = parseInt($(".conWrap li").width());
@@ -153,22 +227,24 @@
             $(window).on("mousewheel", function(e){
                 if(e.originalEvent.wheelDelta < 0){ // 내려가는거
                     $("html, body").not(":animated").animate({scrollLeft:"+="+ht+"px"}, 800);
-                    if (sc1==wd1*pageLast){
-                          $("#toFirst").show();
-                        
-                    }
-                } else { //올라가는거
-                    $("html, body").not(":animated").animate({scrollLeft:"-="+ht+"px"}, 800);
+                    
+                    } else { //올라가는거
+                    $("html, body").not(":animated").animate({scrollLeft:"-="+ht+"px"}, 800, function(){
+                        $(".conWrap li").eq(pageLast).prependTo(".conWrap");
+                        $(".conWrap").css("margin-left","784px");
+                    });
                 }
                 return false;
             });
+                   
                $("#toFirst").click(function(){
                    $(".Wrap").scrollLeft(0);
-               })
-             
-                        
+               });
                         
         });
+             
+         */               
+                        
 
     </script>
     <script>
@@ -230,33 +306,36 @@
 
 
     <script>
-        $(document).ready(function(){
+     /*   $(document).ready(function(){
        
-            $(".conWrap li").hover(function(){
-          
-                
-           $(this).css("width", "3%");
-            $(".conWrap li").eq(0).removeClass("on");    
-            $(this).find(".txM, .txD , .num").addClass("on");
-            $(this).find(".pgImg, .pgimg, .more, .text1").addClass("on");
-           $(this).find(".pgimg").css("display", "block");
-           
-           $(this).siblings().css("width","1.1%");
-           $(this).siblings().find(".txM, .txD, .num").removeClass("on");
-           $(this).siblings().find(".pgImg, .pgimg, .more").removeClass("on");
-                
-                
+        $(".conWrap li").slice(1).hover(function(){
+            $(this).css("width", "3%");
+            $(this).find(".txM, .txD , .num, .pgImg, .pgimg, .more, .text1").addClass("on");
+            $(this).find(".pgimg").css("display", "block");
+            $("#n1").not(":animate").animate({"width": 0+"px"}, 200);
+            $(this).siblings().css("width","1.1%");
+            $(this).siblings().find(".txM, .txD, .num, .pgImg, .pgimg, .more").removeClass("on");
        });
-           
+            
+         
           $(".conWrap li").mouseleave(function(){
-            $(".conWrap li").eq(0).css("width", "3%");
-            $(".conWrap li").eq(0).css("widht", "1.1%");
+            $(".conWrap li").eq(1).css("width", "3%");
+            $(".conWrap li").eq(1).css("widht", "1.1%");
             $(this).find(".pgimg").css("display", "none");
-               $(this).removeClass("on");
-            $(this).siblings().find(".txM").removeClass("on");
+             $("#n1").not(":animate").animate({"width": 780+"px"}, 200);
+            $(this).removeClass("on");
+             $(this).siblings().find(".txM").removeClass("on");
             $(this).siblings().find(".pgImg, .pgimg, .more, .num").removeClass("on");
           }); 
             
+          
+                
+           
+            
+           
+                
+                
+           
             
             
             var hdwdis = parseInt($(".hdText").width());
@@ -266,14 +345,14 @@
                 $(".hdText").css("display", "block");
             }
                 
-            
-            
-            $(".pageGo.first").on("click",)
-            
-            
-            
-            
     });
+            
+            
+       */
+            
+            
+            
+            
     </script>
 
 
@@ -384,41 +463,42 @@
 
             <main class="main">
 
-                <ul class="conWrap">
+                <div class="con view" id="n1">
+                    <div class="n1Wrap">
+                        <h2 class="num pg00">
+                           hello
+                        </h2>
+                        <div class="tbox">
+                            <h3 class="hdText">
 
-                    <li class="con view" id="n1">
-                        <div class="n1Wrap">
-
-
-                            <h2 class="num pg00">
-
-                                00
-
-                            </h2>
-
-                            <div class="tbox">
-
-
-
-                                <h3 class="hdText">
-
-                                    안녕하세요. <br><strong>UX/UI디자이너</strong>가 되고 싶어 <br><strong>시각디자인과</strong>를 졸업하고,<br><strong>퍼블리싱을</strong> 배우고 있는<strong>백유경</strong> 입니다.<br>저의 포트폴리오의 작업물들은<br> 모두<strong> HTML5ㆍCSS3ㆍjQuery</strong>를<br> 사용한 디자인 작업물입니다.
-
-                                </h3>
-
-
-
-                            </div>
-
-                            <label for="" class="pageGo first"> CONTACT ME <span class="af"></span></label>
-
-                            <label for="" class="pageGo"> gallery <span class="af"></span></label>
-
-                            <label for="" class="pageGo"> Introduce <span class="af"></span></label>
+                                안녕하세요. <br><strong>UX/UI디자이너</strong>가 되고 싶어 <br><strong>시각디자인과</strong>를 졸업하고,<br><strong>퍼블리싱을</strong> 배우고 있는<strong>백유경</strong> 입니다.<br>저의 포트폴리오의 작업물들은<br> 모두<strong> HTML5ㆍCSS3ㆍjQuery</strong>를<br> 사용한 디자인 작업물입니다.
+                            </h3>
 
                         </div>
-                    </li>
+                        <label for="" class="pageGo first"> CONTACT ME <span class="af"></span></label>
 
+                        <label for="" class="pageGo"> gallery <span class="af"></span></label>
+
+                        <label for="" class="pageGo"> Introduce <span class="af"></span></label>
+
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+                <ul class="conWrap">
+
+
+                   <li class="wd50">
+
+                    </li>
                     <li class="con" id="n2">
 
                         <h2 class="num ">01</h2>
@@ -436,7 +516,7 @@
 
 
 
-                            <a href="https://10060.github.io/site928_02/" class="more">
+                            <a href="https://10060.github.io/site928_02/" class="more" target="_blank">
                                 MORE VIEW
                             </a>
 
@@ -460,7 +540,7 @@
                             </span>
                             <img src="images1/convers.png" alt="컨버스목업화면" class="pgimg">
 
-                            <a href="" class="more">MORE VIEW</a>
+                            <a href="" class="more" target="_blank">MORE VIEW</a>
 
                         </div>
 
@@ -480,7 +560,7 @@
                             <span class="txM"></span>
                             <img src="./images1/exMob.png" alt="익스피디아목업화면" class="pgimg">
 
-                            <a href="" class="more">MORE VIEW</a>
+                            <a href="" class="more" target="_blank">MORE VIEW</a>
 
                         </div>
 
@@ -500,7 +580,7 @@
                             <span class="txM"></span>
                             <img src="./images1/kcaMon.png" alt="" class="pgimg">
 
-                            <a href="" class="more">MORE VIEW</a>
+                            <a href="" class="more" target="_blank">MORE VIEW</a>
 
                         </div>
 
@@ -523,7 +603,7 @@
 
                             </div>
 
-                            <a href="" class="more">MORE VIEW</a>
+                            <a href="" class="more" target="_blank">MORE VIEW</a>
 
                         </div>
 
@@ -545,7 +625,7 @@
                             </span>
                             <img src="images1/woori.png" alt="" class="pgImg">
 
-                            <a href="" class="more">MORE VIEW</a>
+                            <a href="" class="more" target="_blank">MORE VIEW</a>
 
                         </div>
 
@@ -569,7 +649,7 @@
                             </span>
                             <img src="./images1/bul1.png" alt="" class="pgimg">
 
-                            <a href="" class="more">MORE VIEW</a>
+                            <a href="" class="more" target="_blank">MORE VIEW</a>
 
                         </div>
 
@@ -589,7 +669,7 @@
                             <span class="txD"></span>
                             <img src="./images1/sinseg.png" alt="신세계인터메인화면이미지" class="pgImg">
 
-                            <a href="" class="more">MORE VIEW</a>
+                            <a href="" class="more" target="_blank">MORE VIEW</a>
 
                         </div>
 
@@ -611,7 +691,7 @@
 
                             </div>
 
-                            <a href="" class="more">MORE VIEW</a>
+                            <a href="" class="more" target="_blank">MORE VIEW</a>
 
                         </div>
 
@@ -634,7 +714,7 @@
 
 
 
-                            <a href="" class="more">MORE VIEW</a>
+                            <a href="" class="more" target="_blank">MORE VIEW</a>
 
                         </div>
 
@@ -656,7 +736,7 @@
 
                             </div>
 
-                            <a href="" class="more">MORE VIEW</a>
+                            <a href="" class="more" target="_blank">MORE VIEW</a>
 
                         </div>
 
@@ -679,7 +759,7 @@
                             </div>
 
 
-                            <a href="" class="more">MORE VIEW</a>
+                            <a href="" class="more" target="_blank">MORE VIEW</a>
 
                         </div>
 
@@ -705,7 +785,7 @@
                             </div>
 
 
-                            <a href="" class="more">MORE VIEW</a>
+                            <a href="" class="more" target="_blank">MORE VIEW</a>
 
                         </div>
 
@@ -727,7 +807,7 @@
                             </span>
                             <img src="./images1/kylieMob.png" alt="" class="pgimg">
 
-                            <a href="" class="more">MORE VIEW</a>
+                            <a href="" class="more" target="_blank">MORE VIEW</a>
 
                         </div>
 
@@ -735,7 +815,13 @@
 
 
                 </ul>
-
+                <div class="gofirst">
+                    <div class="pgG">
+                        <span>
+                            <img src="./images1/pageGo.png" alt="">
+                        </span>
+                    </div>
+                </div>
             </main>
 
         </div>
@@ -746,12 +832,12 @@
         </div>
 
 
-     <div id="toFirst">
-         <span>
-             &lt;
-             &lt;
-         </span>
-     </div>
+        <div id="toFirst">
+            <span>
+                &lt;
+                &lt;
+            </span>
+        </div>
     </div>
 
 
