@@ -35,7 +35,7 @@ $(document).ready(function () {
         if (e.originalEvent.wheelDelta < 0) { // 내려가는거
             $("html, body").not(":animated").animate({
                 scrollLeft: "+=" + wd2 + "px"
-            }, 800, function () {
+            }, 500, function () {
                 //                        $(".conWrap li").eq(1).appendTo(".conWrap");
                 $(".conWrap li").eq(0).appendTo(".conWrap");
 
@@ -44,7 +44,7 @@ $(document).ready(function () {
         } else { //올라가는거
             $("html, body").not(":animated").animate({
                 scrollLeft: "-=" + wd2 + "px"
-            }, 800, function () {
+            }, 500, function () {
                 $(".conWrap li").eq(pageLast - 1).prependTo(".conWrap");
                 $(".conWrap").css("margin-left", first2 + "px");
             });
