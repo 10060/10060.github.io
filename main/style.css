@@ -758,6 +758,13 @@ div.m3 {
     user-select: none;
 
 }
+.more:hover{
+      background: linear-gradient(-45deg, #990305, #d545ff, #035dfb, #184842);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 15s ease infinite;
+    -moz-animation: Gradient 15s ease infinite;
+    animation: Gradient 15s ease infinite;
+}
 
 @keyframes layerize {
     0% {
@@ -973,6 +980,7 @@ li#n2.on {
 #n12 .pgImg {
     background-image: url(images1/lanoa.png);
     animation: bgani 0.2s 0.5s;
+    
 }
 
 #n6 .pgImg {
@@ -1002,7 +1010,9 @@ li#n2.on {
 }
 
 
-
+.pgImg{
+    transition-timing-function: cubic-bezier(.17,.67,.89,.32);
+}
 
 
 #toFirst {
@@ -1030,5 +1040,7 @@ li#n2.on {
     top: 100px;
     left: 0;
 }
+
+
 
 
