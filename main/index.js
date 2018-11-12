@@ -88,7 +88,11 @@ $(document).ready(function () {
 
 
        $(".more").hover(function () {
-         $(this).addClass("on");
+         $(this).addClass("on1");
+         }); 
+    
+      $(".more").hover(function () {
+         $(this).removeClass("on1");
          }); 
        
 
