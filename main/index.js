@@ -64,7 +64,7 @@ $(document).ready(function () {
         $(this).find(".txM, .txD , .num, .pgImg, .pgimg, .more, .text1").addClass("on");
         $(this).find(".pgimg").css("display", "block");
         $(this).siblings().css("width", "1.1%");
-        $(this).siblings().find(".txM, .txD, .num, .pgImg, .pgimg, .more").removeClass("on");
+        $(this).siblings().find(".txM, .txD, .num, .pgImg, .pgimg, .more , .text1").removeClass("on");
 
     });
 
@@ -73,9 +73,9 @@ $(document).ready(function () {
         //            $(".conWrap li").eq(1).css("width", "3%");
         //            $(".conWrap li").eq(0).css("widht", "1.1%");
         $(this).css("width", "1.1%");
-        $(this).find(".txM, .txD, .num, .pgImg, .pgimg").removeClass("on");
+        $(this).find(".txM, .txD, .num, .pgImg, .pgimg, .text1").removeClass("on");
         $(this).find(".pgimg").css("display", "none");
-        $(this).siblings().find(".pgImg, .pgimg, .more, .num, .txM").removeClass("on");
+        $(this).siblings().find(".pgImg, .pgimg, .more, .num, .txM , .text1").removeClass("on");
 
 
 
