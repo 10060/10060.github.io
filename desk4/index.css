@@ -120,7 +120,7 @@ input[type=checkbox] {
 a.logo {
     width: 342px;
     height: 32px;
-    background-image: url(./images/logo.png);
+    background-image: url(./imagesA/logo.png);
     background-position: top;
     background-repeat: no-repeat;
     display: block;
@@ -514,7 +514,7 @@ h3.grdColName {
     width: 635px;
     height: 300px;
     background-color: #000;
-    background-image: url(./images/video-still_1_2.png);
+    background-image: url(./imagesA/video-still_1_2.png);
     background-repeat: no-repeat;
     background-size: 625px auto;
     background-position: 160px 0;
@@ -524,14 +524,14 @@ h3.grdColName {
 }
 
 .blogo {
-    background-image: url(./images/blogo.png);
+    background-image: url(./imagesA/blogo.png);
     width: 193px;
     height: 22px;
     margin-top: 20px;
 }
 
 .logo_sm {
-    background-image: url(./images/logo.png);
+    background-image: url(./imagesA/logo.png);
     background-position: center bottom;
     width: 250px;
     background-size: 250px;
@@ -544,7 +544,7 @@ h3.grdColName {
     height: 220px;
     font-family: "YouandiModernTR", sans-serif;
     background-color: #0d0a56;
-    background-image: url(./images/box2.png);
+    background-image: url(./imagesA/box2.png);
     background-size: 635px 255px;
     background-repeat: no-repeat;
     box-sizing: border-box;
@@ -584,7 +584,7 @@ h3.grdColName {
     width: 325px;
     height: 520px;
     background-color: #b41f24;
-    background-image: url(./images/box3img.png);
+    background-image: url(./imagesA/box3img.png);
     background-position: center bottom;
     background-repeat: no-repeat;
     right: 0;
