@@ -73,7 +73,7 @@ $(document).ready(function () {
         //            $(".conWrap li").eq(1).css("width", "3%");
         //            $(".conWrap li").eq(0).css("widht", "1.1%");
         $(this).css("width", "1.1%");
-        $(this).find(".txM, .txD, .num, .pgImg, .pgimg, .more").removeClass("on");
+        $(this).find(".txM, .txD, .num, .pgImg, .pgimg").removeClass("on");
         $(this).find(".pgimg").css("display", "none");
         $(this).siblings().find(".pgImg, .pgimg, .more, .num, .txM").removeClass("on");
 
@@ -90,9 +90,7 @@ $(document).ready(function () {
        $(".more").hover(function () {
          $(this).addClass("on");
          }); 
-       $(".more").mouseleave(function () {
-         $(this).removeClass("on");
-         }); 
+       
 
 
 
