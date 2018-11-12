@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>신세계인터네셔날</title>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Nanum+Myeongjo|Noto+Sans+KR|Noto+Serif+JP|Roboto|Source+Sans+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+    <!--    
+font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Noto Serif JP', sans-serif;
+font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Nanum Myeongjo', serif;
+   
+   -->
+    <!--   파비콘 넣을 자리-->
+    <link rel="shortcut icon" href="./imagesA/and_36x36.ico">
+    <!--   아이콘 넣는 링크-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+
+        $(document).ready(function(){
+        var wd = parseInt($("#vsSl1").width());
+        var count1 = $(".slideFrame li").length;
+        
+     
+        
+        var ani1;
+        
+        function slid() {
+            
+            $(".slideFrame").not(":animated").animate({"margin-left":-wd+"px"},800, function(){
+            $(".slideFrame li").eq(0).appendTo(".slideFrame");
+            $(".slideFrame").css("margin-left","0px");
+            
+        });
+        }; 
+
+           var int1 = setInterval(function(){
+             slid();
+        }, 3000);
+            
+            
+            
+        $(".collapsFrame").hover(function(){
+          $(this).css("left","-10px");
+        });   
+            
+            
+        $(".collapsFrame").mouseleave(function(){
+            $(this).css("left","-805px");
+        });    
+            
+    });
+            
+        
+    
+    </script>
+
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="hd">
+
+
+            <input type="checkbox" name="st_Open" id="ra_Open1" class="on" checked>
+            <div class="topNavWrap">
+                <div class="topWrap">
+                    <ul class="topNav left">
+                        <li>
+                            <a href="">LOGIN</a>
+                        </li>
+                        <li><a href="">JOIN US</a></li>
+                    </ul>
+                    <ul class="topNav right">
+                        <li>
+                            <label for="open_item">SITEMAP</label>
+                        </li>
+                        <li><a href="">LANGUAGE</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+
+
+            <div class="hdWrap">
+                <nav class="top">
+                    <a href="" class="logo"></a>
+                    <ul class="menuWrap">
+                        <!--
+                    <input type="radio" name="subRa" id="mnRa">
+                    <label for="subRa" class="subla0"></label>
+                    
+-->
+
+                        <!--
+                        
+                        <i class="fal fa-times-square"></i>
+                        -->
+
+                        <li class="cate0">
+                            <input type="radio" name="subRa" id="sub_open0" class="ck_item" checked>
+                            <label for="sub_open0.lo"></label>
+                        </li>
+
+                        <li class="cate1">
+                            <input type="radio" name="subRa" id="sub_open1" class="ck_item">
+                            <label for="sub_open1">
+                                COMPANY
+                            </label>
+                            <div class="sub">
+                                <figure class="img left">
+                                    <h2>신세계 인터네셔날</h2>
+                                    <p>글로벌 트렌드의 중심에<br><span> 신세계 인터내셔날</span>이 <br>있습니다.</p>
+
+                                </figure>
+                                <div class="subMenu right">
+                                    <ul>
+                                        <li><a href="">
+                                                <span class="subMimgBox" id="com11"></span>
+                                                <h3>회사소개</h3>
+                                                <p></p>
+                                            </a></li>
+
+                                        <li><a href="">
+                                                <span class="subMimgBox" id="com12"></span>
+                                                <h3>비전</h3>
+                                                <p></p>
+                                            </a></li>
+                                        <li><a href="">
+                                                <span class="subMimgBox" id="com13"></span>
+                                                <h3>연혁</h3>
+                                                <p></p>
+                                            </a></li>
+                                        <li><a href="">
+                                                <span class="subMimgBox" id="com14"></span>
+                                                <h3>위치</h3>
+                                                <p></p>
+                                            </a></li>
+                                        <li><a href="">
+                                                <span class="subMimgBox" id="com15"></span>
+                                                <h3>공고</h3>
+                                                <p></p>
+                                            </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="cate2">
+
+                            <input type="radio" name="subRa" id="sub_open2">
+                            <label for="sub_open2">
+                                BRAND
+                            </label>
+                            <div class="sub">
+                                <figure class="img left">
+                                    <h2>Brand</h2>
+
+                                    <p>신세계 인터네셔날<br> 입점브랜드를 소개합니다.</p>
+                                </figure>
+                                <div class="subMenu right">
+                                    <ul>
+                                        <li><a href="">
+                                                <span class="subMimgBox" id="com21"> </span>
+                                                <h3>브랜드소개</h3>
+                                                <p></p>
+                                            </a></li>
+                                        <li><a href="">
+                                                <span class="subMimgBox" id="com22"> </span>
+                                                <h3>패션</h3>
+                                                <p></p>
+                                            </a></li>
+                                        <li><a href="">
+                                                <span class="subMimgBox" id="com23"> </span>
+                                                <h3>뷰티</h3>
+                                                <p></p>
+                                            </a></li>
+                                        <li><a href="">
+                                                <span class="subMimgBox" id="com24"> </span>
+                                                <h3>리빙</h3>
+                                                <p></p>
+                                            </a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cate3">
+
+                            <input type="radio" name="subRa" id="sub_open3">
+                            <label for="sub_open3">
+                                MEDIA
+                            </label>
+                            <div class="sub">
+                                <figure class="img left">
+                                    <h2>  MEDIA</h2>
+
+                                    <p>트랜드를 앞서나가는 기업이 되겠습니다.</p>
+                                </figure>
+                                <div class="subMenu right">
+                                    <ul>
+                                        <li><a href="">
+                                                <span class="subMimgBox" id="com31"> </span>
+                                                <h3>MIDEA</h3>
+                                                <p></p>
+                                            </a></li>
+                                        <li><a href="">
+                                                <span class="subMimgBox" id="com32"> </span>
+                                                <h3>advertise</h3>
+                                                <p></p>
+                                            </a></li>
+
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cate4">
+
+                            <input type="radio" name="subRa" id="sub_open4">
+                            <label for="sub_open4">CAREER</label>
+                            <div class="sub">
+
+                                <figure class="img left">
+                                    <h2>CAREER</h2>
+
+                                    <p>함께 성장하는 기업, 여러분의 열정을 응원합니다.</p>
+                                </figure>
+                                <div class="subMenu right">
+                                    <ul>
+                                        <li><a href="">
+                                                <span class="subMimgBox" id="com41"> </span>
+                                                <h3>인재상</h3>
+                                                <p></p>
+                                            </a></li>
+                                        <li><a href="">
+                                                <span class="subMimgBox" id="com42"> </span>
+                                                <h3>지원하기</h3>
+                                                <p></p>
+                                            </a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cate5">
+
+                            <input type="radio" name="subRa" id="sub_open5">
+                            <label for="sub_open5">INVESTORS</label>
+                            <div class="sub">
+                                <figure class="img left">
+                                    <h2>INVESTORS</h2>
+                                    <p>신세계인터네셔날 기업운영</p>
+                                </figure>
+                                <div class="subMenu right">
+                                    <ul>
+                                        <li><a href="">
+                                                <span class="subMimgBox" id="com51"> </span>
+                                                <h3>기업지배구조</h3>
+                                                <p></p>
+                                            </a></li>
+                                        <li><a href="">
+                                                <span class="subMimgBox" id="com52"> </span>
+                                                <h3>주식/투자정보</h3>
+                                                <p></p>
+                                            </a></li>
+                                        <li><a href="">
+                                                <span class="subMimgBox" id="com53"> </span>
+                                                <h3>재무정보</h3>
+                                                <p></p>
+                                            </a></li>
+                                        <li><a href="">
+                                                <span class="subMimgBox" id="com54"> </span>
+                                                <h3>전자공고</h3>
+                                                <p></p>
+                                            </a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cate6">
+
+                            <input type="radio" name="subRa" id="sub_open6">
+                            <label for="sub_open6">CSR</label>
+                            <div class="sub">
+
+                                <figure class="img left">
+                                    <h2>CSR</h2>
+
+                                    <p>기업을 이끄는 올바른 정신</p>
+                                </figure>
+                                <div class="subMenu right">
+                                    <ul>
+                                        <li><a href="">
+                                                <span class="subMimgBox" id="com61"> </span>
+                                                <h3>CSR경영</h3>
+                                                <p></p>
+                                            </a></li>
+                                        <li><a href="">
+                                                <span class="subMimgBox" id="com62"> </span>
+                                                <h3>투명경영</h3>
+                                                <p></p>
+                                            </a></li>
+                                        <li><a href="">
+                                                <span class="subMimgBox" id="com63"> </span>
+                                                <h3>상생경영</h3>
+                                                <p></p>
+                                            </a></li>
+                                        <li><a href="">
+                                                <span class="subMimgBox" id="com64"> </span>
+                                                <h3>친환경경영</h3>
+                                                <p></p>
+                                            </a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cate7">
+
+                            <input type="radio" name="subRa" id="sub_open7">
+                            <label for="sub_open7">CONTACT</label>
+                            <div class="sub">
+                                <figure class="img left">
+                                    <h2>CONTACT</h2>
+
+                                    <p></p>
+                                </figure>
+                                <div class="subMenu right">
+                                    <ul>
+                                        <li><a href="">
+                                                <span class="subMimgBox" id="com71"> </span>
+                                                <h3></h3>
+                                                <p></p>
+                                            </a></li>
+                                        <li><a href="">
+                                                <span class="subMimgBox" id="com72"> </span>
+                                                <h3></h3>
+                                                <p></p>
+                                            </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="collapWrap">
+
+                            <input type="radio" name="raOpen1" id="onpen">
+                            <label for="onpen">SITEMAP</label>
+
+                            <div class="collap">
+                                <label for="ra_Open1" id="close"></label>
+                                <h2 class="collapTit"></h2>
+                                <ul>
+                                    <li>
+                                        <h2>COMPANY</h2>
+                                        <a href="">회사소개</a>
+                                        <a href="">비전</a>
+                                        <a href="">연혁</a>
+                                        <a href="">위치</a>
+                                        <a href="">공고</a>
+
+                                    </li>
+                                    <li>
+                                        <h2>BRAND</h2>
+                                        <a href="">패션</a>
+                                        <a href="">뷰티</a>
+                                        <a href="">리빙</a>
+
+                                    </li>
+                                    <li>
+                                        <h2>MEDIA</h2>
+                                        <a href="">MEDIA</a>
+
+                                    </li>
+                                    <li>
+                                        <h2>CAREER</h2>
+                                        <a href="">인재상</a>
+                                        <a href="">지원하기</a>
+
+                                    </li>
+                                    <li>
+                                        <h2>INVESTORS</h2>
+                                        <a href="">기업지배구조</a>
+                                        <a href="">주식/투자정보</a>
+                                        <a href="">재무정보</a>
+                                        <a href="">전자공고</a>
+
+                                    </li>
+                                    <li>
+                                        <h2>CSR</h2>
+                                        <a href=""></a>
+                                        <a href=""></a>
+                                        <a href=""></a>
+                                        <a href=""></a>
+                                        <a href=""></a>
+                                        <a href=""></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+
+                    </ul>
+
+
+
+
+                </nav>
+            </div>
+
+        </header>
+        <main class="content">
+
+
+            <input type="radio" name="slRa1" id="raSl1" class="slItem" checked>
+            <input type="radio" name="slRa1" id="raSl2" class="slItem">
+            <input type="radio" name="slRa1" id="raSl3" class="slItem">
+            <input type="radio" name="slRa1" id="raSl4" class="slItem">
+
+            <figure class="mainSl" id="vsSl1">
+
+                <ul class="slideFrame">
+
+
+                    <li class="img1">
+                        
+                        <div class="tWrap">
+                            <h2 class="txtTitle">FASHION</h2>
+                            <p class="pBox">해외 유명 럭셔리 브랜드부터 컨템포러리 디자이너 브랜드, 매스 브랜드에 이르기까지 다양한 수입 브랜드 포트폴리오를 국내에 소개하고 있으며, 자체 패션 브랜드를 성공적으로 운영하고 있습니다.</p>
+                            <p><span>SHINSEGAE</span> INTERNATIONAL</p>
+                            <a href="" class="more">fashion</a>
+                        </div>
+                    </li>
+
+                    <li class="img2">
+
+                        
+                        <div class="tWrap">
+                            <h2 class="txtTitle">COSMETICS</h2>
+                            <p class="pBox">
+
+                                산타 마리아 노벨라(SANTA MARIA NOVELLA), 바이레도(BYREDO)와 같은 글로벌 뷰티 브랜드, 비디비치 및 신세계인터코스코리아를 통해서 한국을 대표하는 토털 뷰티 기업의 새로운 지평선을 열겠습니다.</p>
+                            <p><span>SHINSEGAE </span>INTERNATIONAL</p>
+                            <a href="" class="more">fashion</a>
+                        </div>
+
+                    </li>
+
+                    <li class="img3">
+                      
+                        <div class="tWrap">
+                            <h2 class="txtTitle">LIVING</h2>
+                            <p class="pBox">
+                                자주 쓰는 것들의 최상'을 제시해 한국형 라이프스타일을 제안합니다. JAJU는 '가장 좋은 선택'들로 내 생활을 채울 수 있도록 해줍니다. 사람들이 자주 쓰는 것들에서 과연 무엇이 최상인지, 그 기준을 만들고 제안합니다. 시대와 소비자들의 삶을 면밀히 관찰하고, 진정으로 필요한 기능과 가치가 무엇인지 끊임없이 .</p>
+                            <p><span>SHINSEGAE </span>INTERNATIONAL</p>
+                            <a href="" class="more">fashion</a>
+                        </div>
+
+                    </li>
+
+                    <li class="img4">
+                       
+                        <div class="tWrap">
+                            <h2 class="txtTitle">S.I.VILLEAGE</h2>
+                            <p class="pBox">해외 유명 럭셔리 브랜드부터 컨템포러리 디자이너 브랜드, 매스 브랜드에 이르기까지 다양한 수입 브랜드 포트폴리오를 국내에 소개하고 있으며, 자체 패션 브랜드를 성공적으로 운영하고 있습니다.</p>
+                            <p><span>SHINSEGAE</span> INTERNATIONAL</p>
+                            <a href="" class="more">fashion</a>
+                        </div>
+
+                    </li>
+                </ul>
+
+                <div class="btnbox">
+                    <button class="prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+
+                <ul class="slnumberFrame">
+                    <li class="item1"><label for="raSl1" class="slNumBtn"></label></li>
+                    <li class="item2"><label for="raSl2" class="slNumBtn"></label></li>
+                    <li class="item3"><label for="raSl3" class="slNumBtn"></label></li>
+                    <li class="item4"><label for="raSl4" class="slNumBtn"></label></li>
+                </ul>
+
+
+
+            </figure>
+
+            <!--    그리드의 전체 박스(제일 위에 부모요소)에 크기를 지정하고 position  relative를 준뒤 아래의 li들에 absolute 위치랑 크기 잡아준다
+        전체 박스가 padding으로 부풀어 오르지 않도록  box-sizing border-box해주기 
+                         각각의 li들은 위치를 top과 left로 px값으로 지정해주기
+                           같은 위치에 이쓴ㄴ 요소가 position이  relative인지 확인  최소 최대 높이 설저앻두ㅃㅉ
+                          -->
+
+            <section id="page1" class="page">
+                <ul class="gridFrame">
+                    <li class="grdCol item1_1">
+                        <p>BRAND</p>
+                        <h3 class="grdColName">국내 최초 입점<br>미국 감성 럭셔리 메이크업 브랜드</h3>
+                        <h2 class="blogo"></h2>
+                        <a href="">뷰티페이지 바로가기</a>
+                    </li>
+                    <li class="grdCol item2_1">
+                        <p>INVERSTORS</p>
+                        <h3 class="grdColName">신세계 인터네셔널<br><span>INVESTORS</span></h3>
+                        <h2></h2>
+                        <div class="item2Awrap">
+                            <a href="">기업 지배구조</a>
+                            <a href="">주식 투자</a>
+                            <a href="">기업 투자</a>
+
+                            <a href="">기업 투자</a>
+                        </div>
+                    </li>
+                    <li class="grdCol item3_1">
+                        <span class="logo_sm"></span>
+                        <P>CAREER</P>
+                        <h3 class="grdColName">신세계 인터네셔널<br><span>채용 정보</span></h3>
+
+
+                        <a href="">채용안내 바로가기</a>
+                    </li>
+                </ul>
+            </section>
+
+        </main>
+
+
+
+
+        <footer id="footer">
+            <nav class="fnb">
+                <ul>
+                    <li><a href="">영상정보처리기기 운영방침</a></li>
+
+
+                    <li><a href="">개인정보 처리방침</a></li>
+                    <li><a href="">Recruit</a></li>
+                    <li><a href="">Partner Support</a>
+                    </li>
+                    <li><a href="">SITEMAP</a></li>
+                </ul>
+            </nav>
+            <div class="fnr">
+
+
+                <p class="copyright">COPYRIGHT 2016 (C) BY SHINSEGAE INTERNATIONAL. ALL RIGHTS RESERVED
+                </p>
+
+            </div>
+        </footer>
+
+        <aside class="collapsFrame">
+            <!--                ( ul.cnb>(li.collapCol>div.collapImgFrame>img)+(div.collapCol>a>div.collapTxtFrame>(h3.collapTit.wTxt>span.tit)+p.collapDesc.txt)+label[for=collapCk1].closeBtn+h3.collapName.wTxt)-->
+            <ul class="cnb">
+                <li class="collapCol">
+                    <div class="collapImgFrame"><img src="./imagesA/com11.jpg" alt=""></div>
+                </li>
+                <div class="collapColBox">
+                    <a href="">
+                        <div class="collapTxtFrame">
+                            <h3 class="collapTitwTxt">We share every moment in your life</h3>
+                            <p class="collapDesctxt">신세계인터내셔날은 고객이 지향하는 가치를 공유하고 고객의 아름다운 삶을 꿈꾸는 국내 대표 라이프스타일 기업입니다. 
+언제 어디서든지 고객에게 최고의 감동과 행복을 드리고자 끊임없이 노력하고 소통하는 라이프 파트너가 되는 것이 우리의 비전이자 목표입니다.</p>
+                        </div>
+                    </a>
+                </div>
+                <label for="collapCk1" class="closeBtn">X</label>
+                <h3 class="collapName wTxt">SHINSEGAE INTERNATIONAL</h3>
+            </ul>
+        </aside>
+
+    </div>
+</body>
+
+</html>
