@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>안녕하세요 보령제약입니다.</title>
+    <link rel="stylesheet" href="">
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- 구글웹폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo|Lato|Nanum+Gothic|Noto+Sans+KR|Noto+Serif+KR|Song+Myung" rel="stylesheet">
+
+    <!--    파비콘들 -->
+    <link rel="shortcut icon" href="./favicon/favi62.ico">
+    <link rel="shortcut icon" href="./favicon/favi32.ico">
+    <link rel="shortcut icon" href="./favicon/favi100.png">
+    <link rel="shortcut icon" href="./favicon/favi62.png">
+    <link rel="shortcut icon" href="./favicon/favi32.png">
+    <!--    css 연결 -->
+    <link rel="stylesheet" href="./set.css">
+    <link rel="stylesheet" href="index.css">
+    <style>
+
+
+    </style>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function() {
+            var nub;
+            $(".menu label, .sub .subWrap").hover(function() {
+                nub = $(this).index();
+                $(".sub").css("display", "block");
+                $(".sub .subWrap").stop().eq(nub).slideDown(400);
+                $(".sub .subWrap").eq(nub).siblings().slideUp(400);
+
+            });
+            $(".sub .subWrap").mouseleave(function() {
+                $(".sub, .sub .subWrap").css("display", "none");
+            });
+            $(".melist .meTit").click(function() {
+                $(this).siblings(".open1").stop().slideToggle(200);
+
+            });
+            
+            
+         
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="pageWrap">
+            <header class="hd">
+                <nav class="gnb">
+                    <a href="" class="logo"></a>
+
+
+                    <div class="menu">
+
+
+                        <label for="me1">제품소개</label>
+
+
+                        <label for="me2">R&amp;D</label>
+
+
+                        <label for="me3">IR</label>
+
+
+                        <label for="me4">사회공헌</label>
+
+
+                        <label for="me5">홍보</label>
+
+
+                        <label for="me6">기업소개</label>
+
+                    </div>
+                    <div class="sub">
+                        <div class="subWrap" id="sub1">
+                            <ul>
+                                <li><a href="">제품검색</a></li>
+                                <li><a href="">증상별제품</a></li>
+                                <li><a href="">기관별제품</a></li>
+                                <li>
+                                    <a href="">건강투석</a>
+                                    <ul>
+                                        <li><a href="">투석상담실</a></li>
+                                        <li><a href="">제품소개</a></li>
+                                        <li><a href="">투석가이드</a></li>
+                                        <li><a href="">영양가이드</a></li>
+                                        <li><a href="">웹진</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="">제품소식</a></li>
+                            </ul>
+                        </div>
+                        <div class="subWrap" id="sub2">
+                            <ul>
+                                <li><a href="">R&amp;D 비전&#46;전략</a></li>
+                                <li><a href="">파이프라인</a></li>
+
+                            </ul>
+                        </div>
+                        <div class="subWrap" id="sub3">
+                            <ul>
+                                <li><a href="">재무정보</a></li>
+                                <li><a href="">지배구조</a></li>
+                                <li><a href="">공시</a></li>
+                                <li><a href="">주가정보</a></li>
+                                <li><a href="">주주문의</a></li>
+                                <li><a href="">IR자료실</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="subWrap" id="sub4">
+                            <ul>
+                                <li><a href="">뉴스</a></li>
+                                <li><a href="">나눔활동</a></li>
+                                <li><a href="">보령중보재단</a></li>
+                                <li><a href="">보령의료봉사상</a>
+                                    <ul>
+                                        <li><a href="">소개</a></li>
+                                        <li><a href="">대상수상자소개</a></li>
+                                        <li><a href="">수상자</a></li>
+                                        <li><a href="">문의&amp;추천</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="">보령의사수필문학상</a></li>
+                                <li><a href="">보령암학술상</a></li>
+                            </ul>
+                        </div>
+                        <div class="subWrap" id="sub5">
+                            <ul>
+                                <li><a href="">뉴스</a></li>
+                                <li><a href="">광고</a></li>
+                                <li><a href="">홍보동영상</a></li>
+                                <li><a href="">웹진</a></li>
+                            </ul>
+                        </div>
+                        <div class="subWrap" id="sub6">
+                            <ul>
+                                <li><a href="">기업개요</a></li>
+                                <li><a href="">역사관</a></li>
+                                <li><a href="">글로벌네트워크</a></li>
+                                <li><a href="">채용정보</a></li>
+                                <li><a href="">윤리경역</a></li>
+                                <li><a href="">찾아오시는길</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+
+                    <input type="checkbox" id="meAll">
+                    <label for="meAll" class="menuOpen"><i class="fas fa-bars"></i></label>
+                    <div class="collaps">
+                        <h2 class="allmenu">전체메뉴</h2>
+
+                        <div class="melist" id="introcorp">
+                            <h3 class="meTit">
+                                제품소개
+                            </h3>
+                            <ul class="open1">
+                                <li><a href="">제품검색</a></li>
+                                <li><a href="">증상별제품</a></li>
+                                <li><a href="">기관별제품</a></li>
+                                <li>
+                                    <a href="">건강투석</a>
+                                    <ul>
+                                        <li><a href="">투석상담실</a></li>
+                                        <li><a href="">제품소개</a></li>
+                                        <li><a href="">투석가이드</a></li>
+                                        <li><a href="">영양가이드</a></li>
+                                        <li><a href="">웹진</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="">제품소식</a></li>
+                            </ul>
+                        </div>
+                        <div class="melist">
+                            <h3 class="meTit">
+                                R&amp;D
+                            </h3>
+                            <ul class="open1">
+                                <li><a href="">R&amp;D 비전&#46;전략</a></li>
+                                <li><a href="">파이프라인</a></li>
+                            </ul>
+                        </div>
+
+
+                        <div class="melist">
+                            <h3 class="meTit">IR</h3>
+                            <ul class="open1">
+                                <li><a href="">재무정보</a></li>
+                                <li><a href="">지배구조</a></li>
+                                <li><a href="">공시</a></li>
+                                <li><a href="">주가정보</a></li>
+                                <li><a href="">주주문의</a></li>
+                                <li><a href="">IR자료실</a></li>
+                            </ul>
+                        </div>
+
+
+                        <div class="melist">
+                            <h3 class="meTit">
+                                사회공헌
+                            </h3>
+                            <ul class="open1">
+                                <li><a href="">뉴스</a></li>
+                                <li><a href="">나눔활동</a></li>
+                                <li><a href="">보령중보재단</a></li>
+                                <li><a href="">보령의료봉사상</a>
+                                    <ul>
+                                        <li><a href="">소개</a></li>
+                                        <li><a href="">대상수상자소개</a></li>
+                                        <li><a href="">수상자</a></li>
+                                        <li><a href="">문의&amp;추천</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="">보령의사수필문학상</a></li>
+                                <li><a href="">보령암학술상</a></li>
+                            </ul>
+                        </div>
+                        <div class="melist">
+                            <h3 class="meTit">
+                                홍보
+                            </h3>
+                            <ul class="open1">
+                                <li><a href="">뉴스</a></li>
+                                <li><a href="">광고</a></li>
+                                <li><a href="">홍보동영상</a></li>
+                                <li><a href="">웹진</a></li>
+                            </ul>
+                        </div>
+                        <div class="melist">
+                            <h3 class="meTit">
+                                기업소개
+                            </h3>
+                            <ul class="open1">
+                                <li><a href="">기업개요</a></li>
+                                <li><a href="">역사관</a></li>
+                                <li><a href="">글로벌네트워크</a></li>
+                                <li><a href="">채용정보</a></li>
+                                <li><a href="">윤리경역</a></li>
+                                <li><a href="">찾아오시는길</a></li>
+                            </ul>
+                        </div>
+                        <div class="melist">
+                            <h3 class="meTit">
+                                고객지원
+                            </h3>
+                            <ul class="open1">
+                                <li><a href="">고객지원</a></li>
+                                <li><a href="">개인정보취급방침</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                </nav>
+            </header>
+            <section class="page1" id="produce">
+
+                <video width="1787px" height="900px" autoplay controls preload="auto" src="images/boryong.mp4">
+
+                </video>
+                <div class="bocTxt">
+
+                    <div class="textWrap">
+                        <h2 class="bor">보령제약</h2>
+                        <p>Always beside you</p>
+                        <p><strong>국민건강과 함께 해온 기업</strong><br> 늘 곁에 있겠습니다</p>
+                    </div>
+                </div>
+            </section>
+            <section class="page1" id="product">
+                <div class="conWrap">
+                    <span class="logo1">
+                        <img src="./images/logoWhite.png" alt="">
+                    </span>
+                    <div class="pbox">
+                        <p>&#9679; 서민과함께한 기업</p>
+                        <p>&#9679; 믿을수있는 성분</p>
+                        <p>&#9679; 워라벨을 추구하는 회사</p>
+                    </div>
+                    <img src="./images/produ3.png" alt="" class="img1">
+                    <div class="textAction">
+                        <h4 class="conText"><strong>우수한 약효와 신뢰로</strong><br> 이끌어온 보령신화</h4>
+                        <p>
+                            보령제약그룹의 뿌리이자 모기업으로 1963년 설립되어 생약 전문 메이커로서의 입지를 굳건히 했으며 제약산업의 현대화를 이끌었습니다. 1967년부터 용각산, 구심, 기응환, 겔포스 등을 통해 남녀노소 모두에게 사랑받는 보령 신화를 만들어왔습니다. 1982년 보령중앙연구소를 설립하고 전문의약품 개발에 집중하고 있으며, 국내 최초 고혈압 신약 ‘카나브’를 개발하며 국민보건 향상에 기여하고 있습니다.
+
+                        </p>
+                        <a href="" class="pMore">더보기</a>
+                    </div>
+                </div>
+            </section>
+            <section class="page1" id="brand">
+                <h2 class="pageTit">보령제약 브랜드소개</h2>
+                <div class="conWrap2">
+
+
+                    <div class="brandBox" id="box1">
+                            <div class="box1bg">
+                                
+                            <h4 class="boxTit">보령제약</h4>
+                            <p class="boxCom">보령제약에대한 전반적인 특징에대한소개</p>
+                            </div>
+                            
+                        <a href="">제품소개 더보기 &gt;</a>
+                    </div>
+                    <div class="brandBox" id="box2"> <a href="">
+                            <h4 class="boxTit">용각산</h4>
+                            <p class="boxCom">[호흡기 용제] 목이아프고 기침날때</p>
+                        </a>
+                    </div>
+                    <div class="brandBox" id="box3"> <a href="">
+                            <h4 class="boxTit">겔포스</h4>
+                            <p class="boxCom">속쓰림엔 겔포스 (위산과다,속쓰림 ,위부불쾌감)</p>
+                        </a>
+                    </div>
+                    <div class="brandBox" id="box4"> <a href="">
+                            <h4 class="boxTit">구심</h4>
+                            <p class="boxCom">심계항진(가슴이 두근거림), 숨이 참, 정신 몽롱</p>
+                        </a>
+                    </div>
+                    <div class="brandBox" id="box5"> <a href="">
+                            <h4 class="boxTit">우황청심환</h4>
+                            <p class="boxCom"></p>
+                        </a>
+                    </div>
+                    <div class="brandBox" id="box6"> <a href="">
+                            <h4 class="boxTit">카나브</h4>
+                            <p class="boxCom">[순환기용제] 고혈압치료제</p>
+                        </a>
+                    </div>
+                    <div class="brandBox" id="box7"> <a href="">
+                            <h4 class="boxTit">아스트릭스</h4>
+                            <p class="boxCom">[순환기용제]심근경색 전문의약</p>
+                        </a>
+                    </div>
+                    <div class="brandBox" id="box8"> <a href="">
+                            <h4 class="boxTit">트란시노2 정</h4>
+                            <p class="boxCom">[일반의약품]기미치료제 트란시노</p>
+                        </a>
+                    </div>
+                    <div class="brandBox" id="box9"> <a href="">
+                            <h4 class="boxTit">뉴브이로토이엑스 점안액</h4>
+                            <p class="boxCom">피로한 눈에 영양을</p>
+                        </a>
+                    </div>
+                    <div class="brandBox" id="box10"> <a href="">
+                            <h4 class="boxTit">스카메디 엘 밴드</h4>
+                            <p class="boxCom">습윤드레싱</p>
+                        </a>
+                    </div>
+                    <div class="brandBox" id="box11"> <a href="">
+                            <h4 class="boxTit">모스앤프리</h4>
+                            <p class="boxCom">모기 물렸을때, 긁지말고 톡톡발라주세요</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page1" id="corp">
+                <ul>
+                    <li>
+                        <img src="" alt="">
+                        <h3 class="ImgTit">핵심가치</h3>
+                    </li>
+                    <li>
+                        <img src="" alt="">
+                        <h3 class="ImgTit">슬로건</h3>
+                    </li>
+                    <li>
+                        <img src="" alt="">
+                        <h3 class="ImgTit">글로벌보령</h3>
+                    </li>
+                    <li>
+                        <img src="" alt="">
+                        <h3 class="ImgTit">ci</h3>
+                    </li>
+                </ul>
+
+
+            </section>
+            <a href="#" class="top">
+                <span>TOP</span>
+            </a>
+            <footer>
+                <nav class="fnv">
+                    <div class="ftleft">
+
+                        <a href="">보령제약SCM</a>
+                        <a href="">보령제약 연구자 주도연구</a>
+                        <a href="">개인정보취급방침</a>
+
+                    </div>
+                    <div class="ftrifght">
+                        <p>고객지원</p>
+                        <p>소비자상담실 (09:00 ~ 18:00) 의약품 080-708-8088</p>
+                    </div>
+                    <p>
+                        서울특별시 종로구 창경궁로 136 보령빌딩
+                    </p>
+                    <p>
+                        COPYRIGHT (C) 2015 by Boryung Co.,Ltd. ALL Right Reserved
+
+                    </p>
+
+                </nav>
+
+            </footer>
+
+
+        </div>
+
+    </div>
+</body>
+
+</html>
