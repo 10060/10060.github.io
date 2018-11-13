@@ -38,13 +38,13 @@
 
 
 
-    <link rel="shortcut icon" href="./images1/favi-01.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./images1/fv_01.png" type="image/x-icon">
 
-    <link rel="icon" size="16x16 32x32 48x48 64x64 72x72 96x96 114x114 128x128 " href="./images1/favi-01.png" type="image/x-icon">
+    <link rel="icon" size="16x16 32x32 48x48 64x64 72x72 96x96 114x114 128x128 " href="./images1/fv_01.png" type="image/x-icon">
 
     <!--    아이폰 아이콘 -->
 
-    <link rel="apple-touch-icon-precomposed" href="./images1/favi-01.png">
+    <link rel="apple-touch-icon-precomposed" href="./images1/fv_01.png">
 
     <meta name="msapplication-TileColor" content="#ffffff">
 
@@ -179,6 +179,68 @@
             
     });
     
+
+</script>
+    <script>
+        
+    var lihd = parseInt($(".coWr1 .WorkWrap li").height());
+    
+    function int1() {
+        
+    $(".coWr1 .WorkWrap").not(":animated").animate({"margin-top":lihd},800, function(){
+         $(".coWr1 .WorkWrap li").eq(0).appendTo(".WorkWrap");
+         $(".coWr1 .WorkWrap").css("margin-top", "0px");
+    });
+    }
+    var e1 = setInterval(function(){
+        int1();
+    },4000);
+        
+        
+        
+         $(".WorkWrap li a").hover(function(){
+             $(this).removeAttr("href");
+             $(this).find(".workTextWrap").addClass("on");
+             $(this)find(".workTextWrap").removeClass("on")
+         })
+        
+        
+    
+   
+    
+    
+</script>
+
+<script>
+
+    
+      $(document).ready(function(){
+        $(".pgBtn").click(function(){
+         var idx1= $(this).attr("dv"); 
+         var wd3 = parseInt($(".workpage2").width());
+        $(".WorkconWrap").not(":animated").animate({"margin-left" : -idx1*wd3+"px"}, 
+        100, function(){
+            $(this).slideDown(500);
+            $(this).siblings().slideDown(100);
+            }); 
+            
+        });
+            
+        $(".pgBtn").hover(function(){
+            //setinterval 넣어보기 !
+            
+            $(this).removeClass("on");    
+            $(this).addClass("on");
+            $(this).siblings().removeClass("on");
+        
+        });
+            
+            
+    });
+    
+
+
+    
 </script>
 
 
@@ -232,7 +294,7 @@
 
                         <ul class="menuWrap">
 
-                            <li><a href="">HOME</a><span class="hcon"></span></li>
+                            <li><a href="https://10060.github.io/main/">HOME</a><span class="hcon"></span></li>
 
                             <li><a href="">WORK</a><span class="hcon"></span></li>
 
@@ -388,36 +450,206 @@
                         <div class="pgWrap">
                             <h2 class="pgTit">소개</h2>
                             <div class="keywordBox">
-                               
-                                    <h3 class="keyTit">
-                                        연관키워드
-                                    </h3>
-                                    <ul class="keyWrap">
-                                        <li><span class="ck3">HTML</span></li>
 
-                                        <li><span class="ck3">퍼블리싱</span></li>
-                                        <li><span class="ck3">UI개발</span></li>
-                                        <li><span class="ck3">HTML5</span></li>
-                                        <li><span class="ck3">CSS3</span></li>
-                                        <li><span class="ck3">웹디자인</span></li>
-                                        <li><span class="ck3">일러스트레이터</span></li>
-                                        <li><span class="ck3">포토샵</span></li>
-                                        <li><span class="ck3">에프터이펙트</span></li>
-                                        <li><span class="ck3">모션그래픽</span></li>
-                                        <li><span class="ck3">인디자인</span></li>
-                                        <li><span class="ck3">2D캐릭터</span></li>
-                                        <li><span class="ck3">로고디자인</span></li>
-                                        <li><span class="ck3">시각디자인</span></li>
+                                <h3 class="keyTit">
+                                    연관키워드
+                                </h3>
+                                <ul class="keyWrap">
+                                    <li><span class="ck3">HTML</span></li>
 
-                                    </ul>
-                            
+                                    <li><span class="ck3">퍼블리싱</span></li>
+                                    <li><span class="ck3">UI개발</span></li>
+                                    <li><span class="ck3">HTML5</span></li>
+                                    <li><span class="ck3">CSS3</span></li>
+                                    <li><span class="ck3">웹디자인</span></li>
+                                    <li><span class="ck3">일러스트레이터</span></li>
+                                    <li><span class="ck3">포토샵</span></li>
+                                    <li><span class="ck3">에프터이펙트</span></li>
+                                    <li><span class="ck3">모션그래픽</span></li>
+                                    <li><span class="ck3">인디자인</span></li>
+                                    <li><span class="ck3">2D캐릭터</span></li>
+                                    <li><span class="ck3">로고디자인</span></li>
+                                    <li><span class="ck3">시각디자인</span></li>
+
+                                </ul>
+
                             </div>
 
                         </div>
                     </section>
                     <section class="content" id="page3">
                         <div class="pgWrap">
-                            <h2 class="pgTit"></h2>
+                            <h2 class="na1">working</h2>
+                            <section class="workpage1">
+                                <div class="pgconWrap">
+                                    <div class="textWrap">
+
+                                        <h2 class="pageTit">
+                                            Working page
+                                        </h2>
+                                        <p class="">
+                                            6개월 간의 저의 작업물입니다.
+                                            다양한 분야의 브랜드, 관공서, 쇼핑몰 ,기업형레이아웃 등을 작업하였습니다.
+                                            저의 작업 참여도는 90%이며,사용한 이미지와fontawesome(CDN방식)아이콘을 제외합니다.
+                                        </p>
+
+                                        <h3 class="useTool">
+                                            사용툴
+                                        </h3>
+                                        <ul class="useWrap">
+                                            <li class="uselist">
+                                                <p>HTML5</p>
+                                            </li>
+                                            <li class="uselist">
+                                                <p>CSS3</p>
+                                            </li>
+                                            <li class="uselist">
+                                                <p>jquery</p>
+                                            </li>
+                                            <li class="uselist">
+                                                <p>illustrator</p>
+                                            </li>
+                                            <li class="uselist">
+                                                <p>photoshop</p>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+
+                                <div class="labelBox">
+
+                                    <label dv="0" class="pgBtn">DESKTOP</label>
+                                    <label dv="1" class="pgBtn">MOBILE</label>
+                                    <label dv="2" class="pgBtn">RESPONSIVE</label>
+                                </div>
+                            </section>
+
+                            <section class="workpage2">
+
+                                <div class="WorkconWrap">
+
+
+                                    <div id="desk" class="coWr1">
+                                        <h2 class="wTit">
+                                            DESKTOP
+                                        </h2>
+                                        <ul class="WorkWrap">
+                                            <li class="ww">
+                                                <a href="" style="background-image:url(images1/igong.png)">
+                                                    <div class="workTextWrap">
+                                                        <span>이공갤러리</span>
+                                                        <p>갤러리 이공의 웹페이지 시안을 작업하였습니다.</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <li class="ww"><a href="" style="background-image:url(images1/lanovo.png)">
+                                                    <div class="workTextWrap">
+                                                        <span>라노보</span>
+                                                        <p>브랜드형</p>
+                                                    </div>
+                                                </a></li>
+                                            <li class="ww"><a href="" style="background-image:url(images1/jeju.png)">
+                                                    <div class="workTextWrap">
+                                                        <span>제주동백</span>
+                                                        <p>브랜드형</p>
+                                                    </div>
+                                                </a></li>
+                                            <li class="ww"><a href="" style="background-image:url(images1/lanoa.png)">
+                                                    <div class="workTextWrap">
+                                                        <span>라노아</span>
+                                                        <p>브랜드형</p>
+                                                    </div>
+                                                </a></li>
+                                            <li class="ww"><a href="" style="background-image:url(images1/borying.png)">
+                                                    <div class="workTextWrap">
+                                                        <span>보령제약</span>
+                                                        <p>기업형</p>
+                                                    </div>
+                                                </a></li>
+                                            <li class="ww"><a href="" style="background-image:url(images1/sinseg.png)">
+                                                    <div class="workTextWrap">
+                                                        <span>신세계인터네셔날</span>
+                                                        <p>기업형</p>
+                                                    </div>
+                                                </a></li>
+                                        </ul>
+
+
+                                    </div>
+                                    <div id="mob" class="coWr1">
+                                        <h2 class="wTit">
+                                            MOBILE
+                                        </h2>
+                                        <ul class="WorkWrap">
+                                            <li class="ww">
+                                                <a href="" style="background-image:url(images1/convers.png)">
+                                                    <div class="workTextWrap">
+                                                        <span>CONVERSE</span>
+                                                        <p>브랜드형</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <li class="ww"><a href="" style="background-image:url(images1/woori.png)">
+                                                    <div class="workTextWrap">
+                                                        <span>우리은행</span>
+                                                        <p>금융형</p>
+                                                    </div>
+                                                </a></li>
+                                            <li class="ww"><a href="" style="background-image:url(images1/bul1.png)">
+                                                    <div class="workTextWrap">
+                                                        <span>불가리</span>
+                                                        <p>브랜드형</p>
+                                                    </div>
+                                                </a></li>
+                                            <li class="ww"><a href="" style="background-image:url(images1/kylieMob.png)">
+                                                    <div class="workTextWrap">
+                                                        <span>KylieCosmetics</span>
+                                                        <p>브랜드,쇼핑몰형</p>
+                                                    </div>
+                                                </a></li>
+                                        </ul>
+
+                                    </div>
+                                    <div id="res" class="coWr1">
+                                        <h2 class="wTit">
+                                            RESPONSIVE
+                                        </h2>
+                                        <ul class="WorkWrap">
+                                            <li class="ww"><a href="" style="background-image:url(images1/expedialibg.png)">
+                                                    <div class="workTextWrap">
+                                                        <span>익스피디아</span>
+                                                        <p>항공, 여행 사이트 익스피디아의 컬러감을 살린 반응형 웹디자인 </p>
+                                                    </div>
+                                                </a></li>
+                                            <li class="ww"><a href="" style="background-image:url(images1/dongwon.png)">
+                                                    <div class="workTextWrap">
+                                                        <span>동원F&amp;B</span>
+                                                        <p>브랜드형</p>
+                                                    </div>
+                                                </a></li>
+                                            <li class="ww"><a href="" style="background-image:url(images1/noroo.png)">
+                                                    <div class="workTextWrap">
+                                                        <span>노루홀딩스</span>
+                                                        <p>기업형</p>
+                                                    </div>
+                                                </a></li>
+                                            <li class="ww"><a href="" style="background-image:url(images1/kca1.png)">
+                                                    <div class="workTextWrap">
+                                                        <span>한국방송통신진흥원</span>
+                                                        <p>관공서형</p>
+                                                    </div>
+                                                </a></li>
+
+                                        </ul>
+
+                                    </div>
+
+
+                                </div>
+                            </section>
                         </div>
                     </section>
                     <section class="content" id="page4">
@@ -432,7 +664,7 @@
                                     <span class="name">instagram</span>
                                     <a href="https://www.instagram.com/_106_0" class="">_106_0</a>
                                 </li>
-                                    
+
                                 <li>
                                     <span class="name">github</span>
                                     <p class="con1">10060</p>
