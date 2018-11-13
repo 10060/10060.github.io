@@ -547,7 +547,7 @@ h2.num.pg00:after {
 
 
 #page3 {
-    background-color: saddlebrown;
+    background-color:#7d0105;
 }
 
 #page4 {
@@ -770,6 +770,166 @@ span.date2 {
 
 
 
+
+
+#toFirst{
+    width: 50px;
+    height: 80px;
+    background-color: #000;
+    border-radius: 50px;
+    float: right;
+    
+}
+
+
+
+#page3 .textWrap{
+   left: 0;
+}
+h2.na1 {
+    font-size: 37px;
+    color: #44545d;
+}
+
+.labelBox{
+    width: 44%;
+    position: absolute;
+    left: 0;
+    height: 50px;
+}
+
+.labelBox label{
+    display: block;
+    width: 30%;
+    float: left;
+    box-sizing: border-box;
+    height: 37px;
+    border: 4px solid #fff;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+    
+
+.labelBox label:nth-child(2){
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+section.workpage2 {
+    width: 50%;
+    height: 100%;
+    float: right;
+   
+}
+.WorkconWrap > div{
+    width: 33.33333%;
+    margin-right:0px;
+    height: auto;
+    /* margin-left: -802px; */
+}
+.wTit{
+    display: block;
+    width: 400px;
+    margin: 0 auto;
+    font-size: 30px;
+    font-weight: bold;
+    color: #ddd
+}
+
+
+.WorkWrap{
+    width: 100%;
+}
+    
+        
+.WorkWrap li{
+    width: 100%;
+    height: 300px;
+
+  
+    background: #fff;
+  
+    margin-bottom: 10px;
+}
+
+.WorkWrap li a{
+    display: block;
+    width: 100%;
+      box-sizing: border-box;
+    height: 100%;
+      padding: 50px;
+    color: #fff;
+    position: relative;
+    background-position: center center;
+    background-size:cover;
+}
+ 
+
+.workTextWrap{
+    width: 100%;
+    height: 100%;
+}
+
+.workTextWrap div{
+    width: 33.3333%;
+    float: left;
+}
+.workTextWrap span{
+    font-size: 30px;
+    display: block;
+    text-align: center;
+}
+    
+.workTextWrap p{
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+}
+
+    section.workpage2 {
+    overflow: hidden;
+}
+
+.WorkconWrap > div {
+    float: left;
+}
+
+.WorkconWrap {
+    margin-left: 0;
+    width: 300%;
+}  
+
+
+.pgBtn.on{
+    color: red;
+}
+
+
+
+.workTextWrap{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    box-sizing: border-box;
+    padding: 60px;
+    padding-top: 102px;
+    top: 0;
+   
+}
+
+.workTextWrap.on{
+    background: linear-gradient(-45deg, #c41278, #2e0ac4d1, #09227f21, #1f0c7200);
+    background-size: 100% 100%;
+    -webkit-animation: Gradient 15s ease infinite;
+    -moz-animation: Gradient 15s ease infinite;
+    animation: Gradient 0.4s ease infinite;
+}
+
+
 @-webkit-keyframes Gradient {
     0% {
         background-position: 0% 50%
@@ -810,18 +970,6 @@ span.date2 {
     100% {
         background-position: 0% 50%
     }
-}
-
-
-
-
-#toFirst{
-    width: 50px;
-    height: 80px;
-    background-color: #000;
-    border-radius: 50px;
-    float: right;
-    
 }
 
 
