@@ -37,7 +37,7 @@ $(document).ready(function () {
                 scrollLeft: "+=" + wd2/2 + "px"
             }, 500, function () {
                 //                        $(".conWrap li").eq(1).appendTo(".conWrap");
-                $(".conWrap li").eq(1).appendTo(".conWrap");
+                $(".conWrap li").eq(0).appendTo(".conWrap");
 
                 $(".conWrap").css("margin-left", first1 + "px");
             });
