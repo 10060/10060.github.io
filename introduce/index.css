@@ -986,13 +986,13 @@ span.name {
     width: 500px;
     text-align: center;
     line-height: 45px;
-    height: 500px;
+    height: 540px;
     box-sizing: border-box;
     padding: 41px;
     border: 28px solid #DDE;
 }
 
-span.name {}
+
 
 ul.contectlist li a {
     display: block;
