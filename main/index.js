@@ -23,7 +23,7 @@ $(document).ready(function () {
     var first1 = $(".conWrap li").eq(0);
     var first2 = parseInt($(".view").width());
     var wd1 = parseInt($(".con").width());
-    var wd2 = parseInt($(this).siblings().width());
+    var wd2 = parseInt($(this).next().width());
     var pageLast = $(".conWrap li").length;
     var sc1 = $(window).scrollLeft();
     var sc2 = $(".Wrap").width();
