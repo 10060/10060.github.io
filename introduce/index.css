@@ -929,6 +929,29 @@ section.workpage2 {
     animation: Gradient 0.4s ease infinite;
 }
 
+#page4 .pgWrap {
+    width: 500px;
+    height: 600px;
+    border: 3px solid #fddd;
+    padding: 30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+ul.contectlist li a {
+    display: block;
+    font-size: 18px;
+    color: #000;
+}
+
+ul.contectlist li {
+    height: 59px;
+    width: 100%;
+    font-size: 19px;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
 
 @-webkit-keyframes Gradient {
     0% {
