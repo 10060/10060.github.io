@@ -547,11 +547,11 @@ h2.num.pg00:after {
 
 
 #page3 {
-    background-color:#7d0105;
+    background-color:#ffffff;
 }
 
 #page4 {
-    background-color: deepskyblue;
+    background-color: #c5d4d9;
 }
 
 /*page1*/
@@ -567,7 +567,7 @@ h2.num.pg00:after {
     font-size: 48px;
     font-weight: bold;
     color: #1e005f;
-    font-family: 'Archivo Narrow', sans-serif
+    font-family: 'Archivo Narrow', sans-serif;
 }
 
 .left {
@@ -973,30 +973,3 @@ section.workpage2 {
 }
 
 
-p.con1 {
-    font-size: 20px;
-}
-
-span.name {
-    font-size: 26px;
-    font-weight: bold;
-}
-
-#page4 .pgWrap {
-    width: 500px;
-    text-align: center;
-    line-height: 45px;
-    height: 540px;
-    box-sizing: border-box;
-    padding: 41px;
-    border: 28px solid #DDE;
-}
-
-
-
-ul.contectlist li a {
-    display: block;
-    color: #000;
-    font-size: 21px;
-    font-weight: bold;
-}
