@@ -34,12 +34,12 @@ $(document).ready(function () {
     $(window).on("mousewheel", function (e) {
         if (e.originalEvent.wheelDelta < 0) { // 내려가는거
             $("html, body").not(":animated").animate({
-                scrollLeft: "+=" + wd2 + "px"
+                scrollLeft: "+=" + wd2/2 + "px"
             }, 500, function () {
                 //                        $(".conWrap li").eq(1).appendTo(".conWrap");
-                $(".conWrap li").eq(0).appendTo(".conWrap");
+                $(".conWrap li").eq(1).appendTo(".conWrap");
 
-                $(".conWrap").css("margin-left", first2 + "px");
+                $(".conWrap").css("margin-left", first1 + "px");
             });
         } else { //올라가는거
             $("html, body").not(":animated").animate({
