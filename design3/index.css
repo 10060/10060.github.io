@@ -1,0 +1,622 @@
+@charset"utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+<link rel="stylesheet" href="fonts.css" > @import url('https://fonts.googleapis.com/css?family=Jua|Nanum+Gothic');
+body,
+html {
+    font-family: 'ns', 'NanumGothic', 'NanumSquare', sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+
+
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    border: 0;
+}
+
+
+/*공통부분*/
+
+.pg {
+    width: 100%;
+    height: 100%;
+    clear: both;
+}
+
+.pgWrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.raIt {
+    display: none;
+}
+
+.grid {
+    clear: both;
+    width: 1200px;
+    height: 554px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.col {
+    float: left;
+}
+
+/*해더부분*/
+
+.hd {
+    width: 100%;
+    position: relative;
+    z-index: 100;
+}
+
+.hdWrap {
+    width: 1500px;
+    margin: 10px auto;
+    clear: both;
+    position: relative;
+}
+
+.top ul li {
+    float: left;
+    border-left: 1px solid #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-right: 1px solid #fff;
+    line-height: 10px;
+}
+
+.top ul li a {
+    color: #fff;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 12px;
+}
+
+.logo {
+    clear: both;
+    float: left;
+    margin-top: 30px;
+}
+
+
+/*네비게이션바*/
+
+.gnb {
+    float: left;
+    margin-top: -48px;
+    width: 1500px;
+    margin-left: 360px;
+}
+
+.gnb li.menu {
+    float: left;
+    padding-left: 60px;
+    margin: 0 auto;
+}
+
+.gnb li.menu > a {
+    display: block;
+    line-height: 48px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: -0.1em;
+}
+
+.gnb li.menu > a:after {
+    content: " ";
+    display: block;
+    width: auto;
+    height: 10px;
+}
+
+.gnb li.menu a:hover {
+    color: #ff9900;
+}
+
+.gnb li.menu hover a:after {
+    border-bottom: 5px solid #fff;
+}
+
+.sub {
+    display: none;
+    width: 1200px;
+    position: absolute;
+    /*  left: calc(calc(100%-1200px) / 2); */
+    z-index: 900;
+    height: 554px;
+    background-color: #fff;
+    padding-top: 10px;
+    border-bottom: 1px solid #ddd;
+    left: 0;
+}
+
+.sub .left {
+    width: 200px;
+}
+
+.gnb li:hover .sub {
+    display: block;
+}
+
+.sub .left {
+    width: 196px;
+    clear: both;
+    height: auto;
+}
+
+.sub .left .menuTit {
+    line-height: 30px;
+    color: #fff;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.sub .left .menuCom {
+    line-height: 1.1em;
+    color: #888;
+    font-size: 15px;
+    padding-top: 15px;
+    width: 150px;
+    margin: 0 auto;
+}
+
+.sub .left .menuTit:before {
+    content: " ";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #fff;
+    margin-bottom: 30px;
+}
+
+.sub .right {
+    width: 1000px;
+}
+
+.sub .right ul {
+    width: 25%;
+    float: left;
+}
+
+.sub .right a {
+    color: #000;
+    font-size: 0.80em;
+}
+
+.sub .right li {
+    padding-left: 20px;
+}
+
+.sub .right .subTit a {
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.hotelsub {
+    width: 1304px;
+}
+
+.hotelsub li {
+    float: left;
+    width: 100px;
+    margin-left: 30px;
+    margin-bottom: 60px;
+}
+
+.sub .right .subTit a:after {
+    content: "∨";
+    float: right;
+    margin-right: 15px;
+}
+
+.sub1 {
+    background-image: url(./images/subimg.png);
+    background-repeat: no-repeat;
+}
+
+.sub2 {
+    background-image: url(./images/subimg5.png);
+    background-repeat: no-repeat;
+}
+
+.sub3 {
+    background-image: url(./images/subimg2.png);
+    background-repeat: no-repeat;
+}
+
+.sub4 {
+    background-image: url(./images/subimg3.png);
+    background-repeat: no-repeat;
+}
+
+.sub5 {
+    background-image: url(./images/subimg4.png);
+    background-repeat: no-repeat;
+}
+
+.sub6 {
+    background-image: url(./images/subimg2.png);
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+
+/*컬랩시블 메뉴 영역*/
+
+#collapse {
+    display: none;
+    position: absolute;
+    left: calc(calc(100%-1500px) / 2);
+    z-index: 9999;
+    height: auto;
+    top: 95px;
+    width: 1500px;
+    left: 1px;
+    /* background-image: url(); */
+    background: rgba(0, 0, 0, 0.9);
+}
+
+#ck {
+    display: none;
+}
+
+.lstBtn {
+    display: block;
+    width: 50px;
+    height: 50px;
+    float: right;
+    cursor: pointer;
+    margin-top: -55px;
+}
+
+.lstBtn .line {
+    display: block;
+    width: 30px;
+    height: 3px;
+    ;
+    transition: 0.5s;
+    background: #fff;
+    -webkit-transition: 0.5s;
+    margin: 8px;
+}
+
+.lstBtn .line:nth-child(2) {
+    width: 20px;
+}
+
+.lstBtn:hover .line:nth-child(2) {
+    width: 30px;
+}
+
+#ck:checked ~ #collapse {
+    display: block;
+}
+
+#collapse ul {
+    float: left;
+    width: 200px;
+    height: 100%;
+}
+
+#collapse li {
+    line-height: 40px;
+    padding-left: 15px;
+    font-size: 0.8em;
+    width: 180px;
+    margin-left: 10px;
+    border-right: 1px solid #fff;
+
+    letter-spacing: -0.1em;
+}
+
+#collapse li a {
+    color: #fff;
+    font-family: 'Jua', sans-serif;
+    letter-spacing: -0.1em;
+}
+
+#collapse li a:hover {
+    color: #ff9900;
+    text-decoration: underline;
+
+}
+
+.collapTit > h2:hover {
+    color: #ff9900;
+}
+
+.collapTit > h2 {
+    font-size: 16px;
+    color: #fff;
+
+}
+
+.collapTit h2:before {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 5px;
+    border-bottom: 3px solid #fff;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+#close {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-image: url(./images/close.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: 0.5s;
+    transform: rotate(0deg);
+    background-position: center center;
+}
+
+#close:hover {
+    -webkit-transition: 0.5s;
+    -webkit-transform: rotate(180deg);
+    background-position: center center;
+}
+
+/*page1 비주얼 배너 부분*/
+
+#con1 {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    overflow: hidden;
+}
+
+#con1 .imgBox {
+    clear: both;
+    padding: 0;
+    transition: 0.8s;
+    width: 400%;
+    height: 100%;
+}
+
+#con1 ul li {
+    float: left;
+    width: 25%;
+    height: 1080px;
+    background-position: center top;
+    position: relative;
+  
+}
+
+#con1 .item1 {
+    background-image: url(./images/bg1.png);
+    width: 1920px;
+   
+}
+
+#con1 .item2 {
+    background-image: url(./images/bg2.png);
+    width: 1920px;
+}
+
+#con1 .item3 {
+    background-image: url(./images/bg3.png);
+    width: 1920px;
+}
+
+#con1 .item4 {
+    background-image: url(./images/bg4.png);
+    width: 1920px;
+}
+
+.banTit {
+    width: 350px;
+    height: 180px;
+    position: absolute;
+
+    display: block;
+    margin-top: -35%;
+    margin-left: 42%;
+}
+
+.banTitle {
+    margin-top: 26%;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    line-height: 38px;
+    z-index: 30;
+    letter-spacing: 0.1px;
+}
+
+#con1 .detail {
+
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    z-index: 30;
+    background: rgba(0, 0, 0, 0.8);
+    left: 48%;
+    background-size: 100px;
+    text-align: center;
+    color: #ff9900;
+    position: absolute;
+    padding: 5px 20px;
+}
+
+.searchBox {
+    position: relative;
+}
+
+.inpSearch {
+    display: block;
+    position: absolute;
+    width: 554px;
+    margin-top: -17%;
+    margin-left: 37%;
+    height: 43px;
+    color: #fff;
+    box-sizing: border-box;
+    border: 5px solid #666;
+
+    border-radius: 90px;
+    text-indent: 27px;
+
+}
+
+.btnSearch {
+    display: block;
+    width: 80px;
+    position: absolute;
+    height: 33px;
+
+    background-image: url(images/searchico.png);
+    float: left;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin-top: -311px;
+    margin-left: 1156px;
+    border: 0;
+    background-color: transparent;
+
+}
+
+
+/*page2*/
+
+/*여기는 탭 메뉴얌ㅃ*/
+
+.tab {
+    overflow: hidden;
+    background-color: #ff9900;
+    z-index: 999;
+    position: absolute;
+    width:1200px;
+    height:100px;
+    left: 20%;
+}
+
+.tab label {
+
+    width: 25%;
+    height: 100px;
+    display: block;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 20px;
+    font-weight: bold;
+    font-size:14px;
+    line-height:10em;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    background-repeat: no-repeat;
+    background-position: center center;
+        
+    background-size:70px;
+}
+
+.tablinks:first-child{
+    background-image: url(./images/ico-orange-1.png);
+}
+.tablinks:nth-child(2){
+    background-image: url(./images/ico-orange-2.png);
+}
+.tablinks:nth-child(3){
+    background-image: url(./images/ico-orange-3.png);
+}
+.tablinks:nth-child(4){
+    background-image: url(./images/ico-orange-4.png);
+}
+/* Change background color of labels on hover */
+
+.tab label:hover {
+    background-color: #ff9900;
+}
+
+/* Create an active/current tablink class */
+
+.tab label.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabCon{
+    width: 1200px;
+    height: 60px;
+    position:relative;
+
+    background-color: #ff9900;
+    margin:100px 20%;
+    z-index: 999;
+    border:0;
+    box-sizing: border-box;
+    background-color: #ff9900;
+}
+.tabCon div{
+     width:100%;
+    position: absolute;
+   padding-left: 114px;    
+    color: #fff;
+    
+}
+.tabcontent {
+   display: block;
+    padding: 6px 12px;
+    z-index: 999;
+    
+    border-top: none;
+}
+#tb1:checked ~ .tab .tablinks1:first-child{
+    background-image:url(images/ico-white-1.png);
+}
+#tb1:checked ~ .tab .tablinks1:nth-child(2){
+    background-image:url(images/ico-white-2.png);
+}
+#tb1:checked ~ .tab .tablinks1:nth-child(3){
+    background-image:url(images/ico-white-3.png);
+}
+
+#tb1:checked ~ .tab .tablinks1:last-child{
+    background-image:url(images/ico-white-4.png);
+}

@@ -1,0 +1,38 @@
+@charset "utf-8";
+@font-face {
+  font-family: "ns"; 
+  src: local("NotoSans-Regular"), /* 첫번째 */
+       local("NotoSans"), /* 두번째 */
+       url("../font/NotoSans-Regular.otf") format("opentype"),
+       url("../font/NanumSquareR.eot") format('embedded-opentype'),
+       url("../font/NotoSans-Regular.woff") format("woff"), /* 세번째 */
+       url("../font/NotoSans-Regular.ttf") format("truetype"); /* 네번째 */
+}
+@font-face {
+ font-family: 'NanumSquare';
+ src: url("../font/NanumSquareR.eot");
+ src: url("../font/NanumSquareR.eot?#iefix") format('embedded-opentype'),
+      url("../font/NanumSquareR.woff") format('woff'),
+      url("../font/NanumSquareR.ttf") format('truetype');
+}
+@font-face {
+ font-family: 'NanumGothic';
+ src: url("../font/NanumGothic.eot");
+ src: url("../font/NanumGothic.eot?#iefix") format('embedded-opentype'),
+      url("../font/NanumGothic.woff") format('woff'),
+      url("../font/NanumGothic.ttf") format('truetype');
+}
+@font-face {
+ font-family: 'NanumBrush';
+ src: url("../font/NanumBrushScript-Regular.eot");
+ src: url("../font/NanumBrushScript-Regular.eot?#iefix") format('embedded-opentype'),
+      url("../font/NanumBrushScript-Regular.woff") format('woff'),
+      url("../font/NanumBrushScript-Regular.ttf") format('truetype');
+}
+@font-face {
+ font-family: 'BMJUA';
+ src: url("../font/BMJUA.eot");
+ src: url("../font/BMJUA.eot?#iefix") format('embedded-opentype'),
+      url("../font/BMJUA.woff") format('woff'),
+      url("../font/BMJUA.ttf") format('truetype');
+}
