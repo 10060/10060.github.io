@@ -60,7 +60,7 @@ $(document).ready(function () {
 
 
     $(".conWrap li").slice(1).hover(function () {
-        $(this).css("width", "3%");
+        $(this).css("width", "4%");
         $(this).find(".txM, .txD , .num, .pgImg, .pgimg, .more, .text1").addClass("on");
         $(this).find(".pgimg").css("display", "block");
         $(this).siblings().css("width", "1.1%");
