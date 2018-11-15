@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+
+    <title>백유경의 포트폴리오</title>
+
+    <!--    css-->
+
+    <!--    <link rel="stylesheet" href="scroll.css">-->
+    <link rel="stylesheet" href="style.css">
+
+
+    <!--    폰트-->
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=K2D|Lato|Noto+Sans+KR|Noto+Serif+KR|Open+Sans|Fjalla+One|Oswald|Roboto|Roboto+Condensed|Roboto+Slab" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Jua|Sunflower:300" rel="stylesheet">
+
+
+
+    <!--    아이콘-->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!--    뷰포트 -->
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+
+
+    <!--   아이콘  -->
+
+
+
+    <link rel="shortcut icon" href="./images1/fv_01.png" type="image/x-icon">
+
+    <link rel="icon" size="16x16 32x32 48x48 64x64 72x72 96x96 114x114 128x128 " href="./images1/fv_01.png" type="image/x-icon">
+
+    <!--    아이폰 아이콘 -->
+
+    <link rel="apple-touch-icon-precomposed" href="./images1/fv_01.png">
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+
+    <meta name="msapplication-TileColor" content="">
+
+    <!--     <meta name="msapplication-TileColor" content=""> 여기 콘텐츠에 이미지 넣으면됨-->
+
+
+
+
+
+    <!--    메타태그-->
+
+    <meta http-equiv="X-UA_Compatible" content="IE=Edge">
+
+    <meta name="keywords" content="">
+
+    <meta name="Description" content="">
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            setTimeout(function() {
+
+                $(".loading").fadeOut(400);
+
+            }, 5000);
+
+
+
+            $(".loading").on("click", function() {
+
+                $(this).fadeOut(100);
+
+            });
+
+        });
+
+    </script>
+
+    <script>
+        $(document).ready(function() {
+
+            var open1 = true;
+            $(".ck1").on("click", function() {
+                $(".open").toggleClass("on");
+
+                if (open1 == true) {
+                    $(this).text("CLOSE");
+                } else {
+                    $(this).text("OPEN");
+                }
+
+                open1 = !open1;
+
+            });
+
+
+        });
+
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Anton|Archivo+Narrow|Fira+Sans|Noto+Serif');
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+        }
+
+
+
+        html,
+
+        body {
+
+            width: 100%;
+
+            height: 100%;
+
+        }
+
+
+
+        body {
+
+            font-family: 'Noto Sans KR', sans-serif;
+
+        }
+
+
+
+        ul {
+
+            list-style: none;
+
+        }
+
+
+
+        a {
+
+            text-decoration: none;
+
+        }
+
+
+
+        .Wrap {-ms-overflow-style: none;width: 100%;/* height: 100%; */box-sizing: border-box;background: #333;}
+
+
+        .loading {
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #4d4844;
+            box-sizing: border-box;
+            padding-top: 400px;
+            cursor: pointer;
+        }
+
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+
+
+
+
+        .pageWrap {width: 100%;/* height: 100%; */position: relative;/* margin: 0; */}
+
+
+
+
+
+        .loading img {
+
+            display: block;
+
+            width: auto;
+
+            height: 100%;
+
+            position: absolute;
+            left: 50px;
+            top: 0;
+
+
+
+
+        }
+
+
+
+        .as1 {width: auto;height: 100%;background-color: #ffffff;position: fixed;z-index: 999;top: 0;}
+
+        .asWrap {width: 80px;height: 100%;border-right: 2px solid #999;box-shadow: 2px 0 2px #ddd;position: relative;padding-top: 20px;top: 0;z-index: 9999;padding-left: 20px;background-color: #fff;box-sizing: border-box;top: 0;}
+
+        .logo {
+
+            display: block;
+
+            width: 80px;
+
+            height: 78px;
+
+            background-image: url(images1/fv_01.png);
+
+            position: absolute;
+
+            left: 0;
+
+            background-repeat: no-repeat;
+
+            background-position: center top;
+
+            background-size: 66px;
+        }
+
+        .open {
+
+            width: 860px;
+
+            height: 103%;
+
+            position: absolute;
+
+            float: left;
+
+            top: 0;
+
+            /* margin-top: -20px; */
+
+            /* margin-left: -1000px; */
+
+            box-sizing: border-box;
+
+            padding: 50px;
+
+            transition: 1s;
+
+            background-color: #0a0a42;
+
+            left: -1000px;
+        }
+
+        .open.on {
+
+            left: 80px;
+            top: 0;
+        }
+
+
+
+
+
+        .ck1 {
+
+            display: block;
+
+            width: 68px;
+
+            height: 120px;
+
+
+            left: 3px;
+
+            font-weight: bold;
+
+            position: absolute;
+
+            top: 500px;
+
+            cursor: pointer;
+
+            transition: 0.5s;
+            color: #ddd;
+
+            text-shadow: 1px 2px 0 #333;
+
+            text-align: center;
+
+            font-size: 20px;
+            display: block;
+
+        }
+
+
+
+
+        .ck1:hover {
+
+            color: #458f54;
+
+        }
+
+
+
+        .meTit {
+
+            font-size: 20px;
+
+            color: #eee;
+
+        }
+
+        .menu {
+
+            width: 100%;
+
+            height: 100%;
+
+        }
+
+
+
+        .menu li {
+
+            line-height: 40px;
+
+        }
+
+
+
+
+
+        .menu li a {
+
+            font-size: 40px;
+
+            color: #ffffff;
+
+            font-weight: bold;
+
+        }
+
+
+
+        .contact {
+            font-size: 20px;
+            position: absolute;
+            color: #fff;
+            top: 470px;
+
+        }
+
+
+
+        .menuWrap .hcon {
+
+            display: block;
+
+            width: 0;
+
+            height: 20px;
+
+            background-color: #458f54;
+
+            transition: 0.5s;
+
+        }
+
+        .tot {
+            color: #fff;
+        }
+
+        .git {
+            display: block;
+            font-size: 30px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        #op {
+
+            display: none;
+
+        }
+
+        .menu li:hover a {
+
+            color: #458f54;
+
+        }
+
+        .menu li:hover .hcon {
+
+            display: block;
+
+            width: 300px;
+
+        }
+
+
+        .pgWrap {
+            width: 1280px;
+            height: 76%;
+            padding-top: 50px;
+            margin: 0px auto;
+            padding: 20px;
+            /* overflow: hidden; */
+            position: relative;
+            background-repeat: no-repeat;
+            box-sizing: border-box;
+        }
+        .imgWrap{width: 1280px;background-size: contain;margin-top: 68px;height: 1500px;background-image: url(images1/img1.png);background-repeat: no-repeat;}
+    </style>
+</head>
+
+<body>
+    <div class="Wrap">
+           
+
+        <div class="pageWrap">
+
+
+
+
+
+            <aside class="as1">
+
+                <div class="asWrap">
+
+
+
+
+
+                    <div class="logo">
+
+                    </div>
+
+                    <label class="ck1" for="op">OPEN</label>
+
+                    <input type="checkbox" id="op">
+
+
+
+                </div>
+                <div class="open">
+
+                    <nav class="menu">
+
+                        <h2 class="meTit">
+
+                            MENU
+
+                        </h2>
+
+                        <ul class="menuWrap">
+
+                            <li><a href="https://10060.github.io/main/">HOME</a><span class="hcon"></span></li>
+
+                            <li><a href="">WORK</a><span class="hcon"></span></li>
+
+                            <li><a href="">ABOUT ME</a><span class="hcon"></span></li>
+
+                            <li><a href="">CONTACT ME</a><span class="hcon"></span></li>
+
+                        </ul>
+
+                    </nav>
+
+                    <div class="contact">
+                        <h3 class="tot">
+                            CONTECT
+                        </h3>
+                        <p class="email">
+                            email
+                        </p>
+                        <p class="git">
+
+                            1006_0@naver.com
+
+                        </p>
+                        <p>github</p>
+                        <a href="https://github.com/10060/10060.github.io" class="git">https://github.com/10060/10060.github.io</a>
+                        <p>instagram</p>
+                        <a href="" class="git">https://www.instagram.com/
+                            _106_0</a>
+                    </div>
+
+                </div>
+
+            </aside>
+
+        <div class="pgWrap">
+            <h2 class="tit">
+                라노아의 웹페이지 디자인
+            </h2>
+            <p class="com">
+                천연화장품 브랜드 라노아의 웹페이지 디자인 입니다.
+            </p>
+
+
+            <div class="imgWrap">
+
+
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
