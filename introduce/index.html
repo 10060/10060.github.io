@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+
+    <title>백유경의 포트폴리오</title>
+
+    <!--    css-->
+
+    <!--    <link rel="stylesheet" href="scroll.css">-->
+    <link rel="stylesheet" href="style.css">
+
+
+    <!--    폰트-->
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=K2D|Lato|Noto+Sans+KR|Noto+Serif+KR|Open+Sans|Fjalla+One|Oswald|Roboto|Roboto+Condensed|Roboto+Slab" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Jua|Sunflower:300" rel="stylesheet">
+
+
+
+    <!--    아이콘-->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!--    뷰포트 -->
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+
+
+    <!--   아이콘  -->
+
+
+
+    <link rel="shortcut icon" href="./images1/fv_01.png" type="image/x-icon">
+
+    <link rel="icon" size="16x16 32x32 48x48 64x64 72x72 96x96 114x114 128x128 " href="./images1/fv_01.png" type="image/x-icon">
+
+    <!--    아이폰 아이콘 -->
+
+    <link rel="apple-touch-icon-precomposed" href="./images1/fv_01.png">
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+
+    <meta name="msapplication-TileColor" content="">
+
+    <!--     <meta name="msapplication-TileColor" content=""> 여기 콘텐츠에 이미지 넣으면됨-->
+
+
+
+
+
+    <!--    메타태그-->
+
+    <meta http-equiv="X-UA_Compatible" content="IE=Edge">
+
+    <meta name="keywords" content="">
+
+    <meta name="Description" content="">
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+
+        $(document).ready(function() {
+
+            setTimeout(function() {
+
+                $(".loading").fadeOut(400);
+
+            }, 5000);
+
+ 
+
+            $(".loading").on("click", function() {
+
+                $(this).fadeOut(100);
+
+            });
+
+        });
+        
+         
+
+ 
+    </script>
+
+    <script>
+
+        $(document).ready(function(){
+                    
+                var open1 = true;
+             $(".ck1").on("click", function(){
+                 $(".open").toggleClass("on");
+            
+                  if( open1 == true ){
+                        $(this).text("CLOSE");
+                    }
+                  else{ 
+                    $(this).text("OPEN"); 
+                   }
+           
+                  open1 = !open1;
+                        
+             });
+                 
+                     
+        });                                             
+    </script>
+    <script>
+        $(document).ready(function(){
+            var ht = parseInt($(".content").width());
+            var tar;
+            var sw=true;
+            $(window).on("mousewheel", function(e){
+                if(e.originalEvent.wheelDelta < 0){ // 내려가는거
+                    $("html, body").not(":animated").animate({scrollLeft:"+="+ht+"px"}, 800);
+                
+                } else { //올라가는거
+                    $("html, body").not(":animated").animate({scrollLeft:"-="+ht+"px"}, 800);
+                }
+                return false;
+            });
+               
+		$(".content").eq(0).find(".pgWrap").animate({"opacity":"1"}, 300);
+        $(".content").mouseover(function(){
+            tar = $(this).index();
+            if(tar<5){
+            
+               $(".content").eq(tar).find(".pgWrap").delay(100).animate({"opacity":"1", "margin-top":"100px"}, 900, function(){
+                    $(".pgN").eq(tar).addClass("on");
+                     $(".pgN").eq(tar).siblings().removeClass("on");
+                   
+               });
+            } 
+		});
+        
+        $(window).scroll(function(){ 
+            var scleft = parseInt($(window).scrollLeft());
+            console.log(scleft);
+            if(scleft>=ht*5-100){
+                $(".contentWrap").animate({"margin-left":0+"px"}, 300);
+            }
+        });
+        
+		
+             
+                     
+                        
+        });
+
+    </script>
+    <script>
+        $(document).ready(function(){
+        $(".pgN").click(function(){
+         var th1 = $(this).attr("dv"); 
+         var wd1 = parseInt($(".content").width());
+        $(".contentWrap").not(":animated").animate({"margin-left" : -wd1*th1+"px"}, 
+        100, function(){
+            $(this).addClass("on");
+            $(this).siblings().removeClass("on");
+            }); 
+            
+        });
+            
+        $(".pgN").hover(function(){
+            //setinterval 넣어보기 !
+            
+            $(this).removeClass("on");    
+            $(this).addClass("on1");
+            $(this).siblings().removeClass("on1");
+        
+        });
+            
+            
+    });
+    
+
+</script>
+    <script>
+        
+    var lihd = parseInt($(".coWr1 .WorkWrap li").height());
+    
+    function int1() {
+        
+    $(".coWr1 .WorkWrap").not(":animated").animate({"margin-top":lihd},800, function(){
+         $(".coWr1 .WorkWrap li").eq(0).appendTo(".WorkWrap");
+         $(".coWr1 .WorkWrap").css("margin-top", "0px");
+    });
+    }
+    var e1 = setInterval(function(){
+        int1();
+    },4000);
+        
+        
+        
+         $(".WorkWrap li a").hover(function(){
+             $(this).removeAttr("href");
+             $(this).find(".workTextWrap").addClass("on");
+             $(this)find(".workTextWrap").removeClass("on")
+         })
+        
+        
+    
+   
+    
+    
+</script>
+
+<script>
+
+    
+      $(document).ready(function(){
+        $(".pgBtn").click(function(){
+         var idx1= $(this).attr("dv"); 
+         var wd3 = parseInt($(".workpage2").width());
+        $(".WorkconWrap").not(":animated").animate({"margin-left" : -idx1*wd3+"px"}, 
+        100, function(){
+            $(this).slideDown(500);
+            $(this).siblings().slideDown(100);
+            }); 
+            
+        });
+            
+        $(".pgBtn").hover(function(){
+            //setinterval 넣어보기 !
+            
+            $(this).removeClass("on");    
+            $(this).addClass("on");
+            $(this).siblings().removeClass("on");
+        
+        });
+            
+            
+    });
+    
+
+
+    
+</script>
+
+
+</head>
+
+<body>
+    <div class="Wrap">
+
+        <div class="loading">
+
+            <h2 class="lodtit">
+                INTRODUCE PAGE
+            </h2>
+            <img src="./images1/year.png" alt="">
+        </div>
+
+        <div class="pageWrap">
+
+
+
+
+
+            <aside class="as1">
+
+                <div class="asWrap">
+
+
+
+
+
+                    <div class="logo">
+
+                    </div>
+
+                    <label class="ck1" for="op">OPEN</label>
+
+                    <input type="checkbox" id="op">
+
+
+
+                </div>
+                <div class="open">
+
+                    <nav class="menu">
+
+                        <h2 class="meTit">
+
+                            MENU
+
+                        </h2>
+
+                        <ul class="menuWrap">
+
+                            <li><a href="https://10060.github.io/main/">HOME</a><span class="hcon"></span></li>
+
+                            <li><a href="">WORK</a><span class="hcon"></span></li>
+
+                            <li><a href="">ABOUT ME</a><span class="hcon"></span></li>
+
+                            <li><a href="">CONTACT ME</a><span class="hcon"></span></li>
+
+                        </ul>
+
+                    </nav>
+
+                    <div class="contact">
+                        <h3 class="tot">
+                            CONTECT
+                        </h3>
+                        <p class="email">
+                            email
+                        </p>
+                        <p class="git">
+
+                            1006_0@naver.com
+
+                        </p>
+                        <p>github</p>
+                        <a href="https://github.com/10060/10060.github.io" class="git">https://github.com/10060/10060.github.io</a>
+                        <p>instagram</p>
+                        <a href="" class="git">https://www.instagram.com/
+                            _106_0</a>
+                    </div>
+
+                </div>
+
+            </aside>
+
+            <main class="main">
+                <div class="pageNation">
+                    <label dv="0" class="pgN on">page1</label>
+                    <label dv="1" class="pgN">page2</label>
+                    <label dv="2" class="pgN">page3</label>
+                    <label dv="3" class="pgN">page4</label>
+                </div>
+                   
+                <div class="contentWrap">
+
+                    <section class=" content" id="visual">
+                        <div class="area1">
+
+                            <div class="pgWrap">
+                                <div class="textWrap">
+
+                                    <h2 class="pgTit">안녕하세요 <br>저는<strong> UI/UX디자이너가</strong><br>되고 싶은 백유경입니다.</h2>
+                                    <!--                        <img src="./images1/yu.gif" alt="" class="yuIcon">-->
+                                    <p class="text1"> 저는 UX/ UI 가 가능한 디자이너가 되기 위해 프로세스에 대한 이래를 길렀고, 타인과 소통하는 능력을 배웠습니다. 시각 디자인과를 졸업하였기에 비주얼적인 이해도가 높지만, 퍼블리셔의 영역까지 다양하게 일하기 위해 새롭게 배우고 있습니다.
+                                        성실한 디자이너가 되어 역량을 넓히고 키워가 전문성이 탄탄한 디자이너가 되겠습니다. 많은 경험을 통해 쌓은 저만의 아이덴티티로 충분히 임할수 있다고 생각합니다. 어느 직무에서나 잘 적응하는 디자이너가 되고 싶습니다. 부족한 부분이 있다면 배워가면서 디자이너의 자세를 갖춰 업무에 대한 전문성을 높히겠습니다. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="content" id="page1">
+                        <div class="leftbg">
+
+                        </div>
+                        <div class="pgWrap">
+                            <h2 class="pgTit">About <span class="light">ME</span></h2>
+                            <div class="left">
+                                <ul class="abContent">
+                                    <li>
+                                        <span class="num2">01</span>
+                                        <div class="textWrap">
+                                            <h3 class="abName">인적사항</h3>
+                                            <p class="abCom">1994년 12월 21일 <span>대전</span></p>
+
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="num2">02</span>
+                                        <div class="textWrap">
+                                            <h3 class="abName">학력사항</h3>
+                                            <p class="abCom">목원대학교 시각디자인과<br><span class="date1"> 2013년 03월 입학</span><br><span class="date1">2018년 2월 졸업</span></p>
+
+
+                                            <p class="abCom">대전신일여자고등학교<br>특성화고등학교<span class="date1"> <br>2011년 03월 입학</span><br><span class="date1">2013년 2월 졸업</span></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="num2">03</span>
+                                        <div class="textWrap">
+                                            <h3 class="abName">지원분야</h3>
+                                            <p class="abCom">신입</p>
+                                            <p class="abCom">UI/UX DESIGN <br>
+                                                Web Designer</p>
+                                        </div>
+                                    </li>
+                                    <!--
+                                    <li>
+                                        <span class="num2">04</span>
+                                        <div class="textWrap">
+                                            <h3 class="abName"></h3>
+                                            <p class="abCom"></p>
+                                        </div>
+                                    </li>
+-->
+                                </ul>
+
+                            </div>
+                            <div class="right">
+                                <h3 class="rigpgTit">
+                                    AWARDS
+                                </h3>
+                                <div class="rigpg">
+                                    <div class="awd1">
+                                        <h4 class="name">
+                                            2017년 26회 대한민국패키지디자인대전 학생부문 특선
+                                        </h4>
+                                        <span class="cor">
+                                            한국패키지디자인협회
+                                        </span>
+                                        <span class="date2">
+                                            2017년 11월
+                                        </span>
+                                    </div>
+                                    <div class="awd1">
+                                        <h4 class="name">
+                                            TeenHair Branding 공모전 금상
+                                        </h4>
+                                        <span class="cor">
+                                            TeenHair
+                                        </span>
+                                        <span class="date2">
+                                            2017년 11월
+                                        </span>
+                                    </div>
+
+                                    <div class="awd1">
+                                        <h4 class="name">
+                                            경상북도 캐릭터 디자인 동상
+                                        </h4>
+                                        <span class="cor">
+                                            구미대학교
+                                        </span>
+                                        <span class="date2">
+                                            2013년
+                                        </span>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+			
+<!--
+                    <section class="content" id="page2">
+                        <div class="pgWrap">
+                            <h2 class="pgTit">소개</h2>
+                            <div class="keywordBox">
+
+                                <h3 class="keyTit">
+                                    연관키워드
+                                </h3>
+                                <ul class="keyWrap">
+                                    <li><span class="ck3">HTML</span></li>
+
+                                    <li><span class="ck3">퍼블리싱</span></li>
+                                    <li><span class="ck3">UI개발</span></li>
+                                    <li><span class="ck3">HTML5</span></li>
+                                    <li><span class="ck3">CSS3</span></li>
+                                    <li><span class="ck3">웹디자인</span></li>
+                                    <li><span class="ck3">일러스트레이터</span></li>
+                                    <li><span class="ck3">포토샵</span></li>
+                                    <li><span class="ck3">에프터이펙트</span></li>
+                                    <li><span class="ck3">모션그래픽</span></li>
+                                    <li><span class="ck3">인디자인</span></li>
+                                    <li><span class="ck3">2D캐릭터</span></li>
+                                    <li><span class="ck3">로고디자인</span></li>
+                                    <li><span class="ck3">시각디자인</span></li>
+
+                                </ul>
+
+                            </div>
+
+                        </div>
+                    </section>
+-->
+	
+                    <section class="content" id="page3">
+                        <div class="pgWrap">
+                            <h2 class="na1">working</h2>
+                            <section class="workpage1">
+<!--
+                                <div class="pgconWrap">
+				
+                                    <div class="textWrap">
+
+                                        <h2 class="pageTit">
+                                            Working page
+                                        </h2>
+                                        <p class="">
+                                            6개월 간의 저의 작업물입니다.
+                                            다양한 분야의 브랜드, 관공서, 쇼핑몰 ,기업형레이아웃 등을 작업하였습니다.
+                                            저의 작업 참여도는 90%이며,사용한 이미지와fontawesome(CDN방식)아이콘을 제외합니다.
+                                        </p>
+
+                                        <h3 class="useTool">
+                                            사용툴
+                                        </h3>
+                                        <ul class="useWrap">
+                                            <li class="uselist">
+                                                <p>HTML5</p>
+                                            </li>
+                                            <li class="uselist">
+                                                <p>CSS3</p>
+                                            </li>
+                                            <li class="uselist">
+                                                <p>jquery</p>
+                                            </li>
+                                            <li class="uselist">
+                                                <p>illustrator</p>
+                                            </li>
+                                            <li class="uselist">
+                                                <p>photoshop</p>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+-->
+
+                                <div class="labelBox">
+
+                                    <label dv="0" class="pgBtn">DESKTOP</label>
+                                    <label dv="1" class="pgBtn">MOBILE</label>
+                                    <label dv="2" class="pgBtn">RESPONSIVE</label>
+                                </div>
+                              
+                            </section>
+
+                            <section class="workpage2">
+
+                                <div class="WorkconWrap">
+
+
+                                    <div id="desk" class="coWr1">
+<!--
+                                        <h2 class="wTit">
+                                            DESKTOP
+                                        </h2>
+-->
+                                        <ul class="WorkWrap">
+                                            <li class="ww">
+                                                <a href="https://10060.github.io/site928_02" style="background-image:url(images1/igong.png)">
+                                                    <div class="workTextWrap">
+                                                        <span>이공갤러리</span>
+                                                        <p>갤러리 이공의 웹페이지 시안을 작업하였습니다.</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <li class="ww"><a href="https://10060.github.io/design1" style="background-image:url(images1/lanovo.png)">
+                                                    <div class="workTextWrap">
+                                                        <span>라노보</span>
+                                                        <p>브랜드형</p>
+                                                    </div>
+                                                </a></li>
+                                            <li class="ww"><a href="https://10060.github.io/design3" style="background-image:url(images1/jeju.png)">
+                                                    <div class="workTextWrap">
+                                                        <span>제주동백</span>
+                                                        <p>브랜드형</p>
+                                                    </div>
+                                                </a></li>
+                                            <li class="https://10060.github.io/design4"><a href="" style="background-image:url(images1/lanoa.png)">
+                                                    <div class="workTextWrap">
+                                                        <span>라노아</span>
+                                                        <p>브랜드형</p>
+                                                    </div>
+                                                </a></li>
+                                            <li class="ww"><a href="https://10060.github.io/design5" style="background-image:url(images1/borying.png)">
+                                                    <div class="workTextWrap">
+                                                        <span>보령제약</span>
+                                                        <p>기업형</p>
+                                                    </div>
+                                                </a></li>
+                                            <li class="ww"><a href="https://10060.github.io/desk4" style="background-image:url(images1/sinseg.png)">
+                                                    <div class="workTextWrap">
+                                                        <span>신세계인터네셔날</span>
+                                                        <p>기업형</p>
+                                                    </div>
+                                                </a></li>
+                                        </ul>
+
+
+                                    </div>
+                                    <div id="mob" class="coWr1">
+<!--
+                                        <h2 class="wTit">
+                                            MOBILE
+                                        </h2>
+-->
+                                        <ul class="WorkWrap">
+                                            <li class="ww">
+                                                <a href="https://10060.github.io/mob2" style="background-image:url(images1/convers.png)">
+                                                    <div class="workTextWrap">
+                                                        <span>CONVERSE</span>
+                                                        <p>브랜드형</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <li class="ww"><a href="https://10060.github.io/mob3" style="background-image:url(images1/woori.png)">
+                                                    <div class="workTextWrap">
+                                                        <span>우리은행</span>
+                                                        <p>금융형</p>
+                                                    </div>
+                                                </a></li>
+                                            <li class="ww"><a href="https://10060.github.io/mob1" style="background-image:url(images1/bul1.png)">
+                                                    <div class="workTextWrap">
+                                                        <span>불가리</span>
+                                                        <p>브랜드형</p>
+                                                    </div>
+                                                </a></li>
+                                            <li class="ww"><a href="https://10060.github.io/mob4" style="background-image:url(images1/kylieMob.png)">
+                                                    <div class="workTextWrap">
+                                                        <span>KylieCosmetics</span>
+                                                        <p>브랜드,쇼핑몰형</p>
+                                                    </div>
+                                                </a></li>
+                                        </ul>
+
+                                    </div>
+                                    <div id="res" class="coWr1">
+<!--
+                                        <h2 class="wTit">
+                                            RESPONSIVE
+                                        </h2>
+-->
+                                        <ul class="WorkWrap">
+                                            <li class="ww"><a href="https://10060.github.io/res2" style="background-image:url(images1/expedialibg.png)">
+                                                    <div class="workTextWrap">
+                                                        <span>익스피디아</span>
+                                                        <p>항공, 여행 사이트 익스피디아의 컬러감을 살린 반응형 웹디자인 </p>
+                                                    </div>
+                                                </a></li>
+                                            <li class="ww"><a href="https://10060.github.io/res1" style="background-image:url(images1/dongwon.png)">
+                                                    <div class="workTextWrap">
+                                                        <span>동원F&amp;B</span>
+                                                        <p>브랜드형</p>
+                                                    </div>
+                                                </a></li>
+                                            <li class="ww"><a href="https://10060.github.io/res4" style="background-image:url(images1/noroo.png)">
+                                                    <div class="workTextWrap">
+                                                        <span>노루홀딩스</span>
+                                                        <p>기업형</p>
+                                                    </div>
+                                                </a></li>
+                                            <li class="ww"><a href="https://10060.github.io/res3" style="background-image:url(images1/kca1.png)">
+                                                    <div class="workTextWrap">
+                                                        <span>한국방송통신진흥원</span>
+                                                        <p>관공서형</p>
+                                                    </div>
+                                                </a></li>
+
+                                        </ul>
+
+                                    </div>
+
+
+                                </div>
+                            </section>
+                        </div>
+                    </section>
+                    <section class="content" id="page4">
+                        <div class="pgWrap">
+                            <h2 class="pgTit">CONTACT ME</h2>
+                            <ul class="contectlist">
+                                <li>
+                                    <span class="name">email</span>
+                                    <p class="con1">1006_0@naver.com</p>
+                                </li>
+                                <li>
+                                    <span class="name">instagram</span>
+                                    <a href="https://www.instagram.com/_106_0" class="">_106_0</a>
+                                </li>
+
+                                <li>
+                                    <span class="name">github</span>
+                                    <p class="con1">10060</p>
+                                </li>
+                                <li>
+                                    <span class="name">phone</span>
+                                    <p class="con1">0107748****</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+
+                </div>
+                <footer id="footer">
+                    <div class="ftWrap">
+                        <p class="copy">
+                            copyright.YUKYUNG_PORTFOLIO
+                        </p>
+                    </div>
+                </footer>
+            </main>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
