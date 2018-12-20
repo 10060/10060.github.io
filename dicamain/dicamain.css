@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: notoRegular;
+    src: url('font/NotoSansKR-Regular.otf');
+    src: url('font/NotoSansKR-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: notoBold;
+    src: url('font/NotoSans-Bold.ttf');
+    src: url('font/NotoSans-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: notoBlack;
+    src: url('font/NotoSansKR-Black.otf');
+    src: url('font/NotoSansKR-Black.otf') format('opentype');
+}
+
+@font-face {
+    font-family: godoM;
+    src: url('font/GodoM.ttf');
+    src: url('font/GodoM.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: godoB;
+    src: url('font/GodoB.ttf');
+    src: url('font/GodoB.ttf') format('truetype');
+}
+
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: notoRegular;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
+
+.wrap {
+    width: 100%;
+}
+
+#header {
+    width: 100%;
+    height: 80px;
+    border-bottom: 2px solid #eeeeee;
+    box-sizing: border-box;
+}
+
+.header_wrap {
+    width: 1280px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.logo {
+    display: block;
+    width: 215px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 20px;
+}
+
+.gnb {
+    width: 868px;
+    height: 100%;
+    margin-left: 380px;
+    padding-top: 10px;
+    box-sizing: border-box;
+
+}
+
+.ul_manuwrap {
+    width: 100%;
+
+}
+
+.ul_manuwrap > li {
+    float: left;
+    margin-right: 20px;
+}
+
+
+.ul_manuwrap > li a {
+    display: block;
+    font-size: 20px;
+    line-height: 50px;
+    
+}
+
+
+.ul_manuwrap > li:hover a{
+    border-bottom:5px solid #5473f7; 
+}
+
+
+.ul_subwrap{
+    width: 100%;
+    display: none;
+}
+
+.searchbox{
+    display: none;
+}
+
+
+
+
+
+
+/*검색*/
+
+.search {
+    display: block;
+    width: 80px;
+    height: 80px;
+    background-image: url(images/main/icon/searchicon.png);
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    background-position:center center;
+    border: 0;
+    background-color: #5473f7;
+    cursor: pointer;
+}
+
